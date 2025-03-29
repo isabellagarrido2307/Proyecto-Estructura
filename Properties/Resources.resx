@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DragonFuego" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\DragonFuego.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChacinDomino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\ChacinDomino.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Alfonsina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\Alfonsina.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SebastianGacha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\SebastianGacha.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AymaraPeluche" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\AymaraPeluche.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LlamarCondenado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\LlamarCondenado.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Imitador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\Imitador.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AgujeroSinFondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\AgujeroSinFondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SergioEmbaucador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\SergioEmbaucador.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FamiliaUnida" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\FamiliaUnida.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IsabellaGatos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\IsabellaGatos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SliferCielo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\SliferCielo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AlaEscudo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\AlaEscudo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JarraCodicia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\JarraCodicia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MiguelMondaquera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\MiguelMondaquera.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Expropiese" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\Expropiese.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EspantaHierro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\EspantaHierro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KuribohAlado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\KuribohAlado.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AngelIntegral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\AngelIntegral.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AndresAbsoluto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\AndresAbsoluto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RompeEscudos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\RompeEscudos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MuroDefensa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\MuroDefensa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LadronFantasma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\LadronFantasma.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CilindroMagico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\CilindroMagico.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kuriboh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\Kuriboh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GuerreroRelampago" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\GuerreroRelampago.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CadenasSombra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\CadenasSombra.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RoedorMalicioso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\RoedorMalicioso.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AlejandroLapiz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\AlejandroLapiz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EspejoFuerza" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\EspejoFuerza.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BalatroBalatrez" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\BalatroBalatrez.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GinoPeloCotufa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\GinoPeloCotufa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CambioPreventivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\CambioPreventivo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Engatuzamiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\Engatuzamiento.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RobarDestino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\RobarDestino.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AgujeroTrampa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\AgujeroTrampa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PollueloSonico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\PollueloSonico.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GabrielExperto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\GabrielExperto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RataBlindada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\RataBlindada.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MagoSombrio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\MagoSombrio.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArmaduraSakuretsu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\ArmaduraSakuretsu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaballeroOscuro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\CaballeroOscuro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AgujeroNegro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\AgujeroNegro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GolemPiedra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\GolemPiedra.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArremetidaFuriosa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\ArremetidaFuriosa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CambioFidel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\CambioFidel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ControlMental" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\ControlMental.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CuracionSuprema" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\CuracionSuprema.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EspadaDestino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\EspadaDestino.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EspadaEscudo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\EspadaEscudo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FuriaDragoniana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\FuriaDragoniana.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MonstruoRenacido" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\MonstruoRenacido.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NegarDefensa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\NegarDefensa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OllaCodicia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\OllaCodicia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PactoDemoniaco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\PactoDemoniaco.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ProvisionesEmergencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\ProvisionesEmergencia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Raigeki" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\Raigeki.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RecargaMagica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\RecargaMagica.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TormentaFlamas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\TormentaFlamas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TormentaRelampago" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\TormentaRelampago.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

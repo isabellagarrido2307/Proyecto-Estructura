@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Proyecto Yu-Gi-Oh/1.0.0": {
+        "runtime": {
+          "Proyecto Yu-Gi-Oh.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Proyecto Yu-Gi-Oh/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
