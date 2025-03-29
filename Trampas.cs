@@ -9,7 +9,7 @@ namespace Proyecto_Yu_Gi_Oh
     public class TrampasAtaque
     {
         private string nombre { get; set; }
-        private string direccion { get; set; }
+        private Image direccion { get; set; }
 
         public unsafe TrampasAtaque()
         {
@@ -19,15 +19,11 @@ namespace Proyecto_Yu_Gi_Oh
         {
             return nombre;
         }
-        public string getDireccion()
-        {
-            return direccion;
-        }
         public void setNombre(string _nombre)
         {
             nombre = _nombre;
         }
-        public void setDireccion(string _direccion)
+        public void setDireccion(Image _direccion)
         {
             direccion = _direccion;
         }
@@ -41,7 +37,7 @@ namespace Proyecto_Yu_Gi_Oh
     public class TrampasInvocacion
     {
         private string nombre { get; set; }
-        private string direccion { get; set; }
+        private Image direccion { get; set; }
 
 
         public unsafe TrampasInvocacion()
@@ -52,15 +48,11 @@ namespace Proyecto_Yu_Gi_Oh
         {
             return nombre;
         }
-        public string getDireccion()
-        {
-            return direccion;
-        }
         public void setNombre(string _nombre)
         {
             nombre = _nombre;
         }
-        public void setDireccion(string _direccion)
+        public void setDireccion(Image _direccion)
         {
             direccion = _direccion;
         }

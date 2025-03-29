@@ -194,13 +194,13 @@ namespace Proyecto_Yu_Gi_Oh
         }
         public unsafe void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioAliado, ListaMonstruos* CementerioEnemigo)
         {
-            ListaMonstruos* aux = CampoEnemigo;
-            while (aux->cabeza != null)
+            Nodo* aux = CampoEnemigo->cabeza;
+            while (aux!= null)
             {
-                if (aux->cabeza->getMonstruo().getAtaque() < this.getAtaque())
+                if (aux->getMonstruo().getAtaque() < this.getAtaque())
                 {
-                    CementerioEnemigo->Insertar(aux->cabeza->getMonstruo());
-                    CampoEnemigo->Eliminar(aux->cabeza->getMonstruo());
+                    CementerioEnemigo->Insertar(aux->getMonstruo());
+                    CampoEnemigo->Eliminar(aux->getMonstruo());
                 }
             }
         }
@@ -277,7 +277,7 @@ namespace Proyecto_Yu_Gi_Oh
             setModo(true);
             setSalud(getAtaque());
         }
-        public unsafe void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        public unsafe void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
         {
             Nodo* aux = CampoEnemigo->cabeza;
             int contador = 0;
@@ -287,6 +287,24 @@ namespace Proyecto_Yu_Gi_Oh
                 aux = aux->getSiguiente();
             }
             setAtaque(getAtaque() + contador * 100);
+        }
+    }
+    public unsafe class GolemPiedra : Monstruos
+    {
+        public GolemPiedra()
+        {
+            setNombre("Golem de Piedra");
+            setDireccion(Properties.Resources.GolemPiedra);
+            setAtaque(2000);
+            setDefensa(2500);
+            setVidas(1);
+            setModo(true);
+            setSalud(getAtaque());
+            setTurnosDeEstado(0);
+        }
+        public unsafe void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        {
+            
         }
     }
     public unsafe class GuerreroRelampago : Monstruos
@@ -369,7 +387,7 @@ namespace Proyecto_Yu_Gi_Oh
     }
     public unsafe class Kuriboh : Monstruos
     {
-        public Kuriboh(bool _modo)
+        public Kuriboh()
         {
             setNombre("Kuriboh");
             setDireccion(Properties.Resources.Kuriboh);
@@ -382,10 +400,10 @@ namespace Proyecto_Yu_Gi_Oh
         }
         public void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
         {
-            ListaMonstruos* aux = CampoAliado;
-            while (aux->cabeza != null)
+            Nodo* aux = CampoAliado->cabeza;
+            while (aux != null)
             {
-                aux->cabeza->getMonstruo().setDefensa(getDefensa() + 200);
+                aux->getMonstruo().setDefensa(getDefensa() + 200);
 
             }
         }
@@ -393,7 +411,7 @@ namespace Proyecto_Yu_Gi_Oh
 
     public unsafe class KuribohAlado : Monstruos
     {
-        public KuribohAlado(bool _modo)
+        public KuribohAlado()
         {
             setNombre("Kuriboh Alado");
             setDireccion(Properties.Resources.KuribohAlado);
@@ -406,17 +424,17 @@ namespace Proyecto_Yu_Gi_Oh
         }
         public void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
         {
-            ListaMonstruos* aux = CampoAliado;
-            while (aux->cabeza != null)
+            Nodo* aux = CampoAliado->cabeza;
+            while (aux != null)
             {
-                aux->cabeza->getMonstruo().setDefensa(getDefensa() + 200);
+                aux->getMonstruo().setDefensa(getDefensa() + 200);
 
             }
         }
     }
     public unsafe class LadronFantasma : Monstruos
     {
-        public LadronFantasma(bool _modo)
+        public LadronFantasma()
         {
             setNombre("Ladron Fantasma");
             setDireccion(Properties.Resources.LadronFantasma);
@@ -435,7 +453,7 @@ namespace Proyecto_Yu_Gi_Oh
 
     public unsafe class MagoSombrio : Monstruos
     {
-        public MagoSombrio(bool _modo)
+        public MagoSombrio()
         {
             setNombre("Mago Sombrio");
             setDireccion(Properties.Resources.MagoSombrio);
@@ -454,7 +472,7 @@ namespace Proyecto_Yu_Gi_Oh
 
     public unsafe class MiguelMondaquera : Monstruos
     {
-        public MiguelMondaquera(bool _modo)
+        public MiguelMondaquera()
         {
             setNombre("Miguel Mondaquera");
             setDireccion(Properties.Resources.MiguelMondaquera);
@@ -473,7 +491,7 @@ namespace Proyecto_Yu_Gi_Oh
 
     public unsafe class PollueloSonico : Monstruos
     {
-        public PollueloSonico(bool _modo)
+        public PollueloSonico()
         {
             setNombre("Polluelo Sonico");
             setDireccion(Properties.Resources.PollueloSonico);
@@ -495,7 +513,7 @@ namespace Proyecto_Yu_Gi_Oh
 
     public unsafe class RataBlindada : Monstruos
     {
-        public RataBlindada(bool _modo)
+        public RataBlindada()
         {
             setNombre("Rata Blindada");
             setDireccion(Properties.Resources.RataBlindada);
@@ -514,7 +532,7 @@ namespace Proyecto_Yu_Gi_Oh
 
     public unsafe class RoedorMalicioso : Monstruos
     {
-        public RoedorMalicioso(bool _modo)
+        public RoedorMalicioso()
         {
             setNombre("Roedor Malicioso");
             setDireccion(Properties.Resources.RoedorMalicioso);
@@ -533,7 +551,7 @@ namespace Proyecto_Yu_Gi_Oh
 
     public unsafe class RompeEscudos : Monstruos
     {
-        public RompeEscudos(bool _modo)
+        public RompeEscudos()
         {
             setNombre("Rompe escudos");
             setDireccion(Properties.Resources.RompeEscudos);
@@ -555,7 +573,7 @@ namespace Proyecto_Yu_Gi_Oh
     }
     public unsafe class SebastianGacha : Monstruos
     {
-        public SebastianGacha(bool _modo)
+        public SebastianGacha()
         {
             setNombre("Sebas el señor del gacha");
             setDireccion(Properties.Resources.SebastianGacha);
@@ -579,7 +597,7 @@ namespace Proyecto_Yu_Gi_Oh
     }
     public unsafe class SergioEmbaucador : Monstruos
     {
-        public SergioEmbaucador(bool _modo)
+        public SergioEmbaucador()
         {
             setNombre("Sergio el Embaucador");
             setDireccion(Properties.Resources.SergioEmbaucador);
@@ -604,7 +622,7 @@ namespace Proyecto_Yu_Gi_Oh
     }
     public unsafe class SliferCielo : Monstruos
     {
-        public SliferCielo(bool _modo)
+        public SliferCielo()
         {
             setNombre("Slifer señor del cielo");
             setDireccion(Properties.Resources.SliferCielo);

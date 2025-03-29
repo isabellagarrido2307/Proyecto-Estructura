@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\GUEST\\Desktop\\Tortura-Yugioh-unsafe\\Proyecto Yu-Gi-Oh.csproj",
+      "projectUniqueName": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Proyecto Yu-Gi-Oh.csproj",
       "projectName": "Proyecto Yu-Gi-Oh",
-      "projectPath": "C:\\Users\\GUEST\\Desktop\\Tortura-Yugioh-unsafe\\Proyecto Yu-Gi-Oh.csproj",
+      "projectPath": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Proyecto Yu-Gi-Oh.csproj",
       "packagesPath": "C:\\Users\\GUEST\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\GUEST\\Desktop\\Tortura-Yugioh-unsafe\\obj\\",
+      "outputPath": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

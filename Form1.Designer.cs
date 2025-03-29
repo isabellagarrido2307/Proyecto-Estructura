@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
+            Fase = new Label();
+            label1 = new Label();
+            pictureBox3 = new PictureBox();
             BarraVidaJ1 = new ProgressBar();
             pictureBox1 = new PictureBox();
             BarraVidaJ2 = new ProgressBar();
             pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            label1 = new Label();
-            Fase = new Label();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
@@ -80,17 +80,17 @@
             pictureBox44 = new PictureBox();
             pictureBox45 = new PictureBox();
             panel2 = new Panel();
-            panel3 = new Panel();
             vidJugador1 = new Label();
+            panel3 = new Panel();
             label2 = new Label();
             CementerioJ1 = new PictureBox();
             CementerioJ2 = new PictureBox();
             MazoJ1 = new PictureBox();
             MazoJ2 = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -147,17 +147,52 @@
             panel1.Controls.Add(Fase);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox3);
-            panel1.Location = new Point(986, -2);
+            panel1.Location = new Point(1232, -2);
+            panel1.Margin = new Padding(4, 4, 4, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(393, 698);
+            panel1.Size = new Size(491, 872);
             panel1.TabIndex = 0;
+            // 
+            // Fase
+            // 
+            Fase.AutoSize = true;
+            Fase.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            Fase.Location = new Point(34, 14);
+            Fase.Margin = new Padding(4, 0, 4, 0);
+            Fase.Name = "Fase";
+            Fase.Size = new Size(240, 54);
+            Fase.TabIndex = 2;
+            Fase.Text = "Fase Actual";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(34, 231);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 25);
+            label1.TabIndex = 1;
+            label1.Text = "label1";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.Red;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(21, 88);
+            pictureBox3.Margin = new Padding(4, 4, 4, 4);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(448, 124);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 0;
+            pictureBox3.TabStop = false;
             // 
             // BarraVidaJ1
             // 
-            BarraVidaJ1.Location = new Point(118, 528);
+            BarraVidaJ1.Location = new Point(148, 660);
+            BarraVidaJ1.Margin = new Padding(4, 4, 4, 4);
             BarraVidaJ1.Maximum = 8000;
             BarraVidaJ1.Name = "BarraVidaJ1";
-            BarraVidaJ1.Size = new Size(251, 40);
+            BarraVidaJ1.Size = new Size(314, 50);
             BarraVidaJ1.Style = ProgressBarStyle.Continuous;
             BarraVidaJ1.TabIndex = 1;
             BarraVidaJ1.Value = 8000;
@@ -165,9 +200,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(24, 26);
+            pictureBox1.Location = new Point(30, 32);
+            pictureBox1.Margin = new Padding(4, 4, 4, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(320, 438);
+            pictureBox1.Size = new Size(400, 548);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
@@ -175,10 +211,11 @@
             // BarraVidaJ2
             // 
             BarraVidaJ2.BackColor = SystemColors.Control;
-            BarraVidaJ2.Location = new Point(118, 615);
+            BarraVidaJ2.Location = new Point(148, 769);
+            BarraVidaJ2.Margin = new Padding(4, 4, 4, 4);
             BarraVidaJ2.Maximum = 8000;
             BarraVidaJ2.Name = "BarraVidaJ2";
-            BarraVidaJ2.Size = new Size(250, 40);
+            BarraVidaJ2.Size = new Size(312, 50);
             BarraVidaJ2.Style = ProgressBarStyle.Continuous;
             BarraVidaJ2.TabIndex = 4;
             BarraVidaJ2.Value = 8000;
@@ -186,386 +223,431 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(-1, -4);
+            pictureBox2.Location = new Point(-1, -5);
+            pictureBox2.Margin = new Padding(4, 4, 4, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(1133, 690);
+            pictureBox2.Size = new Size(1416, 862);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.Red;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(17, 70);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(358, 99);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 0;
-            pictureBox3.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(27, 185);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 1;
-            label1.Text = "label1";
-            // 
-            // Fase
-            // 
-            Fase.AutoSize = true;
-            Fase.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            Fase.Location = new Point(27, 11);
-            Fase.Name = "Fase";
-            Fase.Size = new Size(204, 46);
-            Fase.TabIndex = 2;
-            Fase.Text = "Fase Actual";
-            // 
             // pictureBox4
             // 
-            pictureBox4.Location = new Point(443, 59);
+            pictureBox4.BackColor = Color.PeachPuff;
+            pictureBox4.Location = new Point(554, 74);
+            pictureBox4.Margin = new Padding(4, 4, 4, 4);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(60, 80);
+            pictureBox4.Size = new Size(75, 100);
             pictureBox4.TabIndex = 3;
             pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
-            pictureBox5.Location = new Point(513, 59);
+            pictureBox5.BackColor = Color.PeachPuff;
+            pictureBox5.Location = new Point(641, 74);
+            pictureBox5.Margin = new Padding(4, 4, 4, 4);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(60, 80);
+            pictureBox5.Size = new Size(75, 100);
             pictureBox5.TabIndex = 6;
             pictureBox5.TabStop = false;
             // 
             // pictureBox6
             // 
-            pictureBox6.Location = new Point(582, 59);
+            pictureBox6.BackColor = Color.PeachPuff;
+            pictureBox6.Location = new Point(728, 74);
+            pictureBox6.Margin = new Padding(4, 4, 4, 4);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(60, 80);
+            pictureBox6.Size = new Size(75, 100);
             pictureBox6.TabIndex = 7;
             pictureBox6.TabStop = false;
             // 
             // pictureBox7
             // 
-            pictureBox7.Location = new Point(651, 59);
+            pictureBox7.BackColor = Color.PeachPuff;
+            pictureBox7.Location = new Point(814, 74);
+            pictureBox7.Margin = new Padding(4, 4, 4, 4);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(60, 80);
+            pictureBox7.Size = new Size(75, 100);
             pictureBox7.TabIndex = 8;
             pictureBox7.TabStop = false;
             // 
             // pictureBox8
             // 
-            pictureBox8.Location = new Point(720, 59);
+            pictureBox8.BackColor = Color.PeachPuff;
+            pictureBox8.Location = new Point(900, 74);
+            pictureBox8.Margin = new Padding(4, 4, 4, 4);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(60, 80);
+            pictureBox8.Size = new Size(75, 100);
             pictureBox8.TabIndex = 9;
             pictureBox8.TabStop = false;
             // 
             // pictureBox9
             // 
-            pictureBox9.Location = new Point(788, 59);
+            pictureBox9.BackColor = Color.PeachPuff;
+            pictureBox9.Location = new Point(985, 74);
+            pictureBox9.Margin = new Padding(4, 4, 4, 4);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(60, 80);
+            pictureBox9.Size = new Size(75, 100);
             pictureBox9.TabIndex = 10;
             pictureBox9.TabStop = false;
             // 
             // pictureBox10
             // 
-            pictureBox10.Location = new Point(442, 160);
+            pictureBox10.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox10.Location = new Point(552, 200);
+            pictureBox10.Margin = new Padding(4, 4, 4, 4);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(60, 80);
+            pictureBox10.Size = new Size(75, 100);
             pictureBox10.TabIndex = 11;
             pictureBox10.TabStop = false;
             // 
             // pictureBox11
             // 
-            pictureBox11.Location = new Point(531, 160);
+            pictureBox11.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox11.Location = new Point(664, 200);
+            pictureBox11.Margin = new Padding(4, 4, 4, 4);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(60, 80);
+            pictureBox11.Size = new Size(75, 100);
             pictureBox11.TabIndex = 12;
             pictureBox11.TabStop = false;
             // 
             // pictureBox12
             // 
-            pictureBox12.Location = new Point(623, 160);
+            pictureBox12.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox12.Location = new Point(779, 200);
+            pictureBox12.Margin = new Padding(4, 4, 4, 4);
             pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(60, 80);
+            pictureBox12.Size = new Size(75, 100);
             pictureBox12.TabIndex = 13;
             pictureBox12.TabStop = false;
             // 
             // pictureBox13
             // 
-            pictureBox13.Location = new Point(715, 160);
+            pictureBox13.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox13.Location = new Point(894, 200);
+            pictureBox13.Margin = new Padding(4, 4, 4, 4);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(60, 80);
+            pictureBox13.Size = new Size(75, 100);
             pictureBox13.TabIndex = 14;
             pictureBox13.TabStop = false;
             // 
             // pictureBox14
             // 
-            pictureBox14.Location = new Point(805, 160);
+            pictureBox14.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox14.Location = new Point(1007, 198);
+            pictureBox14.Margin = new Padding(4, 4, 4, 4);
             pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(60, 80);
+            pictureBox14.Size = new Size(75, 100);
             pictureBox14.TabIndex = 15;
             pictureBox14.TabStop = false;
             // 
             // pictureBox15
             // 
             pictureBox15.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox15.Location = new Point(431, 247);
+            pictureBox15.Location = new Point(539, 309);
+            pictureBox15.Margin = new Padding(4, 4, 4, 4);
             pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(83, 80);
+            pictureBox15.Size = new Size(104, 100);
             pictureBox15.TabIndex = 16;
             pictureBox15.TabStop = false;
             // 
             // pictureBox16
             // 
             pictureBox16.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox16.Location = new Point(520, 247);
+            pictureBox16.Location = new Point(650, 309);
+            pictureBox16.Margin = new Padding(4, 4, 4, 4);
             pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(83, 80);
+            pictureBox16.Size = new Size(104, 100);
             pictureBox16.TabIndex = 17;
             pictureBox16.TabStop = false;
             // 
             // pictureBox17
             // 
             pictureBox17.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox17.Location = new Point(612, 247);
+            pictureBox17.Location = new Point(765, 309);
+            pictureBox17.Margin = new Padding(4, 4, 4, 4);
             pictureBox17.Name = "pictureBox17";
-            pictureBox17.Size = new Size(83, 80);
+            pictureBox17.Size = new Size(104, 100);
             pictureBox17.TabIndex = 18;
             pictureBox17.TabStop = false;
             // 
             // pictureBox18
             // 
             pictureBox18.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox18.Location = new Point(703, 247);
+            pictureBox18.Location = new Point(879, 309);
+            pictureBox18.Margin = new Padding(4, 4, 4, 4);
             pictureBox18.Name = "pictureBox18";
-            pictureBox18.Size = new Size(83, 80);
+            pictureBox18.Size = new Size(104, 100);
             pictureBox18.TabIndex = 19;
             pictureBox18.TabStop = false;
             // 
             // pictureBox19
             // 
             pictureBox19.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox19.Location = new Point(797, 247);
+            pictureBox19.Location = new Point(996, 309);
+            pictureBox19.Margin = new Padding(4, 4, 4, 4);
             pictureBox19.Name = "pictureBox19";
-            pictureBox19.Size = new Size(83, 80);
+            pictureBox19.Size = new Size(104, 100);
             pictureBox19.TabIndex = 20;
             pictureBox19.TabStop = false;
             // 
             // pictureBox20
             // 
             pictureBox20.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox20.Location = new Point(612, 348);
+            pictureBox20.Location = new Point(765, 435);
+            pictureBox20.Margin = new Padding(4, 4, 4, 4);
             pictureBox20.Name = "pictureBox20";
-            pictureBox20.Size = new Size(83, 80);
+            pictureBox20.Size = new Size(104, 100);
             pictureBox20.TabIndex = 21;
             pictureBox20.TabStop = false;
             // 
             // pictureBox21
             // 
             pictureBox21.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox21.Location = new Point(703, 348);
+            pictureBox21.Location = new Point(879, 435);
+            pictureBox21.Margin = new Padding(4, 4, 4, 4);
             pictureBox21.Name = "pictureBox21";
-            pictureBox21.Size = new Size(83, 80);
+            pictureBox21.Size = new Size(104, 100);
             pictureBox21.TabIndex = 22;
             pictureBox21.TabStop = false;
             // 
             // pictureBox22
             // 
             pictureBox22.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox22.Location = new Point(796, 348);
+            pictureBox22.Location = new Point(995, 435);
+            pictureBox22.Margin = new Padding(4, 4, 4, 4);
             pictureBox22.Name = "pictureBox22";
-            pictureBox22.Size = new Size(83, 80);
+            pictureBox22.Size = new Size(104, 100);
             pictureBox22.TabIndex = 23;
             pictureBox22.TabStop = false;
             // 
             // pictureBox23
             // 
             pictureBox23.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox23.Location = new Point(522, 349);
+            pictureBox23.Location = new Point(652, 436);
+            pictureBox23.Margin = new Padding(4, 4, 4, 4);
             pictureBox23.Name = "pictureBox23";
-            pictureBox23.Size = new Size(83, 80);
+            pictureBox23.Size = new Size(104, 100);
             pictureBox23.TabIndex = 24;
             pictureBox23.TabStop = false;
             // 
             // pictureBox24
             // 
             pictureBox24.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox24.Location = new Point(432, 349);
+            pictureBox24.Location = new Point(540, 436);
+            pictureBox24.Margin = new Padding(4, 4, 4, 4);
             pictureBox24.Name = "pictureBox24";
-            pictureBox24.Size = new Size(83, 80);
+            pictureBox24.Size = new Size(104, 100);
             pictureBox24.TabIndex = 25;
             pictureBox24.TabStop = false;
             // 
             // pictureBox25
             // 
-            pictureBox25.Location = new Point(443, 435);
+            pictureBox25.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox25.Location = new Point(552, 546);
+            pictureBox25.Margin = new Padding(4, 4, 4, 4);
             pictureBox25.Name = "pictureBox25";
-            pictureBox25.Size = new Size(60, 80);
+            pictureBox25.Size = new Size(75, 100);
             pictureBox25.TabIndex = 26;
             pictureBox25.TabStop = false;
             // 
             // pictureBox26
             // 
-            pictureBox26.Location = new Point(531, 435);
+            pictureBox26.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox26.Location = new Point(664, 546);
+            pictureBox26.Margin = new Padding(4, 4, 4, 4);
             pictureBox26.Name = "pictureBox26";
-            pictureBox26.Size = new Size(60, 80);
+            pictureBox26.Size = new Size(75, 100);
             pictureBox26.TabIndex = 27;
             pictureBox26.TabStop = false;
             // 
             // pictureBox27
             // 
-            pictureBox27.Location = new Point(623, 434);
+            pictureBox27.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox27.Location = new Point(777, 545);
+            pictureBox27.Margin = new Padding(4, 4, 4, 4);
             pictureBox27.Name = "pictureBox27";
-            pictureBox27.Size = new Size(60, 80);
+            pictureBox27.Size = new Size(75, 100);
             pictureBox27.TabIndex = 28;
             pictureBox27.TabStop = false;
             // 
             // pictureBox28
             // 
-            pictureBox28.Location = new Point(715, 434);
+            pictureBox28.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox28.Location = new Point(893, 546);
+            pictureBox28.Margin = new Padding(4, 4, 4, 4);
             pictureBox28.Name = "pictureBox28";
-            pictureBox28.Size = new Size(60, 80);
+            pictureBox28.Size = new Size(75, 100);
             pictureBox28.TabIndex = 29;
             pictureBox28.TabStop = false;
             // 
             // pictureBox29
             // 
-            pictureBox29.Location = new Point(805, 434);
+            pictureBox29.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox29.Location = new Point(1006, 545);
+            pictureBox29.Margin = new Padding(4, 4, 4, 4);
             pictureBox29.Name = "pictureBox29";
-            pictureBox29.Size = new Size(60, 80);
+            pictureBox29.Size = new Size(75, 100);
             pictureBox29.TabIndex = 30;
             pictureBox29.TabStop = false;
             // 
             // pictureBox30
             // 
-            pictureBox30.Location = new Point(445, 531);
+            pictureBox30.BackColor = Color.PeachPuff;
+            pictureBox30.Location = new Point(556, 664);
+            pictureBox30.Margin = new Padding(4, 4, 4, 4);
             pictureBox30.Name = "pictureBox30";
-            pictureBox30.Size = new Size(60, 80);
+            pictureBox30.Size = new Size(75, 100);
             pictureBox30.TabIndex = 31;
             pictureBox30.TabStop = false;
             // 
             // pictureBox31
             // 
-            pictureBox31.Location = new Point(517, 531);
+            pictureBox31.BackColor = Color.PeachPuff;
+            pictureBox31.Location = new Point(646, 664);
+            pictureBox31.Margin = new Padding(4, 4, 4, 4);
             pictureBox31.Name = "pictureBox31";
-            pictureBox31.Size = new Size(60, 80);
+            pictureBox31.Size = new Size(75, 100);
             pictureBox31.TabIndex = 32;
             pictureBox31.TabStop = false;
             // 
             // pictureBox32
             // 
-            pictureBox32.Location = new Point(586, 531);
+            pictureBox32.BackColor = Color.PeachPuff;
+            pictureBox32.Location = new Point(732, 664);
+            pictureBox32.Margin = new Padding(4, 4, 4, 4);
             pictureBox32.Name = "pictureBox32";
-            pictureBox32.Size = new Size(60, 80);
+            pictureBox32.Size = new Size(75, 100);
             pictureBox32.TabIndex = 33;
             pictureBox32.TabStop = false;
             // 
             // pictureBox33
             // 
-            pictureBox33.Location = new Point(657, 533);
+            pictureBox33.BackColor = Color.PeachPuff;
+            pictureBox33.Location = new Point(821, 666);
+            pictureBox33.Margin = new Padding(4, 4, 4, 4);
             pictureBox33.Name = "pictureBox33";
-            pictureBox33.Size = new Size(60, 80);
+            pictureBox33.Size = new Size(75, 100);
             pictureBox33.TabIndex = 34;
             pictureBox33.TabStop = false;
             // 
             // pictureBox34
             // 
-            pictureBox34.Location = new Point(726, 534);
+            pictureBox34.BackColor = Color.PeachPuff;
+            pictureBox34.Location = new Point(908, 668);
+            pictureBox34.Margin = new Padding(4, 4, 4, 4);
             pictureBox34.Name = "pictureBox34";
-            pictureBox34.Size = new Size(60, 80);
+            pictureBox34.Size = new Size(75, 100);
             pictureBox34.TabIndex = 35;
             pictureBox34.TabStop = false;
             // 
             // pictureBox35
             // 
-            pictureBox35.Location = new Point(794, 534);
+            pictureBox35.BackColor = Color.PeachPuff;
+            pictureBox35.Location = new Point(992, 668);
+            pictureBox35.Margin = new Padding(4, 4, 4, 4);
             pictureBox35.Name = "pictureBox35";
-            pictureBox35.Size = new Size(60, 80);
+            pictureBox35.Size = new Size(75, 100);
             pictureBox35.TabIndex = 36;
             pictureBox35.TabStop = false;
             // 
             // pictureBox36
             // 
-            pictureBox36.Location = new Point(442, 246);
+            pictureBox36.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox36.Location = new Point(552, 309);
+            pictureBox36.Margin = new Padding(4, 4, 4, 4);
             pictureBox36.Name = "pictureBox36";
-            pictureBox36.Size = new Size(60, 80);
+            pictureBox36.Size = new Size(75, 100);
             pictureBox36.TabIndex = 37;
             pictureBox36.TabStop = false;
             // 
             // pictureBox37
             // 
-            pictureBox37.Location = new Point(531, 247);
+            pictureBox37.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox37.Location = new Point(664, 309);
+            pictureBox37.Margin = new Padding(4, 4, 4, 4);
             pictureBox37.Name = "pictureBox37";
-            pictureBox37.Size = new Size(60, 80);
+            pictureBox37.Size = new Size(75, 100);
             pictureBox37.TabIndex = 38;
             pictureBox37.TabStop = false;
             // 
             // pictureBox38
             // 
-            pictureBox38.Location = new Point(623, 247);
+            pictureBox38.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox38.Location = new Point(779, 309);
+            pictureBox38.Margin = new Padding(4, 4, 4, 4);
             pictureBox38.Name = "pictureBox38";
-            pictureBox38.Size = new Size(60, 80);
+            pictureBox38.Size = new Size(75, 100);
             pictureBox38.TabIndex = 39;
             pictureBox38.TabStop = false;
             // 
             // pictureBox39
             // 
-            pictureBox39.Location = new Point(715, 246);
+            pictureBox39.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox39.Location = new Point(893, 309);
+            pictureBox39.Margin = new Padding(4, 4, 4, 4);
             pictureBox39.Name = "pictureBox39";
-            pictureBox39.Size = new Size(60, 80);
+            pictureBox39.Size = new Size(75, 100);
             pictureBox39.TabIndex = 40;
             pictureBox39.TabStop = false;
             // 
             // pictureBox40
             // 
-            pictureBox40.Location = new Point(805, 246);
+            pictureBox40.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox40.Location = new Point(1008, 308);
+            pictureBox40.Margin = new Padding(4, 4, 4, 4);
             pictureBox40.Name = "pictureBox40";
-            pictureBox40.Size = new Size(60, 80);
+            pictureBox40.Size = new Size(75, 100);
             pictureBox40.TabIndex = 41;
             pictureBox40.TabStop = false;
             // 
             // pictureBox41
             // 
-            pictureBox41.Location = new Point(444, 349);
+            pictureBox41.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox41.Location = new Point(553, 436);
+            pictureBox41.Margin = new Padding(4, 4, 4, 4);
             pictureBox41.Name = "pictureBox41";
-            pictureBox41.Size = new Size(60, 80);
+            pictureBox41.Size = new Size(75, 100);
             pictureBox41.TabIndex = 42;
             pictureBox41.TabStop = false;
             // 
             // pictureBox42
             // 
-            pictureBox42.Location = new Point(531, 349);
+            pictureBox42.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox42.Location = new Point(664, 436);
+            pictureBox42.Margin = new Padding(4, 4, 4, 4);
             pictureBox42.Name = "pictureBox42";
-            pictureBox42.Size = new Size(60, 80);
+            pictureBox42.Size = new Size(75, 100);
             pictureBox42.TabIndex = 43;
             pictureBox42.TabStop = false;
             // 
             // pictureBox43
             // 
-            pictureBox43.Location = new Point(623, 348);
+            pictureBox43.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox43.Location = new Point(779, 435);
+            pictureBox43.Margin = new Padding(4, 4, 4, 4);
             pictureBox43.Name = "pictureBox43";
-            pictureBox43.Size = new Size(60, 80);
+            pictureBox43.Size = new Size(75, 100);
             pictureBox43.TabIndex = 44;
             pictureBox43.TabStop = false;
             // 
             // pictureBox44
             // 
-            pictureBox44.Location = new Point(715, 348);
+            pictureBox44.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox44.Location = new Point(894, 435);
+            pictureBox44.Margin = new Padding(4, 4, 4, 4);
             pictureBox44.Name = "pictureBox44";
-            pictureBox44.Size = new Size(60, 80);
+            pictureBox44.Size = new Size(75, 100);
             pictureBox44.TabIndex = 45;
             pictureBox44.TabStop = false;
             // 
             // pictureBox45
             // 
-            pictureBox45.Location = new Point(805, 349);
+            pictureBox45.BackColor = Color.FromArgb(200, 90, 40);
+            pictureBox45.Location = new Point(1006, 436);
+            pictureBox45.Margin = new Padding(4, 4, 4, 4);
             pictureBox45.Name = "pictureBox45";
-            pictureBox45.Size = new Size(60, 80);
+            pictureBox45.Size = new Size(75, 100);
             pictureBox45.TabIndex = 46;
             pictureBox45.TabStop = false;
             // 
@@ -573,46 +655,51 @@
             // 
             panel2.BackColor = Color.FromArgb(255, 128, 0);
             panel2.Controls.Add(vidJugador1);
-            panel2.Location = new Point(257, 488);
+            panel2.Location = new Point(321, 610);
+            panel2.Margin = new Padding(4, 4, 4, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(112, 35);
+            panel2.Size = new Size(140, 44);
             panel2.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(255, 128, 0);
-            panel3.Controls.Add(label2);
-            panel3.Location = new Point(257, 575);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(112, 35);
-            panel3.TabIndex = 4;
             // 
             // vidJugador1
             // 
             vidJugador1.AutoSize = true;
             vidJugador1.Font = new Font("Segoe UI", 13.7000008F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            vidJugador1.Location = new Point(5, 1);
+            vidJugador1.Location = new Point(6, 1);
+            vidJugador1.Margin = new Padding(4, 0, 4, 0);
             vidJugador1.Name = "vidJugador1";
-            vidJugador1.Size = new Size(105, 31);
+            vidJugador1.Size = new Size(129, 38);
             vidJugador1.TabIndex = 3;
             vidJugador1.Text = "8000 pts";
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(255, 128, 0);
+            panel3.Controls.Add(label2);
+            panel3.Location = new Point(321, 719);
+            panel3.Margin = new Padding(4, 4, 4, 4);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(140, 44);
+            panel3.TabIndex = 4;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13.7000008F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.Location = new Point(4, 0);
+            label2.Location = new Point(5, 0);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(105, 31);
+            label2.Size = new Size(129, 38);
             label2.TabIndex = 4;
             label2.Text = "8000 pts";
             // 
             // CementerioJ1
             // 
             CementerioJ1.Image = (Image)resources.GetObject("CementerioJ1.Image");
-            CementerioJ1.Location = new Point(886, 350);
+            CementerioJ1.Location = new Point(1108, 438);
+            CementerioJ1.Margin = new Padding(4, 4, 4, 4);
             CementerioJ1.Name = "CementerioJ1";
-            CementerioJ1.Size = new Size(60, 80);
+            CementerioJ1.Size = new Size(75, 100);
             CementerioJ1.SizeMode = PictureBoxSizeMode.StretchImage;
             CementerioJ1.TabIndex = 47;
             CementerioJ1.TabStop = false;
@@ -620,9 +707,10 @@
             // CementerioJ2
             // 
             CementerioJ2.Image = (Image)resources.GetObject("CementerioJ2.Image");
-            CementerioJ2.Location = new Point(361, 246);
+            CementerioJ2.Location = new Point(451, 308);
+            CementerioJ2.Margin = new Padding(4, 4, 4, 4);
             CementerioJ2.Name = "CementerioJ2";
-            CementerioJ2.Size = new Size(60, 80);
+            CementerioJ2.Size = new Size(75, 100);
             CementerioJ2.SizeMode = PictureBoxSizeMode.StretchImage;
             CementerioJ2.TabIndex = 48;
             CementerioJ2.TabStop = false;
@@ -630,9 +718,10 @@
             // MazoJ1
             // 
             MazoJ1.Image = (Image)resources.GetObject("MazoJ1.Image");
-            MazoJ1.Location = new Point(886, 436);
+            MazoJ1.Location = new Point(1108, 545);
+            MazoJ1.Margin = new Padding(4, 4, 4, 4);
             MazoJ1.Name = "MazoJ1";
-            MazoJ1.Size = new Size(60, 80);
+            MazoJ1.Size = new Size(75, 100);
             MazoJ1.SizeMode = PictureBoxSizeMode.StretchImage;
             MazoJ1.TabIndex = 49;
             MazoJ1.TabStop = false;
@@ -640,21 +729,22 @@
             // MazoJ2
             // 
             MazoJ2.Image = (Image)resources.GetObject("MazoJ2.Image");
-            MazoJ2.Location = new Point(361, 158);
+            MazoJ2.Location = new Point(451, 198);
+            MazoJ2.Margin = new Padding(4, 4, 4, 4);
             MazoJ2.Name = "MazoJ2";
-            MazoJ2.Size = new Size(60, 80);
+            MazoJ2.Size = new Size(75, 100);
             MazoJ2.SizeMode = PictureBoxSizeMode.StretchImage;
             MazoJ2.TabIndex = 50;
             MazoJ2.TabStop = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1373, 686);
+            ClientSize = new Size(1716, 858);
             Controls.Add(MazoJ2);
             Controls.Add(MazoJ1);
             Controls.Add(CementerioJ2);
@@ -708,14 +798,15 @@
             Controls.Add(BarraVidaJ1);
             Controls.Add(panel1);
             Controls.Add(pictureBox2);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();

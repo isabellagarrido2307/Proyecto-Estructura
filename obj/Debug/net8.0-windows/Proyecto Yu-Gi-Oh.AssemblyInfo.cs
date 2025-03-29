@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Proyecto Yu-Gi-Oh")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d573fca0d0ce236eac0ba7890e3bd8eb846544b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b29235a06a1f9651fd00f84a15f6deaa52239854")]
 [assembly: System.Reflection.AssemblyProductAttribute("Proyecto Yu-Gi-Oh")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Proyecto Yu-Gi-Oh")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
