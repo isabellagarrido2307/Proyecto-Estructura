@@ -10,13 +10,15 @@ namespace Proyecto_Yu_Gi_Oh
     {
         public ListaMonstruos CementerioMonstruos;
         public ListaHechizos CementerioHechizos;
-        public ListaTrampas CementerioTrampas;
+        public ListaTrampasInvocacion CementerioTrampasInvocacion;
+        public ListaTrampasAtaque CementerioTrampasAtaque;
 
-        public Cementerio(ListaMonstruos cementerioMonstruos, ListaHechizos cementerioHechizos, ListaTrampas cementerioTrampas)
+        public Cementerio(ListaMonstruos cementerioMonstruos, ListaHechizos cementerioHechizos, ListaTrampasInvocacion cementerioTrampasInvocacion, ListaTrampasAtaque cementerioTrampasAtaque)
         {
             CementerioMonstruos = cementerioMonstruos;
             CementerioHechizos = cementerioHechizos;
-            CementerioTrampas = cementerioTrampas;
+            CementerioTrampasInvocacion = cementerioTrampasInvocacion;
+            CementerioTrampasAtaque = cementerioTrampasAtaque;
         } 
     }
 }

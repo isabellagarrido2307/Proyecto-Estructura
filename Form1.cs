@@ -2,6 +2,8 @@ namespace Proyecto_Yu_Gi_Oh
 {
     public partial class Form1 : Form
     {
+        Jugador Jugador1;
+        Jugador Jugador2;
         public int TipoFase;
         // 1 = Fase de planeacion (Poner cartas y tal)
         // 2 = Fase de ataque
@@ -15,81 +17,30 @@ namespace Proyecto_Yu_Gi_Oh
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //quitarlo
         }
         public void InicializarTodo()
         {
-            //AlaEscudo alaEscudo = new AlaEscudo();
-            //AlejandroLapiz alejandroLapiz = new AlejandroLapiz();
-            //Alfonsina alfonsina = new Alfonsina();
-            //AndresAbsoluto andresAbsoluto = new AndresAbsoluto();
-            //AngelIntegral angelIntegral = new AngelIntegral();
-            //AymaraPeluche aymaraPeluche = new AymaraPeluche();
-            //CaballeroOscuro caballeroOscuro = new CaballeroOscuro();
-            //ChacinDomino chacinDomino = new ChacinDomino();
-            //DragonFuego dragonFuego = new DragonFuego();
-            //FamiliaUnida familiaUnida = new FamiliaUnida();
-            //GabrielConductor gabrielConductor = new GabrielConductor();
-            //GinoPeloCotufa ginoPeloCotufa = new GinoPeloCotufa();
-            //GolemPiedra golemPiedra = new GolemPiedra();
-            //GuerreroRelampago guerreroRelampago = new GuerreroRelampago();
-            //Imitador imitador = new Imitador();
-            //Isabella isabella = new Isabella();
-            //Kuriboh kuriboh = new Kuriboh();
-            //KuribohAlado kuribohAlado = new KuribohAlado();
-            //LadronFantasma ladronFantasma = new LadronFantasma();
-            //MagoSombrio magoSombrio = new MagoSombrio();
-            //MiguelMondaquera miguelMondaquera = new MiguelMondaquera();
-            //PollueloSonico pollueloSonico = new PollueloSonico();
-            //RataBlindada rataBlindada = new RataBlindada();
-            //RoedorMalicioso roedorMalicioso = new RoedorMalicioso();
-            //RompeEscudos rompeEscudos = new RompeEscudos();
-            //SebastianGacha sebastianGacha = new SebastianGacha();
-            //SergioEmbaucador sergioEmbaucador = new SergioEmbaucador();
-            //SliferCielo sliferCielo = new SliferCielo();
 
-            //ArremetidaImprudente arremetidaImprudente = new ArremetidaImprudente();
-            //CambioFidelidad cambioFidelidad = new CambioFidelidad();
-            //ControlMental controlMental = new ControlMental();
-            //CuracionSuperma curacionSuperma = new CuracionSuperma();
-            //EspadaDestino espadaDestino = new EspadaDestino();
-            //EspadaEscudo espadaEscudo = new EspadaEscudo();
-            //FuriaDragoniana furiaDragoniana = new FuriaDragoniana();
-            //MonstruoRenacido monstruoRenacido = new MonstruoRenacido();
-            //NegarDefensa negarDefensa = new NegarDefensa();
-            //OllaCodicia ollaCodicia = new OllaCodicia();
-            //PactoDemoniaco pactoDemoniaco = new PactoDemoniaco();
-            //ProvisionesEmergencia provisionesEmergencia = new ProvisionesEmergencia();
-            //Raigeki raigeki = new Raigeki();
-            //RecargaMagica recargaMagica = new RecargaMagica();
-            //TormentaFlamas tormentaFlamas = new TormentaFlamas();
-            //TormentaRelampagos tormentaRelampagos = new TormentaRelampagos();
-
-            //AgujeroOscuro agujeroOscuro = new AgujeroOscuro();
-            //AgujeroSinFondo agujeroSinFondo = new AgujeroSinFondo();
-            //AgujeroTrampa agujeroTrampa = new AgujeroTrampa();
-            //ArmaduraSakuretsu armaduraSakuretsu = new ArmaduraSakuretsu();
-            //BalatroBalatrez balatroBalatrez = new BalatroBalatrez();
-            //CadenasDeSombra cadenasDeSombra = new CadenasDeSombra();
-            //CambioPreventivo cambioPreventivo = new CambioPreventivo();
-            //CilindroMagico cilindroMagico = new CilindroMagico();
-            //EngatuzamientoLabioso engatuzamientoLabioso = new EngatuzamientoLabioso();
-            //EspantapajarosDeHierro espantapajarosDeHierro = new EspantapajarosDeHierro();
-            //EspejoDeFuerza espejoDeFuerza = new EspejoDeFuerza();
-            //Expropiese expropiese = new Expropiese();
-            //JarraDeLaCodicia jarraDeLaCodicia = new JarraDeLaCodicia();
-            //LlamarAlCondenado llamarAlCondenado = new LlamarAlCondenado();
-            //MuroDeDefensa muroDeDefensa = new MuroDeDefensa();
-            //RobarDestino robarDestino = new RobarDestino();
-
-            Jugador Jugador1 = new Jugador()
+            Jugador1 = new Jugador()
             {
                 Vida = 8000,
                 DeckMonstruo = new ListaMonstruos(),
                 DeckHechizos = new ListaHechizos(),
-                DeckTrampas = new ListaTrampas()
+                DeckTrampasInvocacion = new ListaTrampasInvocacion(),
+                DeckTrampasAtaque = new ListaTrampasAtaque(),
+                ManoMonstruos = new ListaMonstruos(),
+                ManoHechizos = new ListaHechizos(),
+                ManoTrampasInvocacion = new ListaTrampasInvocacion(),
+                ManoTrampasAtaque = new ListaTrampasAtaque(),
+                Cementerio = new Cementerio(new ListaMonstruos(), new ListaHechizos(), new ListaTrampasInvocacion(), new ListaTrampasAtaque()),
+                CampoMonstruos = new ListaMonstruos(),
+                CampoHechizos = new ListaHechizos(),
+                CampoTrampasInvocacion = new ListaTrampasInvocacion(),
+                CampoTrampasAtaque = new ListaTrampasAtaque()
+
             };
-            
+
             Jugador1.DeckMonstruo.Insertar(new KuribohAlado());
             Jugador1.DeckMonstruo.Insertar(new GabrielConductor());
             Jugador1.DeckMonstruo.Insertar(new SergioEmbaucador());
@@ -114,18 +65,27 @@ namespace Proyecto_Yu_Gi_Oh
             Jugador1.DeckHechizos.Insertar(new Raigeki());
             Jugador1.DeckHechizos.Insertar(new EspadaEscudo());
 
-            //Jugador1.DeckTrampas.Insertar(new AgujeroSinFondo());
+            Jugador1.DeckTrampasInvocacion.Insertar(new AgujeroSinFondo());
+            Jugador1.DeckTrampasInvocacion.Insertar(new LlamarAlCondenado());
+            Jugador1.DeckTrampasAtaque.Insertar(new BalatroBalatrez());
+            Jugador1.DeckTrampasAtaque.Insertar(new EngatuzamientoLabioso());
+            Jugador1.DeckTrampasAtaque.Insertar(new JarraDeLaCodicia());
+            Jugador1.DeckTrampasAtaque.Insertar(new EspantapajarosDeHierro());
+            Jugador1.DeckTrampasAtaque.Insertar(new CilindroMagico());
+            Jugador1.DeckTrampasAtaque.Insertar(new Expropiese());
 
-            Jugador Jugador2 = new Jugador()
+            Jugador2 = new Jugador()
             {
                 Vida = 8000,
                 DeckMonstruo = new ListaMonstruos(),
                 DeckHechizos = new ListaHechizos(),
-                DeckTrampas = new ListaTrampas()
+                DeckTrampasInvocacion = new ListaTrampasInvocacion(),
+                DeckTrampasAtaque = new ListaTrampasAtaque()
             };
 
             Jugador2.DeckMonstruo.Insertar(new DragonFuego());
             Jugador2.DeckMonstruo.Insertar(new CaballeroOscuro());
+            Jugador2.DeckMonstruo.Insertar(new GuerreroRelampago());
             Jugador2.DeckMonstruo.Insertar(new SliferCielo());
             Jugador2.DeckMonstruo.Insertar(new AlaEscudo());
             Jugador2.DeckMonstruo.Insertar(new PollueloSonico());
@@ -142,7 +102,39 @@ namespace Proyecto_Yu_Gi_Oh
             Jugador2.DeckHechizos.Insertar(new RecargaMagica());
             Jugador2.DeckHechizos.Insertar(new EspadaDestino());
             Jugador2.DeckHechizos.Insertar(new MonstruoRenacido());
+            Jugador2.DeckHechizos.Insertar(new CuracionSuperma());
+            Jugador2.DeckHechizos.Insertar(new ControlMental());
+            Jugador2.DeckHechizos.Insertar(new TormentaFlamas());
+            Jugador2.DeckHechizos.Insertar(new NegarDefensa());
 
+            Jugador2.DeckTrampasAtaque.Insertar(new EspejoDeFuerza());
+            Jugador2.DeckTrampasAtaque.Insertar(new MuroDeDefensa());
+            Jugador2.DeckTrampasInvocacion.Insertar(new AgujeroOscuro());
+            Jugador2.DeckTrampasAtaque.Insertar(new CambioPreventivo());
+            Jugador2.DeckTrampasInvocacion.Insertar(new RobarDestino());
+            Jugador2.DeckTrampasAtaque.Insertar(new CadenasDeSombra());
+            Jugador2.DeckTrampasAtaque.Insertar(new ArmaduraSakuretsu());
+            Jugador2.DeckTrampasInvocacion.Insertar(new AgujeroTrampa());
+
+        }
+
+        private void toolTipDato_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void MazoJ1_MouseHover(object sender, EventArgs e)
+        {
+            this.toolTipDato.SetToolTip(this.MazoJ1, "N° Cartas: " /* variable/procedimiento para calcular el tamaño */);
+        }
+
+        private void MazoJ2_MouseHover(object sender, EventArgs e)
+        {
+            this.toolTipDato.SetToolTip(this.MazoJ2, "N° Cartas: " /* variable/procedimiento para calcular el tamaño */);
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

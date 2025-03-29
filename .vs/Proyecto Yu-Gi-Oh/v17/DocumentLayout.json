@@ -1,74 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\",
+  "WorkspaceRootPath": "C:\\Users\\aymar\\OneDrive\\Desktop\\AAA\\Proyecto-Estructura\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\cartas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:cartas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\aymar\\onedrive\\desktop\\aaa\\proyecto-estructura\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\trampas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:trampas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\colatrampa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:colatrampa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\listatrampas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:listatrampas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\clasestrampas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:clasestrampas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\aymar\\onedrive\\desktop\\aaa\\proyecto-estructura\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\listamonstruos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:listamonstruos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\aymar\\onedrive\\desktop\\aaa\\proyecto-estructura\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\hechizos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:hechizos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\aymar\\onedrive\\desktop\\aaa\\proyecto-estructura\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\claseshechizos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:claseshechizos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\aymar\\onedrive\\desktop\\aaa\\proyecto-estructura\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\cementerio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:cementerio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\aymar\\onedrive\\desktop\\aaa\\proyecto-estructura\\clasestrampas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:clasestrampas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\listahechizos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:listahechizos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\nodohechizos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:nodohechizos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\nodotrampa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:nodotrampa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\nodo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:nodo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\guest\\desktop\\nuevo proyecto yugioh unsafe\\monstruos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:monstruos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\aymar\\onedrive\\desktop\\aaa\\proyecto-estructura\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -81,210 +41,97 @@
           "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClasesTrampas.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\ClasesTrampas.cs",
-              "RelativeDocumentMoniker": "ClasesTrampas.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\ClasesTrampas.cs",
-              "RelativeToolTip": "ClasesTrampas.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAADwvyEAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T13:57:31.064Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAYwI8AAAA/AAAAAAAAAA==",
+              "Title": "Jugador.cs",
+              "DocumentMoniker": "C:\\Users\\aymar\\OneDrive\\Desktop\\AAA\\Proyecto-Estructura\\Jugador.cs",
+              "RelativeDocumentMoniker": "Jugador.cs",
+              "ToolTip": "C:\\Users\\aymar\\OneDrive\\Desktop\\AAA\\Proyecto-Estructura\\Jugador.cs",
+              "RelativeToolTip": "Jugador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:09:17.216Z",
+              "WhenOpened": "2025-03-29T17:22:36.413Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Jugador.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Jugador.cs",
-              "RelativeDocumentMoniker": "Jugador.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Jugador.cs",
-              "RelativeToolTip": "Jugador.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAIwBAAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:14:50.985Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ListaTrampas.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\ListaTrampas.cs",
-              "RelativeDocumentMoniker": "ListaTrampas.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\ListaTrampas.cs",
-              "RelativeToolTip": "ListaTrampas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T05:15:25.553Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ListaMonstruos.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\ListaMonstruos.cs",
-              "RelativeDocumentMoniker": "ListaMonstruos.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\ListaMonstruos.cs",
-              "RelativeToolTip": "ListaMonstruos.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA2wBAAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:20:05.635Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ColaTrampa.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\ColaTrampa.cs",
-              "RelativeDocumentMoniker": "ColaTrampa.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\ColaTrampa.cs",
-              "RelativeToolTip": "ColaTrampa.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aymar\\OneDrive\\Desktop\\AAA\\Proyecto-Estructura\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\aymar\\OneDrive\\Desktop\\AAA\\Proyecto-Estructura\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:21:38.137Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Cartas.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Cartas.cs",
-              "RelativeDocumentMoniker": "Cartas.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Cartas.cs",
-              "RelativeToolTip": "Cartas.cs",
-              "ViewState": "AgIAAH4BAAAAAAAAAAAqwKgBAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T02:37:20.416Z",
+              "WhenOpened": "2025-03-29T17:09:45.473Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Trampas.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Trampas.cs",
-              "RelativeDocumentMoniker": "Trampas.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Trampas.cs",
-              "RelativeToolTip": "Trampas.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCQAAAARAAAAAAAAAA==",
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Users\\aymar\\OneDrive\\Desktop\\AAA\\Proyecto-Estructura\\Menu.cs",
+              "RelativeDocumentMoniker": "Menu.cs",
+              "ToolTip": "C:\\Users\\aymar\\OneDrive\\Desktop\\AAA\\Proyecto-Estructura\\Menu.cs",
+              "RelativeToolTip": "Menu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T13:57:37.487Z"
+              "WhenOpened": "2025-03-29T17:09:01.593Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ClasesHechizos.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\ClasesHechizos.cs",
-              "RelativeDocumentMoniker": "ClasesHechizos.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\ClasesHechizos.cs",
-              "RelativeToolTip": "ClasesHechizos.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwOwAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Menu.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\aymar\\OneDrive\\Desktop\\AAA\\Proyecto-Estructura\\Menu.cs",
+              "RelativeDocumentMoniker": "Menu.cs",
+              "ToolTip": "C:\\Users\\aymar\\OneDrive\\Desktop\\AAA\\Proyecto-Estructura\\Menu.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Menu.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T02:37:14.704Z"
+              "WhenOpened": "2025-03-29T16:53:51.525Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Cementerio.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Cementerio.cs",
-              "RelativeDocumentMoniker": "Cementerio.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Cementerio.cs",
-              "RelativeToolTip": "Cementerio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ClasesTrampas.cs",
+              "DocumentMoniker": "C:\\Users\\aymar\\OneDrive\\Desktop\\AAA\\Proyecto-Estructura\\ClasesTrampas.cs",
+              "RelativeDocumentMoniker": "ClasesTrampas.cs",
+              "ToolTip": "C:\\Users\\aymar\\OneDrive\\Desktop\\AAA\\Proyecto-Estructura\\ClasesTrampas.cs",
+              "RelativeToolTip": "ClasesTrampas.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:19:44.424Z"
+              "WhenOpened": "2025-03-29T16:02:35.926Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Hechizos.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Hechizos.cs",
-              "RelativeDocumentMoniker": "Hechizos.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Hechizos.cs",
-              "RelativeToolTip": "Hechizos.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwCIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\aymar\\OneDrive\\Desktop\\AAA\\Proyecto-Estructura\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\aymar\\OneDrive\\Desktop\\AAA\\Proyecto-Estructura\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T02:50:28.79Z"
+              "WhenOpened": "2025-03-29T15:46:10.85Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ListaHechizos.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\ListaHechizos.cs",
-              "RelativeDocumentMoniker": "ListaHechizos.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\ListaHechizos.cs",
-              "RelativeToolTip": "ListaHechizos.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAADMAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\aymar\\OneDrive\\Desktop\\AAA\\Proyecto-Estructura\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\aymar\\OneDrive\\Desktop\\AAA\\Proyecto-Estructura\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:48:16.108Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Form1.Designer.cs",
-              "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAIwCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T05:54:17.284Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "NodoHechizos.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\NodoHechizos.cs",
-              "RelativeDocumentMoniker": "NodoHechizos.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\NodoHechizos.cs",
-              "RelativeToolTip": "NodoHechizos.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAYwBEAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:29:23.488Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "NodoTrampa.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\NodoTrampa.cs",
-              "RelativeDocumentMoniker": "NodoTrampa.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\NodoTrampa.cs",
-              "RelativeToolTip": "NodoTrampa.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwCIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:39:48.359Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Nodo.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Nodo.cs",
-              "RelativeDocumentMoniker": "Nodo.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Nodo.cs",
-              "RelativeToolTip": "Nodo.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBkAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:29:48.217Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Monstruos.cs",
-              "DocumentMoniker": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Monstruos.cs",
-              "RelativeDocumentMoniker": "Monstruos.cs",
-              "ToolTip": "C:\\Users\\GUEST\\Desktop\\Nuevo Proyecto Yugioh Unsafe\\Monstruos.cs",
-              "RelativeToolTip": "Monstruos.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAADYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T02:37:50.972Z"
+              "WhenOpened": "2025-03-29T15:29:03.913Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

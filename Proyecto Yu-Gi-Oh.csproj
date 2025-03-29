@@ -25,4 +25,8 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Yu-Gi-Oh\FondoYBotones\" />
+  </ItemGroup>
+
 </Project>

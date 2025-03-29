@@ -163,6 +163,16 @@ namespace Proyecto_Yu_Gi_Oh.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Atacar {
+            get {
+                object obj = ResourceManager.GetObject("Atacar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AymaraPeluche {
             get {
                 object obj = ResourceManager.GetObject("AymaraPeluche", resourceCulture);
@@ -176,6 +186,26 @@ namespace Proyecto_Yu_Gi_Oh.Properties {
         internal static System.Drawing.Bitmap BalatroBalatrez {
             get {
                 object obj = ResourceManager.GetObject("BalatroBalatrez", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonDuelo {
+            get {
+                object obj = ResourceManager.GetObject("BotonDuelo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonMazo {
+            get {
+                object obj = ResourceManager.GetObject("BotonMazo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,6 +233,16 @@ namespace Proyecto_Yu_Gi_Oh.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CambiarModo {
+            get {
+                object obj = ResourceManager.GetObject("CambiarModo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CambioFidel {
             get {
                 object obj = ResourceManager.GetObject("CambioFidel", resourceCulture);
@@ -216,6 +256,16 @@ namespace Proyecto_Yu_Gi_Oh.Properties {
         internal static System.Drawing.Bitmap CambioPreventivo {
             get {
                 object obj = ResourceManager.GetObject("CambioPreventivo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cementerio {
+            get {
+                object obj = ResourceManager.GetObject("Cementerio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +313,29 @@ namespace Proyecto_Yu_Gi_Oh.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Default {
+            get {
+                object obj = ResourceManager.GetObject("Default", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DragonFuego {
             get {
                 object obj = ResourceManager.GetObject("DragonFuego", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Eliminar {
+            get {
+                object obj = ResourceManager.GetObject("Eliminar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,6 +413,46 @@ namespace Proyecto_Yu_Gi_Oh.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fase1 {
+            get {
+                object obj = ResourceManager.GetObject("Fase1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fase2 {
+            get {
+                object obj = ResourceManager.GetObject("Fase2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fase3 {
+            get {
+                object obj = ResourceManager.GetObject("Fase3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fases {
+            get {
+                object obj = ResourceManager.GetObject("Fases", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FuriaDragoniana {
             get {
                 object obj = ResourceManager.GetObject("FuriaDragoniana", resourceCulture);
@@ -396,6 +506,26 @@ namespace Proyecto_Yu_Gi_Oh.Properties {
         internal static System.Drawing.Bitmap Imitador {
             get {
                 object obj = ResourceManager.GetObject("Imitador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InterfazNueva {
+            get {
+                object obj = ResourceManager.GetObject("InterfazNueva", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Invocar {
+            get {
+                object obj = ResourceManager.GetObject("Invocar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -466,6 +596,16 @@ namespace Proyecto_Yu_Gi_Oh.Properties {
         internal static System.Drawing.Bitmap MagoSombrio {
             get {
                 object obj = ResourceManager.GetObject("MagoSombrio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MenuFondo {
+            get {
+                object obj = ResourceManager.GetObject("MenuFondo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -656,6 +796,16 @@ namespace Proyecto_Yu_Gi_Oh.Properties {
         internal static System.Drawing.Bitmap TormentaRelampago {
             get {
                 object obj = ResourceManager.GetObject("TormentaRelampago", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Versus {
+            get {
+                object obj = ResourceManager.GetObject("Versus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

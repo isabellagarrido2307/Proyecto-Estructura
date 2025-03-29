@@ -58,3 +58,22 @@ C:\Users\GUEST\Desktop\Nuevo Proyecto Yugioh Unsafe\obj\Debug\net8.0-windows\ref
 C:\Users\GUEST\Desktop\Nuevo Proyecto Yugioh Unsafe\obj\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.pdb
 C:\Users\GUEST\Desktop\Nuevo Proyecto Yugioh Unsafe\obj\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.genruntimeconfig.cache
 C:\Users\GUEST\Desktop\Nuevo Proyecto Yugioh Unsafe\obj\Debug\net8.0-windows\ref\Proyecto Yu-Gi-Oh.dll
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\bin\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.exe
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\bin\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.deps.json
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\bin\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.runtimeconfig.json
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\bin\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.dll
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\bin\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.pdb
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\obj\Debug\net8.0-windows\Proyecto_Yu_Gi_Oh.Form1.resources
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\obj\Debug\net8.0-windows\Proyecto_Yu_Gi_Oh.Properties.Resources.resources
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\obj\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.csproj.GenerateResource.cache
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\obj\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\obj\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.AssemblyInfoInputs.cache
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\obj\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.AssemblyInfo.cs
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\obj\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.csproj.CoreCompileInputs.cache
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\obj\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.sourcelink.json
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\obj\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.dll
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\obj\Debug\net8.0-windows\refint\Proyecto Yu-Gi-Oh.dll
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\obj\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.pdb
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\obj\Debug\net8.0-windows\Proyecto Yu-Gi-Oh.genruntimeconfig.cache
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\obj\Debug\net8.0-windows\ref\Proyecto Yu-Gi-Oh.dll
+C:\Users\aymar\OneDrive\Desktop\AAA\Proyecto-Estructura\obj\Debug\net8.0-windows\Proyecto_Yu_Gi_Oh.Menu.resources
