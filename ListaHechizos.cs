@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -12,22 +13,22 @@ namespace Proyecto_Yu_Gi_Oh
         public NodoHechizos* cabeza;
         public ListaHechizos()
         {
-            cabeza = null;
+            this.cabeza = null;
         }
 
         public unsafe void Insertar(Hechizos _hechizo)
         {
-            NodoHechizos pepe = new NodoHechizos(_hechizo);
-            NodoHechizos* nuevo = &pepe;
-            if (cabeza == null)
+            NodoHechizos* nuevo = (NodoHechizos*)Marshal.AllocHGlobal(sizeof(NodoHechizos));
+            nuevo->setHechizos(_hechizo);
+            nuevo->setSiguiente(null);
+            if (this.cabeza == null)
             {
-                cabeza = nuevo;
+                this.cabeza = nuevo;
             }
             else
             {
-                NodoHechizos* aux = cabeza;
-                aux->setSiguiente(cabeza);
-                cabeza = aux;
+                nuevo->setSiguiente(this.cabeza);
+                this.cabeza = nuevo;
             }
         }
         public void Eliminar(Hechizos _hechizo)

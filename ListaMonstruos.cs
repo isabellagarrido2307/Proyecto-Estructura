@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,29 +13,29 @@ namespace Proyecto_Yu_Gi_Oh
         public Nodo* cabeza;
         public ListaMonstruos()
         {
-            cabeza = null;
+            this.cabeza = null;
         }
 
         public unsafe void Insertar(Monstruos _monstruo)
         {
-            Nodo pepe = new Nodo(_monstruo);
-            Nodo* nuevo = &pepe;
-            if (cabeza == null)
+            Nodo* nuevo = (Nodo*)Marshal.AllocHGlobal(sizeof(Nodo));
+            nuevo->setMonstruo(_monstruo);
+            nuevo->setSiguiente(null);
+            if (this.cabeza == null)
             {
-                cabeza = nuevo;
+                this.cabeza = nuevo;
             }
             else
             {
-                Nodo* aux = cabeza;
-                aux->setSiguiente(cabeza);
-                cabeza = aux;
+                nuevo->setSiguiente(this.cabeza);
+                this.cabeza = nuevo;
             }
         }
         public void Eliminar(Monstruos _monstruo)
         {
-            Nodo* aux = cabeza;
-            Nodo* aux2 = cabeza;
-            if (cabeza->getMonstruo() == _monstruo)
+            Nodo* aux = this.cabeza;
+            Nodo* aux2 = this.cabeza;
+            if (this.cabeza->getMonstruo() == _monstruo)
             {
                 cabeza = cabeza->getSiguiente();
                 return;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,21 +12,21 @@ namespace Proyecto_Yu_Gi_Oh
         public NodoTrampasInvocacion* cabeza;
         public ListaTrampasInvocacion()
         {
-            cabeza = null;
+            this.cabeza = null;
         }
-        public unsafe void Insertar(TrampasInvocacion _trampas)
+        public unsafe void InsertarTra(TrampasInvocacion _trampas)
         {
-            NodoTrampasInvocacion pepe = new NodoTrampasInvocacion(_trampas);
-            NodoTrampasInvocacion* nuevo = &pepe;
-            if (cabeza == null)
+            NodoTrampasInvocacion* nuevo = (NodoTrampasInvocacion*)Marshal.AllocHGlobal(sizeof(NodoTrampasInvocacion));
+            nuevo->setTrampa(_trampas);
+            nuevo->setSiguiente(null);
+            if (this.cabeza == null)
             {
-                cabeza = nuevo;
+                this.cabeza = nuevo;
             }
             else
             {
-                NodoTrampasInvocacion* aux = cabeza;
-                aux->setSiguiente(cabeza);
-                cabeza = aux;
+                nuevo->setSiguiente(this.cabeza);
+                this.cabeza = nuevo;
             }
         }
         public void Eliminar(TrampasInvocacion _trampas)

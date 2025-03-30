@@ -26,6 +26,10 @@ namespace Proyecto_Yu_Gi_Oh
         {
             direccion = _direccion;
         }
+        public Image getDireccion()
+        {
+            return direccion;
+        }
         public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
         {
             

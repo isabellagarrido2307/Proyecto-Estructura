@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Yu_Gi_Oh
 {
-    public unsafe class NodoTrampasInvocacion
+    public unsafe struct NodoTrampasInvocacion
     {
-        private unsafe NodoTrampasInvocacion* siguiente { get; set; }
-        private TrampasInvocacion trampas { get; set; }
+        private unsafe NodoTrampasInvocacion* siguiente;
+        private TrampasInvocacion trampas;
         public NodoTrampasInvocacion(TrampasInvocacion _trampas)
         {
             siguiente = null;

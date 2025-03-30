@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Yu_Gi_Oh
 {
-    public unsafe class NodoTrampa
+    public unsafe struct NodoTrampa
     {
         private unsafe NodoTrampa* siguiente { get; set; }
         private TrampasAtaque trampas { get; set; }

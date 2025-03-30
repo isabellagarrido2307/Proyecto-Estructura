@@ -39,38 +39,43 @@ namespace Proyecto_Yu_Gi_Oh
             ManoTrampasInvocacion = new ListaTrampasInvocacion();
             ManoTrampasAtaque = new ListaTrampasAtaque();
         }
-        public unsafe void RobarCarta ()
+        public unsafe void RobarCarta()
         {
-            int cartasCampo = 0;
+            int cartasMano = 0;
+
             Nodo* auxMons = ManoMonstruos.cabeza;
             while (auxMons != null)
             {
-                cartasCampo++;
+                cartasMano++;
                 auxMons = auxMons->getSiguiente();
             }
+
             NodoHechizos* auxHech = ManoHechizos.cabeza;
             while (auxHech != null)
             {
-                cartasCampo++;
+                cartasMano++;
                 auxHech = auxHech->getSiguiente();
             }
+
             NodoTrampaAtaque* auxTrampAtaq = ManoTrampasAtaque.cabeza;
             while (auxTrampAtaq != null)
             {
-                cartasCampo++;
+                cartasMano++;
                 auxTrampAtaq = auxTrampAtaq->getSiguiente();
             }
+
             NodoTrampasInvocacion* auxTrampInv = ManoTrampasInvocacion.cabeza;
             while (auxTrampInv != null)
             {
-                cartasCampo++;
+                cartasMano++;
                 auxTrampInv = auxTrampInv->getSiguiente();
             }
 
-            if (cartasCampo < 6)
+            if (cartasMano < 6)
             {
                 Random random = new Random();
-                int tipoRobo = random.Next(1, 3);
+                int tipoRobo = random.Next(1, 4);
+
                 switch (tipoRobo)
                 {
                     case 1:
@@ -81,24 +86,24 @@ namespace Proyecto_Yu_Gi_Oh
                             cantMonstruos++;
                             aux2 = aux2->getSiguiente();
                         }
-                        if (cantMonstruos != 0)
+
+                        if (cantMonstruos == 0)
                         {
                             RobarCarta();
                             return;
                         }
+
                         aux2 = DeckMonstruo.cabeza;
-                        int RobandoCarta = random.Next(1, cantMonstruos);
-                        for (int i = 0; i < RobandoCarta; i++)
+                        int RobandoCarta = random.Next(1, cantMonstruos + 1);
+                        for (int i = 0; i < RobandoCarta - 1; i++)
                         {
-                            if (aux2->getSiguiente != null)
-                            {
-                                aux2 = aux2->getSiguiente();
-                            }
+                            aux2 = aux2->getSiguiente();
                         }
+
                         DeckMonstruo.Eliminar(aux2->getMonstruo());
                         ManoMonstruos.Insertar(aux2->getMonstruo());
-                        
                         break;
+
                     case 2:
                         NodoHechizos* aux3 = DeckHechizos.cabeza;
                         int cantHechizos = 0;
@@ -107,24 +112,26 @@ namespace Proyecto_Yu_Gi_Oh
                             cantHechizos++;
                             aux3 = aux3->getSiguiente();
                         }
+
                         if (cantHechizos == 0)
                         {
                             RobarCarta();
                             return;
                         }
-                        RobandoCarta = random.Next(1, 8);
-                        for (int i = 0; i < RobandoCarta; i++)
+
+                        aux3 = DeckHechizos.cabeza;
+                        RobandoCarta = random.Next(1, cantHechizos + 1);
+                        for (int i = 0; i < RobandoCarta - 1; i++)
                         {
-                            if (aux3->getSiguiente != null)
-                            {
-                                aux3 = aux3->getSiguiente();
-                            }
+                            aux3 = aux3->getSiguiente();
                         }
+
                         DeckHechizos.Eliminar(aux3->getHechizo());
                         ManoHechizos.Insertar(aux3->getHechizo());
                         break;
+
                     case 3:
-                        int tipoHechizo = random.Next(1, 2);
+                        int tipoHechizo = random.Next(1, 3);
                         if (tipoHechizo == 1)
                         {
                             NodoTrampaAtaque* aux4 = DeckTrampasAtaque.cabeza;
@@ -134,26 +141,24 @@ namespace Proyecto_Yu_Gi_Oh
                                 cantidadTrampasAtaque++;
                                 aux4 = aux4->getSiguiente();
                             }
-                            aux4 = DeckTrampasAtaque.cabeza;
+
                             if (cantidadTrampasAtaque == 0)
                             {
                                 RobarCarta();
                                 return;
                             }
-                            else {
-                                RobandoCarta = random.Next(1, 3);
-                                for (int i = 0; i < RobandoCarta; i++)
-                                {
-                                    if (aux4->getSiguiente != null)
-                                    {
-                                        aux4 = aux4->getSiguiente();
-                                    }
-                                }
-                                DeckTrampasAtaque.Eliminar(aux4->getTrampa());
-                                ManoTrampasAtaque.Insertar(aux4->getTrampa());
+
+                            aux4 = DeckTrampasAtaque.cabeza;
+                            RobandoCarta = random.Next(1, cantidadTrampasAtaque + 1);
+                            for (int i = 0; i < RobandoCarta - 1; i++)
+                            {
+                                aux4 = aux4->getSiguiente();
                             }
+
+                            DeckTrampasAtaque.Eliminar(aux4->getTrampa());
+                            ManoTrampasAtaque.InsertarTr(aux4->getTrampa());
                         }
-                        if (tipoHechizo == 2)
+                        else
                         {
                             NodoTrampasInvocacion* aux5 = DeckTrampasInvocacion.cabeza;
                             int cantidadTrampasInvocacion = 0;
@@ -162,30 +167,29 @@ namespace Proyecto_Yu_Gi_Oh
                                 cantidadTrampasInvocacion++;
                                 aux5 = aux5->getSiguiente();
                             }
+
                             if (cantidadTrampasInvocacion == 0)
                             {
                                 RobarCarta();
                                 return;
                             }
+
                             aux5 = DeckTrampasInvocacion.cabeza;
-                            RobandoCarta = random.Next(1, 8);
-                            for (int i = 0; i < RobandoCarta; i++)
+                            RobandoCarta = random.Next(1, cantidadTrampasInvocacion + 1);
+                            for (int i = 0; i < RobandoCarta - 1; i++)
                             {
-                                if (aux5->getSiguiente != null)
-                                {
-                                    aux5 = aux5->getSiguiente();
-                                }
+                                aux5 = aux5->getSiguiente();
                             }
+
                             DeckTrampasInvocacion.Eliminar(aux5->getTrampa());
-                            ManoTrampasInvocacion.Insertar(aux5->getTrampa());
+                            ManoTrampasInvocacion.InsertarTra(aux5->getTrampa());
                         }
-                        RobandoCarta = random.Next(1, 8);
                         break;
-                    
                 }
-            } else
+            }
+            else
             {
-                MessageBox.Show("No puedes robar mas cartas");
+                MessageBox.Show("No puedes robar más cartas, tu mano está llena.");
             }
         }
     }

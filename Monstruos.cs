@@ -53,6 +53,10 @@ namespace Proyecto_Yu_Gi_Oh
         {
             direccion = _direccion;
         }
+        public Image getDireccion()
+        {
+            return direccion;
+        }
         public void setAtaque(int _ataque)
         {
             ataque = _ataque;

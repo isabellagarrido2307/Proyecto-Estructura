@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Yu_Gi_Oh
 {
-    public unsafe class NodoHechizos
+    public unsafe struct NodoHechizos
     {
-        private unsafe NodoHechizos* siguiente { get; set; }
-        private Hechizos hechizos { get; set; }
+        private unsafe NodoHechizos* siguiente;
+        private Hechizos hechizos;
         public NodoHechizos(Hechizos _hechizos)
         {
             siguiente = null;

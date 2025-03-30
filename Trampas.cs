@@ -27,6 +27,10 @@ namespace Proyecto_Yu_Gi_Oh
         {
             direccion = _direccion;
         }
+        public Image getDireccion()
+        {
+            return direccion;
+        }
 
         public unsafe void efectoBatalla(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
         {
@@ -55,6 +59,10 @@ namespace Proyecto_Yu_Gi_Oh
         public void setDireccion(Image _direccion)
         {
             direccion = _direccion;
+        }
+        public Image getDireccion()
+        {
+            return direccion;
         }
 
         public unsafe void efectoInvocacion(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
