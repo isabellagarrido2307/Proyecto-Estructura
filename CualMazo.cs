@@ -16,5 +16,15 @@ namespace Proyecto_Yu_Gi_Oh
         {
             InitializeComponent();
         }
+
+        private void botonMazoFamilia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botonMazoObliga_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

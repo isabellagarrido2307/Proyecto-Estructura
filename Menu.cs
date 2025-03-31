@@ -23,5 +23,11 @@ namespace Proyecto_Yu_Gi_Oh
             Form1 Duelo = new Form1();
             Duelo.ShowDialog();
         }
+
+        private void botonMazos_Click(object sender, EventArgs e)
+        {
+            CualMazo cualMazo = new CualMazo();
+            cualMazo.ShowDialog();
+        }
     }
 }

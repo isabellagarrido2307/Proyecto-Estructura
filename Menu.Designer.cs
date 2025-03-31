@@ -57,6 +57,7 @@
             botonMazos.Size = new Size(387, 93);
             botonMazos.TabIndex = 1;
             botonMazos.UseVisualStyleBackColor = true;
+            botonMazos.Click += botonMazos_Click;
             // 
             // Menu
             // 

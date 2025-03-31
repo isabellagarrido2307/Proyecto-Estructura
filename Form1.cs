@@ -39,7 +39,7 @@ namespace Proyecto_Yu_Gi_Oh
         {
             // MANO JUGADOR 1
             Nodo* aux = Jugador1.ManoMonstruos.cabeza;
-            while (aux!=null)
+            while (aux != null)
             {
                 ManoJ1.Insertar(aux->getMonstruo().getDireccion());
                 aux = aux->getSiguiente();
@@ -223,7 +223,7 @@ namespace Proyecto_Yu_Gi_Oh
                     J1CampMons5.Image = aux->getImagen();
                 }
             }
-            
+
             // CAMPO MONSTRUOS JUGADOR 2
             aux = CampoMonsJ2.cabeza;
             if (aux != null)
@@ -425,6 +425,11 @@ namespace Proyecto_Yu_Gi_Oh
         }
 
         private void botonDescartar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
