@@ -193,9 +193,59 @@ namespace Proyecto_Yu_Gi_Oh.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BotonActivar {
+            get {
+                object obj = ResourceManager.GetObject("BotonActivar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonColocar {
+            get {
+                object obj = ResourceManager.GetObject("BotonColocar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BotonDuelo {
             get {
                 object obj = ResourceManager.GetObject("BotonDuelo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonEliminarHechizo {
+            get {
+                object obj = ResourceManager.GetObject("BotonEliminarHechizo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonEliminarMostro {
+            get {
+                object obj = ResourceManager.GetObject("BotonEliminarMostro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonEliminarTra {
+            get {
+                object obj = ResourceManager.GetObject("BotonEliminarTra", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

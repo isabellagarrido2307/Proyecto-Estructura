@@ -30,7 +30,7 @@ namespace Proyecto_Yu_Gi_Oh
         {
             return direccion;
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador JugadorAliado, Jugador JugadorEnemigo)
         {
             
         }

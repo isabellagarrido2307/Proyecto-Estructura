@@ -403,6 +403,51 @@ namespace Proyecto_Yu_Gi_Oh
             Jugador2.DeckTrampasInvocacion.InsertarTra(new AgujeroTrampa());
 
         }
+        public unsafe void InvocarMonstruo(Jugador JugadorInvocando, Jugador JugadorEnemigo, string NombreMons)
+        {
+            Nodo* aux = JugadorInvocando.ManoMonstruos.cabeza;
+            while (aux->getMonstruo().getNombre() != NombreMons)
+            {
+                aux = aux->getSiguiente();
+            }
+            aux->getMonstruo().EfectoDespliegue(JugadorInvocando.CampoMonstruos, JugadorEnemigo.CampoMonstruos);
+            JugadorInvocando.CampoMonstruos.Insertar(aux->getMonstruo());
+            JugadorInvocando.ManoMonstruos.Eliminar(aux->getMonstruo());
+        }
+        public unsafe void UsarHechizo(Jugador JugadorUso, Jugador JugadorEnemigo, string NombreHechizo)
+        {
+            NodoHechizos* aux = JugadorUso.ManoHechizos.cabeza;
+            while (aux->getHechizo().getNombre() != NombreHechizo)
+            {
+                aux = aux->getSiguiente();
+            }
+            aux->getHechizo().activarEfecto(JugadorUso, JugadorEnemigo);
+            JugadorUso.Cementerio.CementerioHechizos.Insertar(aux->getHechizo());
+            JugadorUso.ManoHechizos.Eliminar(aux->getHechizo());
+        }
+        public unsafe void DesplegarTrampa(Jugador JugadorAliado, Jugador JugadorEnemigo, string NombreTrampa)
+        {
+            NodoTrampasInvocacion* aux = JugadorAliado.ManoTrampasInvocacion.cabeza;
+            while (aux->getTrampa().getNombre() != NombreTrampa && aux != null)
+            {
+                aux = aux->getSiguiente();
+            }
+            if (aux != null)
+            {
+                JugadorAliado.CampoTrampasInvocacion.InsertarTra(aux->getTrampa());
+                JugadorAliado.ManoTrampasInvocacion.Eliminar(aux->getTrampa());
+            }
+            else
+            {
+                NodoTrampaAtaque* aux2 = JugadorAliado.ManoTrampasAtaque.cabeza;
+                while (aux2->getTrampa().getNombre() != NombreTrampa && aux2 != null)
+                {
+                    aux2 = aux2->getSiguiente();
+                }
+                JugadorAliado.CampoTrampasAtaque.InsertarTr(aux2->getTrampa());
+                JugadorAliado.ManoTrampasAtaque.Eliminar(aux2->getTrampa());
+            }
+        }
 
         private void toolTipDato_Popup(object sender, PopupEventArgs e)
         {
