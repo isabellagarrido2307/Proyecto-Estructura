@@ -14,19 +14,19 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Agujero Oscuro");
             setDireccion(Properties.Resources.AgujeroNegro);
         }
-        public unsafe void efectoInvocacion(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            ListaMonstruos* aux = CampoEnemigo;
-            while (aux->cabeza != null)
+            Nodo* aux = jugadorEnemigo.CampoMonstruos.cabeza;
+            while (aux!= null)
             {
-                CementerioEnemigo->Insertar(aux->cabeza->getMonstruo());
-                CampoEnemigo->Eliminar(aux->cabeza->getMonstruo());
+                jugadorEnemigo.Cementerio.CementerioMonstruos.Insertar(aux->getMonstruo());
+                jugadorEnemigo.CampoMonstruos.Eliminar(aux->getMonstruo());
             }
-            ListaMonstruos* aux1 = CampoAliado;
-            while (aux->cabeza != null)
+            Nodo* aux1 = jugadorAliado.CampoMonstruos.cabeza;
+            while (aux != null)
             {
-                CementerioAliado->Insertar(aux1->cabeza->getMonstruo());
-                CampoAliado->Eliminar(aux1->cabeza->getMonstruo());
+                jugadorAliado.Cementerio.CementerioMonstruos.Insertar(aux1->getMonstruo());
+                jugadorAliado.CampoMonstruos.Eliminar(aux1->getMonstruo());
             }
         }
     }
@@ -38,16 +38,16 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Agujero sin fondo");
             setDireccion(Properties.Resources.AgujeroSinFondo);
         }
-        public unsafe void efectoInvocacion(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // validacion, si invoca, se hace en el main
-            ListaMonstruos* aux = CampoEnemigo;
-            while (aux->cabeza != null)
+            Nodo* aux = jugadorEnemigo.CampoMonstruos.cabeza;
+            while (aux != null)
             {
-                if (aux->cabeza->getMonstruo().getAtaque() < 2000)
+                if (aux->getMonstruo().getAtaque() < 2000)
                 {
-                    CementerioEnemigo->Insertar(aux->cabeza->getMonstruo());
-                    CampoEnemigo->Eliminar(aux->cabeza->getMonstruo());
+                    jugadorEnemigo.Cementerio.CementerioMonstruos.Insertar(aux->getMonstruo());
+                    jugadorEnemigo.CampoMonstruos.Eliminar(aux->getMonstruo());
                 }
             }
         }
@@ -59,16 +59,16 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Agujero Trampa");
             setDireccion(Properties.Resources.AgujeroTrampa);
         }
-        public unsafe void efectoInvocacion(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // validacion, si invoca, se hace en el main
-            Nodo* aux = CampoEnemigo->cabeza;
+            Nodo* aux = jugadorEnemigo.CampoMonstruos.cabeza;
             while (aux != null)
             {
                 if (aux->getMonstruo().getAtaque() < 1000)
                 {
-                    CementerioEnemigo->Insertar(aux->getMonstruo());
-                    CampoEnemigo->Eliminar(aux->getMonstruo());
+                    jugadorEnemigo.Cementerio.CementerioMonstruos.Insertar(aux->getMonstruo());
+                    jugadorEnemigo.CampoMonstruos.Eliminar(aux->getMonstruo());
                 }
             }
         }
@@ -80,9 +80,9 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Armadura Sakuretsu");
             setDireccion(Properties.Resources.ArmaduraSakuretsu);
         }
-        public unsafe void efectoBatalla(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            //se hace en el main
+            // termina la battle phase
         }
     }
     public unsafe class BalatroBalatrez : TrampasAtaque
@@ -92,9 +92,9 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Balatro Balatrez");
             setDireccion(Properties.Resources.BalatroBalatrez);
         }
-        public unsafe void efectoBatalla(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            // clase jugador y main necesarias
+            // termina la battle phase
         }
     }
     public unsafe class CadenasDeSombra : TrampasAtaque
@@ -104,9 +104,9 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Cadenas de Sombra");
             setDireccion(Properties.Resources.CadenasSombra);
         }
-        public unsafe void efectoBatalla(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            // metodo de fase ataque necesaria
+            // termina la battle phase
         }
     }
     public unsafe class CambioPreventivo : TrampasAtaque
@@ -116,9 +116,9 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Cambio Preventivo");
             setDireccion(Properties.Resources.CambioPreventivo);
         }
-        public unsafe void efectoBatalla(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            // metodo de fase ataque necesaria
+            // termina la battle phase
         }
     }
     public unsafe class CilindroMagico : TrampasAtaque
@@ -128,9 +128,9 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Cilindro Magico");
             setDireccion(Properties.Resources.CilindroMagico);
         }
-        public unsafe void efectoBatalla(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            // clase jugador y main necesarias
+            // termina la battle phase
         }
     }
     public unsafe class EngatuzamientoLabioso : TrampasAtaque
@@ -140,7 +140,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Engatuzamiento Labioso");
             setDireccion(Properties.Resources.Engatuzamiento);
         }
-        public unsafe void efectoBatalla(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoAtaque(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // termina la battle phase
         }
@@ -152,7 +152,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Espantapajaros de hierro");
             setDireccion(Properties.Resources.EspantaHierro);
         }
-        public unsafe void efectoBatalla(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // metodo ataque battle phase
         }
@@ -164,14 +164,14 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Espejo de Fuerza");
             setDireccion(Properties.Resources.EspejoFuerza);
         }
-        public unsafe void efectoBatalla(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // si ataca, entonces:
-            ListaMonstruos* aux = CampoEnemigo;
-            while (aux->cabeza != null)
+            Nodo* aux = jugadorEnemigo.CampoMonstruos.cabeza;
+            while (aux != null)
             {
-                CementerioEnemigo->Insertar(aux->cabeza->getMonstruo());
-                CampoEnemigo->Eliminar(aux->cabeza->getMonstruo());
+                jugadorEnemigo.Cementerio.CementerioMonstruos.Insertar(aux->getMonstruo());
+                jugadorEnemigo.CampoMonstruos.Eliminar(aux->getMonstruo());
             }
         }
     }
@@ -182,16 +182,15 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Expropiese");
             setDireccion(Properties.Resources.Expropiese);
         }
-        public unsafe void efectoBatalla(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            // si te atacan, entonces:
-            Nodo* aux = CampoAliado->cabeza;
+            Nodo* aux = jugadorAliado.CampoMonstruos.cabeza;
             if (aux == null)
             {
-                Nodo* aux1 = CampoEnemigo->cabeza;
+                Nodo* aux1 = jugadorEnemigo.CampoMonstruos.cabeza;
                 if (aux1 != null)
                 {
-                    CampoAliado->Insertar(aux1->getMonstruo());
+                    jugadorAliado.CampoMonstruos.Insertar(aux1->getMonstruo());
                     aux1->getMonstruo().setModo(false);
                 }
             }
@@ -204,9 +203,9 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Jarra de la codicia");
             setDireccion(Properties.Resources.JarraCodicia);
         }
-        public unsafe void efectoBatalla(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            // requiere metodo robar carta
+            // requiere robar carta
         }
     }
     public unsafe class LlamarAlCondenado : TrampasInvocacion
@@ -216,20 +215,20 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("LLamar al condenado");
             setDireccion(Properties.Resources.LlamarCondenado);
         }
-        public unsafe void efectoInvocacion(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // si te atacan, entonces:
-            Nodo* aux = CampoAliado->cabeza;
+            Nodo* aux = jugadorAliado.CampoMonstruos.cabeza;
             int contador = 0;
             while (aux != null)
             {
                 contador++;
                 aux = aux->getSiguiente();
             }
-            Nodo* aux1 = CementerioAliado->cabeza;
+            Nodo* aux1 = jugadorAliado.Cementerio.CementerioMonstruos.cabeza;
             if (contador < 5)
             {
-                CampoAliado->Insertar(aux1->getMonstruo());
+                jugadorAliado.CampoMonstruos.Insertar(aux1->getMonstruo());
                 aux1->getMonstruo().setModo(false);
             }
         }
@@ -241,9 +240,9 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Muro de defensa");
             setDireccion(Properties.Resources.MuroDefensa);
         }
-        public unsafe void efectoBatalla(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            // termina battle phase
+            // termina la battle phase
         }
     }
     public unsafe class RobarDestino : TrampasInvocacion
@@ -253,12 +252,12 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Agujero Negro");
             setDireccion(Properties.Resources.RobarDestino);
         }
-        public unsafe void efectoInvocacion(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioEnemigo, ListaMonstruos* CementerioAliado)
+        public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            Nodo* aux = CementerioAliado->cabeza;
+            Nodo* aux = jugadorAliado.Cementerio.CementerioMonstruos.cabeza;
             if (aux != null)
             {
-                CampoAliado->Insertar(aux->getMonstruo());
+                jugadorAliado.CampoMonstruos.Insertar(aux->getMonstruo());
                 aux->getMonstruo().setModo(false);
             }
         }

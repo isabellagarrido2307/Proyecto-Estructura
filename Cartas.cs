@@ -10,11 +10,13 @@ namespace Proyecto_Yu_Gi_Oh
     public class AlaEscudo : Monstruos
     {
         public AlaEscudo()
-        {
+        {   
             setNombre("Ala Escudo");
             setDireccion(Properties.Resources.AlaEscudo);
             setAtaque(100);
             setDefensa(1000);
+            setAtaqueBase(100);
+            setDefensaBase(1000);
             setVidas(2);
             setModo(true);
             if (getModo())
@@ -36,6 +38,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.AlejandroLapiz);
             setAtaque(1000);
             setDefensa(1000);
+            setAtaqueBase(1000);
+            setDefensaBase(1000);
             setVidas(1);
             setModo(true);
             if (getModo())
@@ -61,6 +65,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.Alfonsina);
             setAtaque(1000);
             setDefensa(1200);
+            setAtaqueBase(1000);
+            setDefensaBase(1200);
             setVidas(1);
             setModo(true);
             if (getModo())
@@ -95,6 +101,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.AndresAbsoluto);
             setAtaque(0);
             setDefensa(0);
+            setAtaqueBase(0);
+            setDefensaBase(0);
             setVidas(1);
             setModo(true);
             if (getModo())
@@ -127,6 +135,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.AngelIntegral);
             setAtaque(2000);
             setDefensa(2000);
+            setAtaqueBase(2000);
+            setDefensaBase(2000);
             setVidas(1);
             setModo(true);
             setSalud(getAtaque());
@@ -144,6 +154,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.AymaraPeluche);
             setAtaque(1700);
             setDefensa(1300);
+            setAtaqueBase(1700);
+            setDefensaBase(1300);
             setVidas(1);
             setModo(true);
             setSalud(getAtaque());
@@ -171,6 +183,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.CaballeroOscuro);
             setAtaque(1800);
             setDefensa(1600);
+            setAtaqueBase(1800);
+            setDefensaBase(1600);
             setVidas(1);
             setModo(true);
             setSalud(getAtaque());
@@ -188,6 +202,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.ChacinDomino);
             setAtaque(1600);
             setDefensa(1400);
+            setAtaqueBase(1600);
+            setDefensaBase(1400);
             setVidas(1);
             setModo(true);
             setSalud(getAtaque());
@@ -213,6 +229,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.DragonFuego);
             setAtaque(2500);
             setDefensa(2000);
+            setAtaqueBase(2500);
+            setDefensaBase(2000);
             setVidas(1);
             setModo(true);
             setSalud(getAtaque());
@@ -233,6 +251,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.FamiliaUnida);
             setAtaque(99999);
             setDefensa(99999);
+            setAtaqueBase(99999);
+            setDefensaBase(99999);
             setVidas(1);
             setModo(true);
             setSalud(99999);
@@ -256,6 +276,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.GabrielExperto);
             setAtaque(1500);
             setDefensa(1200);
+            setAtaqueBase(1500);
+            setDefensaBase(1200);
             setVidas(1);
             setModo(true);
             setSalud(getAtaque());
@@ -273,6 +295,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.GinoPeloCotufa);
             setAtaque(1700);
             setDefensa(1300);
+            setAtaqueBase(1700);
+            setDefensaBase(1300);
             setVidas(1);
             setModo(true);
             setSalud(getAtaque());
@@ -297,6 +321,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.GolemPiedra);
             setAtaque(2000);
             setDefensa(2500);
+            setAtaqueBase(2000);
+            setDefensaBase(2500);
             setVidas(1);
             setModo(true);
             setSalud(getAtaque());
@@ -315,6 +341,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.GuerreroRelampago);
             setAtaque(1900);
             setDefensa(1200);
+            setAtaqueBase(1900);
+            setDefensaBase(1200);
             setVidas(1);
             setModo(true);
             setSalud(getAtaque());
@@ -337,6 +365,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.Imitador);
             setAtaque(0);
             setDefensa(0);
+            setAtaqueBase(0);
+            setDefensaBase(0);
             setVidas(1);
             setModo(true);
             setSalud(getAtaque());
@@ -370,6 +400,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.IsabellaGatos);
             setAtaque(1300);
             setDefensa(1600);
+            setAtaqueBase(1300);
+            setDefensaBase(1600);
             setVidas(1);
             setModo(true);
             setSalud(getAtaque());
@@ -393,6 +425,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.Kuriboh);
             setAtaque(500);
             setDefensa(500);
+            setAtaqueBase(500);
+            setDefensaBase(500);
             setModo(true);
             setSalud(0);
             setTurnosDeEstado(0);
@@ -417,6 +451,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.KuribohAlado);
             setAtaque(500);
             setDefensa(500);
+            setAtaqueBase(500);
+            setDefensaBase(500);
             setModo(true);
             setSalud(0);
             setTurnosDeEstado(0);
@@ -440,6 +476,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.LadronFantasma);
             setAtaque(1600);
             setDefensa(1400);
+            setAtaqueBase(1600);
+            setDefensaBase(1400);
             setModo(true);
             setSalud(0);
             setTurnosDeEstado(0);
@@ -459,6 +497,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.MagoSombrio);
             setAtaque(1700);
             setDefensa(1300);
+            setAtaqueBase(1700);
+            setDefensaBase(1300);
             setModo(true);
             setSalud(0);
             setTurnosDeEstado(0);
@@ -478,6 +518,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.MiguelMondaquera);
             setAtaque(1600);
             setDefensa(1700);
+            setAtaqueBase(1600);
+            setDefensaBase(1700);
             setModo(true);
             setSalud(0);
             setTurnosDeEstado(0);
@@ -497,6 +539,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.PollueloSonico);
             setAtaque(900);
             setDefensa(900);
+            setAtaqueBase(900);
+            setDefensaBase(900);
             setModo(true);
             setSalud(0);
             setTurnosDeEstado(0);
@@ -519,6 +563,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.RataBlindada);
             setAtaque(500);
             setDefensa(2000);
+            setAtaqueBase(500);
+            setDefensaBase(2000);
             setModo(true);
             setSalud(0);
             setTurnosDeEstado(0);
@@ -538,6 +584,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.RoedorMalicioso);
             setAtaque(1400);
             setDefensa(1200);
+            setAtaqueBase(1400);
+            setDefensaBase(1200);
             setModo(true);
             setSalud(0);
             setTurnosDeEstado(0);
@@ -557,6 +605,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.RompeEscudos);
             setAtaque(1000);
             setDefensa(800);
+            setAtaqueBase(1000);
+            setDefensaBase(800);
             setModo(true);
             setSalud(0);
             setTurnosDeEstado(0);
@@ -579,6 +629,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.SebastianGacha);
             setAtaque(1200);
             setDefensa(1300);
+            setAtaqueBase(1200);
+            setDefensaBase(1300);
             setModo(true);
             setSalud(0);
             setTurnosDeEstado(0);
@@ -603,6 +655,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.SergioEmbaucador);
             setAtaque(1500);
             setDefensa(1500);
+            setAtaqueBase(1500);
+            setDefensaBase(1500);
             setModo(true);
             setSalud(0);
             setTurnosDeEstado(0);
@@ -628,6 +682,8 @@ namespace Proyecto_Yu_Gi_Oh
             setDireccion(Properties.Resources.SliferCielo);
             setAtaque(0);
             setDefensa(0);
+            setAtaqueBase(0);
+            setDefensaBase(0);
             setModo(true);
             setSalud(0);
             setTurnosDeEstado(0);

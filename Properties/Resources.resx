@@ -124,8 +124,8 @@
   <data name="RataBlindada" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Monstruos\RataBlindada.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AgujeroSinFondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\Cartas\Trampas\AgujeroSinFondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\FondoYBotones\Eliminar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\FondoYBotones\Default.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,14 +133,17 @@
   <data name="Fases" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\FondoYBotones\Fases.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MenuFondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\FondoYBotones\MenuFondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="DragonFuego" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Monstruos\DragonFuego.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AymaraPeluche" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Monstruos\AymaraPeluche.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TormentaRelampago" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\Cartas\Hechizos\TormentaRelampago.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Atacar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\FondoYBotones\Atacar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CambiarModo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\FondoYBotones\CambiarModo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,14 +166,11 @@
   <data name="Versus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\FondoYBotones\Versus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Raigeki" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\Cartas\Hechizos\Raigeki.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SebastianGacha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\SebastianGacha.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CambioPreventivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Trampas\CambioPreventivo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RompeEscudos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\Cartas\Monstruos\RompeEscudos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SergioEmbaucador" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Monstruos\SergioEmbaucador.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +196,9 @@
   <data name="CilindroMagico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Trampas\CilindroMagico.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AlaEscudo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\AlaEscudo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="InterfazNueva" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\FondoYBotones\InterfazNueva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,6 +214,9 @@
   <data name="Expropiese" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Trampas\Expropiese.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AndresAbsoluto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\AndresAbsoluto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ProvisionesEmergencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Hechizos\ProvisionesEmergencia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -220,14 +226,17 @@
   <data name="GuerreroRelampago" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Monstruos\GuerreroRelampago.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BotonEliminarTra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\FondoYBotones\BotonEliminarTra.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SliferCielo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Monstruos\SliferCielo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BotonActivar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\FondoYBotones\BotonActivar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BotonColocar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\FondoYBotones\BotonColocar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TormentaFlamas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\TormentaFlamas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CadenasSombra" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Trampas\CadenasSombra.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,17 +262,17 @@
   <data name="CuracionSuprema" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Hechizos\CuracionSuprema.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Atacar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\FondoYBotones\Atacar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RecargaMagica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\RecargaMagica.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TormentaRelampago" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\TormentaRelampago.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EspejoFuerza" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Trampas\EspejoFuerza.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OllaCodicia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Hechizos\OllaCodicia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fase2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\FondoYBotones\Fase2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AgujeroTrampa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Trampas\AgujeroTrampa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,8 +283,11 @@
   <data name="Alfonsina" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Monstruos\Alfonsina.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\FondoYBotones\Eliminar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GabrielExperto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\GabrielExperto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonColocar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\FondoYBotones\BotonColocar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LadronFantasma" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Monstruos\LadronFantasma.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -292,32 +304,26 @@
   <data name="Invocar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\FondoYBotones\Invocar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BotonDuelo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\FondoYBotones\BotonDuelo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cementerio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\FondoYBotones\Cementerio.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="NegarDefensa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Hechizos\NegarDefensa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RecargaMagica" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\Cartas\Hechizos\RecargaMagica.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Raigeki" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Hechizos\Raigeki.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fase1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\FondoYBotones\Fase1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GabrielExperto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\Cartas\Monstruos\GabrielExperto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fase2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\FondoYBotones\Fase2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EspantaHierro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Trampas\EspantaHierro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AndresAbsoluto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\Cartas\Monstruos\AndresAbsoluto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BotonDuelo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\FondoYBotones\BotonDuelo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MenuFondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\FondoYBotones\MenuFondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RompeEscudos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Monstruos\RompeEscudos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EspadaDestino" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Hechizos\EspadaDestino.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,14 +337,11 @@
   <data name="Engatuzamiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Trampas\Engatuzamiento.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TormentaFlamas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\Cartas\Hechizos\TormentaFlamas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="PollueloSonico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Monstruos\PollueloSonico.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SebastianGacha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\Cartas\Monstruos\SebastianGacha.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AgujeroSinFondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\Cartas\Trampas\AgujeroSinFondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BotonMazo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\FondoYBotones\BotonMazo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -352,13 +355,13 @@
   <data name="Kuriboh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Monstruos\Kuriboh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AlaEscudo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\Cartas\Monstruos\AlaEscudo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cementerio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\FondoYBotones\Cementerio.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ArremetidaFuriosa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Yu-Gi-Oh\Cartas\Hechizos\ArremetidaFuriosa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BotonEliminarTra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Yu-Gi-Oh\FondoYBotones\BotonEliminarTra.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BotonAtacar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Yu-Gi-Oh\FondoYBotones\BotonAtacar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

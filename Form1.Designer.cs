@@ -56,8 +56,6 @@
             botonCambiarModo = new Button();
             botonInvocar = new Button();
             BotonCambiarFase = new Button();
-            Fase3 = new PictureBox();
-            Fase2 = new PictureBox();
             Fase1 = new PictureBox();
             Fase = new Label();
             FaseNormal = new PictureBox();
@@ -124,8 +122,6 @@
             ((System.ComponentModel.ISupportInitialize)CartaAtacanteR).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox46).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Fase3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Fase2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Fase1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FaseNormal).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -196,8 +192,6 @@
             panel1.Controls.Add(botonCambiarModo);
             panel1.Controls.Add(botonInvocar);
             panel1.Controls.Add(BotonCambiarFase);
-            panel1.Controls.Add(Fase3);
-            panel1.Controls.Add(Fase2);
             panel1.Controls.Add(Fase1);
             panel1.Controls.Add(Fase);
             panel1.Controls.Add(FaseNormal);
@@ -209,6 +203,7 @@
             // 
             // comboBoxManoTra
             // 
+            comboBoxManoTra.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxManoTra.FormattingEnabled = true;
             comboBoxManoTra.Location = new Point(171, 472);
             comboBoxManoTra.Margin = new Padding(3, 2, 3, 2);
@@ -239,6 +234,7 @@
             botonColocarTra.Size = new Size(73, 38);
             botonColocarTra.TabIndex = 65;
             botonColocarTra.UseVisualStyleBackColor = true;
+            botonColocarTra.Click += botonColocarTra_Click;
             // 
             // botonEliminarTra
             // 
@@ -263,6 +259,7 @@
             botonActivarHechizo.Size = new Size(73, 38);
             botonActivarHechizo.TabIndex = 63;
             botonActivarHechizo.UseVisualStyleBackColor = true;
+            botonActivarHechizo.Click += botonActivarHechizo_Click;
             // 
             // botonEliminarHechizo
             // 
@@ -275,6 +272,7 @@
             botonEliminarHechizo.Size = new Size(73, 38);
             botonEliminarHechizo.TabIndex = 62;
             botonEliminarHechizo.UseVisualStyleBackColor = true;
+            botonEliminarHechizo.Click += botonEliminarHechizo_Click;
             // 
             // botonEliminarMounstro
             // 
@@ -287,6 +285,7 @@
             botonEliminarMounstro.Size = new Size(73, 38);
             botonEliminarMounstro.TabIndex = 61;
             botonEliminarMounstro.UseVisualStyleBackColor = true;
+            botonEliminarMounstro.Click += botonEliminarMounstro_Click;
             // 
             // comboBoxCampoAliado
             // 
@@ -363,6 +362,7 @@
             // 
             // botonAtacar
             // 
+            botonAtacar.BackgroundImage = Properties.Resources.BotonAtacar;
             botonAtacar.BackgroundImageLayout = ImageLayout.Stretch;
             botonAtacar.FlatAppearance.BorderSize = 0;
             botonAtacar.Location = new Point(122, 161);
@@ -479,6 +479,7 @@
             botonInvocar.Size = new Size(73, 38);
             botonInvocar.TabIndex = 7;
             botonInvocar.UseVisualStyleBackColor = true;
+            botonInvocar.Click += botonInvocar_Click;
             // 
             // BotonCambiarFase
             // 
@@ -493,30 +494,7 @@
             BotonCambiarFase.TabIndex = 6;
             BotonCambiarFase.Text = "Siguiente Fase";
             BotonCambiarFase.UseVisualStyleBackColor = false;
-            // 
-            // Fase3
-            // 
-            Fase3.BackColor = Color.Red;
-            Fase3.Image = Properties.Resources.Fase3;
-            Fase3.Location = new Point(18, 53);
-            Fase3.Margin = new Padding(3, 2, 3, 2);
-            Fase3.Name = "Fase3";
-            Fase3.Size = new Size(314, 74);
-            Fase3.SizeMode = PictureBoxSizeMode.StretchImage;
-            Fase3.TabIndex = 5;
-            Fase3.TabStop = false;
-            // 
-            // Fase2
-            // 
-            Fase2.BackColor = Color.Red;
-            Fase2.Image = Properties.Resources.Fase2;
-            Fase2.Location = new Point(15, 53);
-            Fase2.Margin = new Padding(3, 2, 3, 2);
-            Fase2.Name = "Fase2";
-            Fase2.Size = new Size(314, 74);
-            Fase2.SizeMode = PictureBoxSizeMode.StretchImage;
-            Fase2.TabIndex = 4;
-            Fase2.TabStop = false;
+            BotonCambiarFase.Click += BotonCambiarFase_Click;
             // 
             // Fase1
             // 
@@ -900,6 +878,7 @@
             J1Mano1.SizeMode = PictureBoxSizeMode.StretchImage;
             J1Mano1.TabIndex = 31;
             J1Mano1.TabStop = false;
+            J1Mano1.Click += J1Mano1_Click;
             // 
             // J1Mano2
             // 
@@ -912,6 +891,7 @@
             J1Mano2.SizeMode = PictureBoxSizeMode.StretchImage;
             J1Mano2.TabIndex = 32;
             J1Mano2.TabStop = false;
+            J1Mano2.Click += J1Mano2_Click;
             // 
             // J1Mano3
             // 
@@ -1249,8 +1229,6 @@
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox46).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Fase3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Fase2).EndInit();
             ((System.ComponentModel.ISupportInitialize)Fase1).EndInit();
             ((System.ComponentModel.ISupportInitialize)FaseNormal).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -1368,8 +1346,6 @@
         private PictureBox CementerioJ2;
         private PictureBox MazoJ1;
         private PictureBox MazoJ2;
-        private PictureBox Fase3;
-        private PictureBox Fase2;
         private PictureBox Fase1;
         private Button BotonCambiarFase;
         private ToolTip toolTipDato;

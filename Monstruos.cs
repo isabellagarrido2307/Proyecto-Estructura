@@ -12,11 +12,13 @@ namespace Proyecto_Yu_Gi_Oh
         private Image direccion {  get; set; }
         private int ataque {  get; set; }
         private int defensa { get; set; }
+        private int ataqueBase { get; set; }
+        private int defensaBase { get; set; }
         private bool modo { get; set; }
         private int salud {  get; set; }
         private int turnosDeEstado { get; set; }
         private int vidas {  get; set; }
-
+        
         public unsafe Monstruos()
         {
             
@@ -32,6 +34,14 @@ namespace Proyecto_Yu_Gi_Oh
         public int getDefensa()
         {
             return defensa;
+        }
+        public int getAtaqueBase()
+        {
+            return ataqueBase;
+        }
+        public int getDefensaBase()
+        {
+            return defensaBase;
         }
         public bool getModo()
         {
@@ -64,6 +74,14 @@ namespace Proyecto_Yu_Gi_Oh
         public void setDefensa(int _defensa)
         {
             defensa = _defensa;
+        }
+        public void setAtaqueBase(int _ataqueBase)
+        {
+            ataque = _ataqueBase;
+        }
+        public void setDefensaBase(int _defensaBase)
+        {
+            defensa = _defensaBase;
         }
         public void setModo(bool _modo)
         {

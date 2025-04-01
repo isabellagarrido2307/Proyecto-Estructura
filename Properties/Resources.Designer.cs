@@ -203,6 +203,16 @@ namespace Proyecto_Yu_Gi_Oh.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BotonAtacar {
+            get {
+                object obj = ResourceManager.GetObject("BotonAtacar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BotonColocar {
             get {
                 object obj = ResourceManager.GetObject("BotonColocar", resourceCulture);

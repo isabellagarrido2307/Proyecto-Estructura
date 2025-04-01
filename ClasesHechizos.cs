@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,10 +14,11 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Arremetida Imprudente");
             setDireccion(Properties.Resources.ArremetidaFuriosa);
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            Monstruo->setAtaque(Monstruo->getAtaque()+700);
-            Monstruo->setTurnosDeEstado(1);
+            jugadorAliado.CampoMonstruos.cabeza->getMonstruo().
+            setAtaque(jugadorAliado.CampoMonstruos.cabeza->getMonstruo().getAtaque() + 700);
+            jugadorAliado.CampoMonstruos.cabeza->getMonstruo().setTurnosDeEstado(1);
         }
     }
     public unsafe class CambioFidelidad  : Hechizos
@@ -26,7 +28,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Cambio de Fidelidad");
             setDireccion(Properties.Resources.CambioFidel);
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             
         }
@@ -38,7 +40,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Control Mental");
             setDireccion(Properties.Resources.ControlMental);
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
 
         }
@@ -50,9 +52,9 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Curacion Suprema");
             setDireccion(Properties.Resources.CuracionSuprema);
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            *Vida = *Vida + 2000;
+            jugadorAliado.Vida = jugadorAliado.Vida + 2000;
         }
     }
     public unsafe class EspadaDestino : Hechizos
@@ -62,10 +64,11 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Espada del Destino");
             setDireccion(Properties.Resources.EspadaDestino);
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            Monstruo->setAtaque(Monstruo->getAtaque() + 1000);
-            Monstruo->setTurnosDeEstado(1);
+            jugadorAliado.CampoMonstruos.cabeza->getMonstruo().
+            setAtaque(jugadorAliado.CampoMonstruos.cabeza->getMonstruo().getAtaque() + 1000);
+            jugadorAliado.CampoMonstruos.cabeza->getMonstruo().setTurnosDeEstado(1);
         }
     }
     public unsafe class EspadaEscudo : Hechizos
@@ -75,25 +78,39 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Espada por Escudo");
             setDireccion(Properties.Resources.EspadaEscudo);
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            Monstruo->setAtaque(Monstruo->getDefensa());
-            Monstruo->setDefensa(Monstruo->getAtaque());
-            Monstruo->setTurnosDeEstado(1);
+            jugadorAliado.CampoMonstruos.cabeza->getMonstruo().
+            setAtaque(jugadorAliado.CampoMonstruos.cabeza->getMonstruo().getDefensa());
+            jugadorAliado.CampoMonstruos.cabeza->getMonstruo().
+            setDefensa(jugadorAliado.CampoMonstruos.cabeza->getMonstruo().getAtaque());
+            jugadorAliado.CampoMonstruos.cabeza->getMonstruo().setTurnosDeEstado(1);
         }
     }
-    public unsafe class FuriaDragoniana : Hechizos
+    public unsafe class FuriaDragoniana : Hechizos //esta mal
     {
         public FuriaDragoniana()
         {
             setNombre("Furia Dragoniana");
             setDireccion(Properties.Resources.FuriaDragoniana);
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            Monstruo->setAtaque(Monstruo->getAtaque() + 500);
-            Monstruo->setDefensa(Monstruo->getDefensa() - 400);
-            Monstruo->setTurnosDeEstado(1);
+            int contador = 0;
+            Nodo* aux = jugadorAliado.Cementerio.CementerioMonstruos.cabeza; 
+            while (aux != null)
+            {
+                contador++;
+                aux = aux->getSiguiente();
+            }
+            if (jugadorAliado.Vida - contador * 200 >= 0)
+            {
+                jugadorAliado.Vida = 0;
+            }
+            else
+            {
+                jugadorAliado.Vida = jugadorAliado.Vida - contador * 200;
+            }
         }
     }
     public unsafe class MonstruoRenacido : Hechizos
@@ -103,15 +120,15 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Monstruo Renacido");
             setDireccion(Properties.Resources.MonstruoRenacido);
         }
-        public unsafe void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public unsafe void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            if (*Vida+2000 >= 8000)
+            if (jugadorAliado.Vida + 2000 >= 8000)
             {
-                *Vida = 8000;
+                jugadorAliado.Vida = 8000;
             }
             else
             {
-                *Vida = *Vida + 2000;
+                jugadorAliado.Vida = jugadorAliado.Vida + 2000;
             }
         }
     }
@@ -122,9 +139,9 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Negar Defensa");
             setDireccion(Properties.Resources.NegarDefensa);
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            Monstruo->setModo(false);
+            jugadorAliado.CampoMonstruos.cabeza->getMonstruo().setModo(false);
         }
     }
     public unsafe class OllaCodicia : Hechizos
@@ -134,7 +151,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Olla de la Codicia");
             setDireccion(Properties.Resources.OllaCodicia);
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
 
         }
@@ -146,11 +163,12 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Pacto Demoníaco");
             setDireccion(Properties.Resources.PactoDemoniaco);
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            Monstruo->setAtaque(Monstruo->getAtaque() * 2);
-            Monstruo->setDefensa(0);
-            Monstruo->setTurnosDeEstado(1);
+            jugadorAliado.CampoMonstruos.cabeza->getMonstruo().
+            setAtaque(jugadorAliado.CampoMonstruos.cabeza->getMonstruo().getAtaque()*2);
+            jugadorAliado.CampoMonstruos.cabeza->getMonstruo().setDefensa(0);
+            jugadorAliado.CampoMonstruos.cabeza->getMonstruo().setTurnosDeEstado(1);
         }
     }
     public unsafe class ProvisionesEmergencia : Hechizos
@@ -160,22 +178,22 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Provisiones de Emergencia");
             setDireccion(Properties.Resources.ProvisionesEmergencia);
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             int contador = 0;
-            Nodo* aux = Cementerio->cabeza;
+            Nodo* aux = jugadorAliado.Cementerio.CementerioMonstruos.cabeza; //a segun
             while (aux != null)
             {
                 contador++;
                 aux = aux->getSiguiente();
             }
-            if (*Vida + contador * 300 >= 8000)
+            if (jugadorAliado.Vida + contador * 300 >= 8000)
             {
-                *Vida = 8000;
+                jugadorAliado.Vida = 8000;
             }
             else
             {
-                *Vida = *Vida + contador * 300;
+                jugadorAliado.Vida = jugadorAliado.Vida + contador * 300;
             }
         }
     }
@@ -186,10 +204,10 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Raigeki");
             setDireccion(Properties.Resources.Raigeki);
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            Cementerio->Insertar(*Monstruo);
-            Campo->Eliminar(*Monstruo);
+            jugadorEnemigo.Cementerio.CementerioMonstruos.Insertar(jugadorAliado.CampoMonstruos.cabeza->getMonstruo());
+            jugadorEnemigo.CampoMonstruos.Eliminar(jugadorAliado.CampoMonstruos.cabeza->getMonstruo());
         }
     }
     public unsafe class RecargaMagica : Hechizos
@@ -199,7 +217,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Recarga Mágica");
             setDireccion(Properties.Resources.RecargaMagica);
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
         }
     }
@@ -210,9 +228,9 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Tormenta de Flamas");
             setDireccion(Properties.Resources.TormentaFlamas);
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            Vida -= 800;
+            jugadorEnemigo.Vida -= 800;
         }
     }
     public unsafe class TormentaRelampagos : Hechizos
@@ -222,15 +240,15 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Tormenta Relámpago");
             setDireccion(Properties.Resources.TormentaRelampago);
         }
-        public void activarEfecto(Monstruos* Monstruo, ListaMonstruos* Campo, ListaMonstruos* Cementerio, int* Vida)
+        public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            Nodo* aux = Campo->cabeza;
+            Nodo* aux = jugadorAliado.CampoMonstruos.cabeza;
             while (aux != null)
             {
                 if (aux->getMonstruo().getAtaque() < 2000)
                 {
-                    Cementerio->Insertar(aux->getMonstruo());
-                    Campo->Eliminar(aux->getMonstruo());
+                    jugadorEnemigo.Cementerio.CementerioMonstruos.Insertar(aux->getMonstruo());
+                    jugadorEnemigo.CampoMonstruos.Eliminar(aux->getMonstruo());
                 }
                 aux = aux->getSiguiente();
             }

@@ -65,7 +65,7 @@ namespace Proyecto_Yu_Gi_Oh
             return direccion;
         }
 
-        public unsafe void efectoInvocacion(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioEnemigo, ListaMonstruos CementerioAliado)
+        public unsafe void efectoInvocacion(Jugador J1, Jugador j2)
         {
 
         }
