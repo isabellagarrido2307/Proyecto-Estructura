@@ -9,10 +9,16 @@ namespace Proyecto_Yu_Gi_Oh
 {
     public unsafe class ListaTrampasInvocacion
     {
+        private int tamano;
         public NodoTrampasInvocacion* cabeza;
         public ListaTrampasInvocacion()
         {
+            tamano = 0;
             this.cabeza = null;
+        }
+        public int getTamano()
+        {
+            return tamano;
         }
         public unsafe void InsertarTra(TrampasInvocacion _trampas)
         {
@@ -28,26 +34,31 @@ namespace Proyecto_Yu_Gi_Oh
                 nuevo->setSiguiente(this.cabeza);
                 this.cabeza = nuevo;
             }
+            tamano++;
         }
         public void Eliminar(TrampasInvocacion _trampas)
         {
             NodoTrampasInvocacion* aux = cabeza;
-            NodoTrampasInvocacion* aux2 = cabeza;
-            if (cabeza->getTrampa() == _trampas)
-            {
-                cabeza = cabeza->getSiguiente();
-                return;
-            }
+            NodoTrampasInvocacion* aux2 = null;
             while (aux != null)
             {
                 if (aux->getTrampa() == _trampas)
                 {
-                    aux2->setSiguiente(aux->getSiguiente());
+                    if(aux2 == null)
+                    {
+                        cabeza = aux->getSiguiente();
+                    }
+                    else
+                    {
+                        aux2->setSiguiente(aux->getSiguiente());
+                    }
+                    Marshal.FreeHGlobal((IntPtr)aux);
                     return;
                 }
                 aux2 = aux;
                 aux = aux->getSiguiente();
             }
+            tamano--;
         }
     }
 }

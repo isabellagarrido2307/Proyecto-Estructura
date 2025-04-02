@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Lo que estoy trabajando hoy\\Interfaz\\Proyecto-Estructura\\Proyecto Yu-Gi-Oh.csproj",
+      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Proyecto Yu-Gi-Oh.csproj",
       "projectName": "Proyecto Yu-Gi-Oh",
-      "projectPath": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Lo que estoy trabajando hoy\\Interfaz\\Proyecto-Estructura\\Proyecto Yu-Gi-Oh.csproj",
+      "projectPath": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Proyecto Yu-Gi-Oh.csproj",
       "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Lo que estoy trabajando hoy\\Interfaz\\Proyecto-Estructura\\obj\\",
+      "outputPath": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual Shared\\NuGetPackages"

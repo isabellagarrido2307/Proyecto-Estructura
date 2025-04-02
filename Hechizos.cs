@@ -30,9 +30,9 @@ namespace Proyecto_Yu_Gi_Oh
         {
             return direccion;
         }
-        public void activarEfecto(Jugador JugadorAliado, Jugador JugadorEnemigo)
+        virtual public void activarEfecto(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
-            
+
         }
     }
 }

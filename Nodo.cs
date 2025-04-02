@@ -31,7 +31,5 @@ namespace Proyecto_Yu_Gi_Oh
         {
             monstruo = _monstruo;
         }
-
-
     }
 }

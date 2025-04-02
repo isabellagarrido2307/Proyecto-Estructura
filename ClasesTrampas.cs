@@ -14,7 +14,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Agujero Oscuro");
             setDireccion(Properties.Resources.AgujeroNegro);
         }
-        public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             Nodo* aux = jugadorEnemigo.CampoMonstruos.cabeza;
             while (aux!= null)
@@ -38,7 +38,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Agujero sin fondo");
             setDireccion(Properties.Resources.AgujeroSinFondo);
         }
-        public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // validacion, si invoca, se hace en el main
             Nodo* aux = jugadorEnemigo.CampoMonstruos.cabeza;
@@ -59,7 +59,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Agujero Trampa");
             setDireccion(Properties.Resources.AgujeroTrampa);
         }
-        public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // validacion, si invoca, se hace en el main
             Nodo* aux = jugadorEnemigo.CampoMonstruos.cabeza;
@@ -80,7 +80,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Armadura Sakuretsu");
             setDireccion(Properties.Resources.ArmaduraSakuretsu);
         }
-        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // termina la battle phase
         }
@@ -92,7 +92,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Balatro Balatrez");
             setDireccion(Properties.Resources.BalatroBalatrez);
         }
-        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // termina la battle phase
         }
@@ -104,7 +104,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Cadenas de Sombra");
             setDireccion(Properties.Resources.CadenasSombra);
         }
-        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // termina la battle phase
         }
@@ -116,7 +116,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Cambio Preventivo");
             setDireccion(Properties.Resources.CambioPreventivo);
         }
-        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // termina la battle phase
         }
@@ -128,7 +128,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Cilindro Magico");
             setDireccion(Properties.Resources.CilindroMagico);
         }
-        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // termina la battle phase
         }
@@ -140,7 +140,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Engatuzamiento Labioso");
             setDireccion(Properties.Resources.Engatuzamiento);
         }
-        public unsafe void efectoAtaque(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // termina la battle phase
         }
@@ -152,7 +152,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Espantapajaros de hierro");
             setDireccion(Properties.Resources.EspantaHierro);
         }
-        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // metodo ataque battle phase
         }
@@ -164,7 +164,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Espejo de Fuerza");
             setDireccion(Properties.Resources.EspejoFuerza);
         }
-        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // si ataca, entonces:
             Nodo* aux = jugadorEnemigo.CampoMonstruos.cabeza;
@@ -182,7 +182,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Expropiese");
             setDireccion(Properties.Resources.Expropiese);
         }
-        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             Nodo* aux = jugadorAliado.CampoMonstruos.cabeza;
             if (aux == null)
@@ -203,7 +203,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Jarra de la codicia");
             setDireccion(Properties.Resources.JarraCodicia);
         }
-        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // requiere robar carta
         }
@@ -215,7 +215,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("LLamar al condenado");
             setDireccion(Properties.Resources.LlamarCondenado);
         }
-        public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // si te atacan, entonces:
             Nodo* aux = jugadorAliado.CampoMonstruos.cabeza;
@@ -240,7 +240,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Muro de defensa");
             setDireccion(Properties.Resources.MuroDefensa);
         }
-        public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             // termina la battle phase
         }
@@ -252,7 +252,7 @@ namespace Proyecto_Yu_Gi_Oh
             setNombre("Agujero Negro");
             setDireccion(Properties.Resources.RobarDestino);
         }
-        public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        override public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
             Nodo* aux = jugadorAliado.Cementerio.CementerioMonstruos.cabeza;
             if (aux != null)

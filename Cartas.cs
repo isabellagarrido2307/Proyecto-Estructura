@@ -48,11 +48,11 @@ namespace Proyecto_Yu_Gi_Oh
             }
             else
             {
-                setSalud(1000);
+                  setSalud(1000);
             }
-            setTurnosDeEstado(0);
+          setTurnosDeEstado(0);
         }
-        public unsafe void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioAliado, ListaMonstruos* CementerioEnemigo, Monstruos* CartaAtacar)
+        override public unsafe void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
         {
             setAtaque(getAtaque() / 2);
         }
@@ -78,18 +78,18 @@ namespace Proyecto_Yu_Gi_Oh
                 setSalud(1200);
             }
         }
-        public unsafe void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        override public unsafe void EfectoDespliegue(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo)
         {
-            ListaMonstruos* aux = CampoAliado;
-            while (aux->cabeza != null)
+            Nodo* aux = CampoAliado.cabeza;
+            while (aux!= null)
             {
-                if (aux->cabeza->getMonstruo().getNombre() == "Aymara Reina Peluche")
+                if (aux->getMonstruo().getNombre() == "Aymara Reina Peluche")
                 {
                     this.setAtaque(2000);
                     this.setDefensa(2200);
                     return;
                 }
-                aux->cabeza = aux->cabeza->getSiguiente();
+                aux = aux->getSiguiente();
             }
         }
     }
@@ -115,9 +115,9 @@ namespace Proyecto_Yu_Gi_Oh
             }
 
         }
-        public unsafe void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        override public unsafe void EfectoDespliegue(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo)
         {
-            Nodo* aux = CampoAliado->cabeza;
+            Nodo* aux = CampoAliado.cabeza;
             while (aux != null)
             {
                 aux->getMonstruo().setAtaque(0);
@@ -141,7 +141,7 @@ namespace Proyecto_Yu_Gi_Oh
             setModo(true);
             setSalud(getAtaque());
         }
-        public unsafe void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        override public unsafe void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
         {
             this.setAtaque(getAtaque() + 100);
         }
@@ -160,9 +160,9 @@ namespace Proyecto_Yu_Gi_Oh
             setModo(true);
             setSalud(getAtaque());
         }
-        public unsafe void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        override public unsafe void EfectoDespliegue(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo)
         {
-            Nodo* aux = CampoAliado->cabeza;
+            Nodo* aux = CampoAliado.cabeza;
             int contador = 0;
             while (aux != null)
             {
@@ -171,7 +171,7 @@ namespace Proyecto_Yu_Gi_Oh
             }
             if (contador <= 6)
             {
-                CampoAliado->Insertar(new Alfonsina());
+                CampoAliado.Insertar(new Alfonsina());
             }
         }
     }
@@ -189,7 +189,7 @@ namespace Proyecto_Yu_Gi_Oh
             setModo(true);
             setSalud(getAtaque());
         }
-        public unsafe void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        override public unsafe void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
         {
 
         }
@@ -208,15 +208,15 @@ namespace Proyecto_Yu_Gi_Oh
             setModo(true);
             setSalud(getAtaque());
         }
-        public unsafe void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioAliado, ListaMonstruos* CementerioEnemigo)
+        override public unsafe void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
         {
-            Nodo* aux = CampoEnemigo->cabeza;
+            Nodo* aux = CampoEnemigo.cabeza;
             while (aux!= null)
             {
                 if (aux->getMonstruo().getAtaque() < this.getAtaque())
                 {
-                    CementerioEnemigo->Insertar(aux->getMonstruo());
-                    CampoEnemigo->Eliminar(aux->getMonstruo());
+                    CementerioEnemigo.Insertar(aux->getMonstruo());
+                    CampoEnemigo.Eliminar(aux->getMonstruo());
                 }
             }
         }
@@ -235,11 +235,11 @@ namespace Proyecto_Yu_Gi_Oh
             setModo(true);
             setSalud(getAtaque());
         }
-        public unsafe void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioAliado, ListaMonstruos* CementerioEnemigo, Monstruos* CartaAtacar)
+        override public unsafe void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
         {
-            if (CartaAtacar->getDefensa() < 1500)
+            if (CartaAtacar.getDefensa() < 1500)
             {
-                CampoEnemigo->Eliminar(*CartaAtacar);
+                CampoEnemigo.Eliminar(CartaAtacar);
             }
         }
     }
@@ -257,9 +257,9 @@ namespace Proyecto_Yu_Gi_Oh
             setModo(true);
             setSalud(99999);
         }
-        public unsafe void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        override public unsafe void EfectoDespliegue(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo)
         {
-            Nodo* aux = CampoAliado->cabeza;
+            Nodo* aux = CampoAliado.cabeza;
             while (aux != null)
             {
                 aux->getMonstruo().setAtaque(9999);
@@ -282,7 +282,7 @@ namespace Proyecto_Yu_Gi_Oh
             setModo(true);
             setSalud(getAtaque());
         }
-        public unsafe void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        override public unsafe void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
         {
             setAtaque(getAtaque() + 100);
         }
@@ -301,9 +301,9 @@ namespace Proyecto_Yu_Gi_Oh
             setModo(true);
             setSalud(getAtaque());
         }
-        public unsafe void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        override public unsafe void EfectoDespliegue(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo)
         {
-            Nodo* aux = CampoEnemigo->cabeza;
+            Nodo* aux = CampoEnemigo.cabeza;
             int contador = 0;
             while (aux != null)
             {
@@ -328,7 +328,7 @@ namespace Proyecto_Yu_Gi_Oh
             setSalud(getAtaque());
             setTurnosDeEstado(0);
         }
-        public unsafe void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        override public unsafe void EfectoDespliegue(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo)
         {
             
         }
@@ -347,9 +347,9 @@ namespace Proyecto_Yu_Gi_Oh
             setModo(true);
             setSalud(getAtaque());
         }
-        public unsafe void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        override public unsafe void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
         {
-            Nodo* aux = CampoAliado->cabeza;
+            Nodo* aux = CampoAliado.cabeza;
             while (aux != null)
             {
                 aux->getMonstruo().setAtaque(aux->getMonstruo().getAtaque() + 100);
@@ -371,9 +371,9 @@ namespace Proyecto_Yu_Gi_Oh
             setModo(true);
             setSalud(getAtaque());
         }
-        public unsafe void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        override public unsafe void EfectoDespliegue(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo)
         {
-            Nodo* aux = CampoEnemigo->cabeza;
+            Nodo* aux = CampoEnemigo.cabeza;
             int defensa = 0;
             int ataque = 0;
             while (aux != null)
@@ -406,9 +406,9 @@ namespace Proyecto_Yu_Gi_Oh
             setModo(true);
             setSalud(getAtaque());
         }
-        public unsafe void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        override public unsafe void EfectoDespliegue(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo)
         {
-            Nodo* aux = CampoEnemigo->cabeza;
+            Nodo* aux = CampoEnemigo.cabeza;
             while (aux != null)
             {
                 aux->getMonstruo().setAtaque(getAtaque() - 400);
@@ -432,9 +432,9 @@ namespace Proyecto_Yu_Gi_Oh
             setTurnosDeEstado(0);
             setVidas(1);
         }
-        public void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        override public void EfectoDespliegue(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo)
         {
-            Nodo* aux = CampoAliado->cabeza;
+            Nodo* aux = CampoAliado.cabeza;
             while (aux != null)
             {
                 aux->getMonstruo().setDefensa(getDefensa() + 200);
@@ -458,9 +458,9 @@ namespace Proyecto_Yu_Gi_Oh
             setTurnosDeEstado(0);
             setVidas(1);
         }
-        public void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo)
+        override public void EfectoDespliegue(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo)
         {
-            Nodo* aux = CampoAliado->cabeza;
+            Nodo* aux = CampoAliado.cabeza;
             while (aux != null)
             {
                 aux->getMonstruo().setDefensa(getDefensa() + 200);
@@ -483,9 +483,13 @@ namespace Proyecto_Yu_Gi_Oh
             setTurnosDeEstado(0);
             setVidas(1);
         }
-        public void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioAliado, ListaMonstruos* CementerioEnemigo, Monstruos* CartaAtacar)
+        override public void EfectoDespliegue(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo)
         {
 
+        }
+        override public void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
+        {
+            
         }
     }
 
@@ -504,7 +508,7 @@ namespace Proyecto_Yu_Gi_Oh
             setTurnosDeEstado(0);
             setVidas(1);
         }
-        public void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioAliado, ListaMonstruos* CementerioEnemigo, Monstruos* CartaAtacar)
+        override public void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
         {
 
         }
@@ -525,7 +529,7 @@ namespace Proyecto_Yu_Gi_Oh
             setTurnosDeEstado(0);
             setVidas(1);
         }
-        public void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioAliado, ListaMonstruos* CementerioEnemigo, Monstruos* CartaAtacar)
+        override public void EfectoDespliegue(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo)
         {
 
         }
@@ -546,11 +550,11 @@ namespace Proyecto_Yu_Gi_Oh
             setTurnosDeEstado(0);
             setVidas(1);
         }
-        public void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioAliado, ListaMonstruos* CementerioEnemigo, Monstruos* CartaAtacar)
+        override public void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
         {
-            if (CartaAtacar->getAtaque() > 1900)
+            if (CartaAtacar.getAtaque() > 1900)
             {
-                CartaAtacar->setVidas(0);
+                CartaAtacar.setVidas(0);
             }
         }
     }
@@ -570,7 +574,7 @@ namespace Proyecto_Yu_Gi_Oh
             setTurnosDeEstado(0);
             setVidas(1);
         }
-        public void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioAliado, ListaMonstruos* CementerioEnemigo, Monstruos* CartaAtacar)
+        override public void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
         {
             setDefensa(getDefensa() - 500);
         }
@@ -591,7 +595,7 @@ namespace Proyecto_Yu_Gi_Oh
             setTurnosDeEstado(0);
             setVidas(1);
         }
-        public void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioAliado, ListaMonstruos* CementerioEnemigo, Monstruos* CartaAtacar)
+        override public void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
         {
 
         }
@@ -612,11 +616,11 @@ namespace Proyecto_Yu_Gi_Oh
             setTurnosDeEstado(0);
             setVidas(1);
         }
-        public void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioAliado, ListaMonstruos* CementerioEnemigo, Monstruos* CartaAtacar)
+        override public void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
         {
-            if (CartaAtacar->getModo() == false)
+            if (CartaAtacar.getModo() == false)
             {
-                setAtaque(getAtaque() * 2);
+                this.setAtaque(getAtaque() * 2);
             }
 
         }
@@ -636,7 +640,7 @@ namespace Proyecto_Yu_Gi_Oh
             setTurnosDeEstado(0);
             setVidas(1);
         }
-        public void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioAliado, ListaMonstruos* CementerioEnemigo, Monstruos* CartaAtacar)
+        override public void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
         {
             Random random = new Random();
             int gacha = random.Next(1, 2);
@@ -662,15 +666,15 @@ namespace Proyecto_Yu_Gi_Oh
             setTurnosDeEstado(0);
             setVidas(1);
         }
-        public void EfectoAtaque(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioAliado, ListaMonstruos* CementerioEnemigo, Monstruos* CartaAtacar)
+        override public void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
         {
-            if (CartaAtacar->getAtaque() < CartaAtacar->getDefensa())
+            if (CartaAtacar.getAtaque() < CartaAtacar.getDefensa())
             {
-                CartaAtacar->setModo(true);
+                CartaAtacar.setModo(true);
             }
             else
             {
-                CartaAtacar->setModo(false);
+                CartaAtacar.setModo(false);
             }
         }
     }
@@ -689,10 +693,9 @@ namespace Proyecto_Yu_Gi_Oh
             setTurnosDeEstado(0);
             setVidas(1);
         }
-        public void EfectoDespliegue(ListaMonstruos* CampoAliado, ListaMonstruos* CampoEnemigo, ListaMonstruos* CementerioAliado, ListaMonstruos* CementerioEnemigo, Monstruos* CartaAtacar)
+        override public void EfectoDespliegue(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo)
         {
-            ListaMonstruos* aux = CampoAliado;
-            Nodo* aux1 = CampoAliado->cabeza;
+            Nodo* aux1 = CampoAliado.cabeza;
             int contador = 0;
             while (aux1 != null)
             {

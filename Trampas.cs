@@ -32,7 +32,7 @@ namespace Proyecto_Yu_Gi_Oh
             return direccion;
         }
 
-        public unsafe void efectoBatalla(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioEnemigo, ListaMonstruos CementerioAliado)
+        virtual public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
     
         }
@@ -65,7 +65,7 @@ namespace Proyecto_Yu_Gi_Oh
             return direccion;
         }
 
-        public unsafe void efectoInvocacion(Jugador J1, Jugador j2)
+        virtual public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
         {
 
         }

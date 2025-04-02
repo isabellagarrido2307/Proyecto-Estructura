@@ -70,8 +70,11 @@
             Controls.Add(botonDuelo);
             DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Menu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu";
+            Load += Menu_Load;
             ResumeLayout(false);
         }
 

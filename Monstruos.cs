@@ -124,11 +124,12 @@ namespace Proyecto_Yu_Gi_Oh
                 modo = false;
             }
         }
-        public unsafe void EfectoDespliegue(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo)
+        virtual public unsafe void EfectoDespliegue(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo)
         {
             
         }
-        public unsafe void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
+
+        virtual public unsafe void EfectoAtaque(ListaMonstruos CampoAliado, ListaMonstruos CampoEnemigo, ListaMonstruos CementerioAliado, ListaMonstruos CementerioEnemigo, Monstruos CartaAtacar)
         {
 
         }

@@ -74,16 +74,16 @@
             J2CampTra3 = new PictureBox();
             J2CampTra4 = new PictureBox();
             J2CampTra5 = new PictureBox();
-            pictureBox15 = new PictureBox();
-            pictureBox16 = new PictureBox();
-            pictureBox17 = new PictureBox();
-            pictureBox18 = new PictureBox();
-            pictureBox19 = new PictureBox();
-            pictureBox20 = new PictureBox();
-            pictureBox21 = new PictureBox();
-            pictureBox22 = new PictureBox();
-            pictureBox23 = new PictureBox();
-            pictureBox24 = new PictureBox();
+            J2CampMons1Mod = new PictureBox();
+            J2CampMons2Mod = new PictureBox();
+            J2CampMons3Mod = new PictureBox();
+            J2CampMons4Mod = new PictureBox();
+            J2CampMons5Mod = new PictureBox();
+            J1CampMons3Mod = new PictureBox();
+            J1CampMons4Mod = new PictureBox();
+            J1CampMons5Mod = new PictureBox();
+            J1CampMons2Mod = new PictureBox();
+            J1CampMons1Mod = new PictureBox();
             J1CampTra1 = new PictureBox();
             J1CampTra2 = new PictureBox();
             J1CampTra3 = new PictureBox();
@@ -114,6 +114,11 @@
             MazoJ1 = new PictureBox();
             MazoJ2 = new PictureBox();
             toolTipDato = new ToolTip(components);
+            panel5 = new Panel();
+            labelJugadorTurno = new Label();
+            label3 = new Label();
+            button1 = new Button();
+            actualizacionVida = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             panel7.SuspendLayout();
             panel9.SuspendLayout();
@@ -137,16 +142,16 @@
             ((System.ComponentModel.ISupportInitialize)J2CampTra3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)J2CampTra4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)J2CampTra5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox23).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox24).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)J2CampMons1Mod).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)J2CampMons2Mod).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)J2CampMons3Mod).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)J2CampMons4Mod).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)J2CampMons5Mod).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)J1CampMons3Mod).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)J1CampMons4Mod).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)J1CampMons5Mod).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)J1CampMons2Mod).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)J1CampMons1Mod).BeginInit();
             ((System.ComponentModel.ISupportInitialize)J1CampTra1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)J1CampTra2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)J1CampTra3).BeginInit();
@@ -174,6 +179,7 @@
             ((System.ComponentModel.ISupportInitialize)CementerioJ2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MazoJ1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MazoJ2).BeginInit();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -198,17 +204,17 @@
             panel1.Location = new Point(862, -1);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(344, 523);
+            panel1.Size = new Size(369, 550);
             panel1.TabIndex = 0;
             // 
             // comboBoxManoTra
             // 
             comboBoxManoTra.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxManoTra.FormattingEnabled = true;
-            comboBoxManoTra.Location = new Point(171, 472);
+            comboBoxManoTra.Location = new Point(171, 494);
             comboBoxManoTra.Margin = new Padding(3, 2, 3, 2);
             comboBoxManoTra.Name = "comboBoxManoTra";
-            comboBoxManoTra.Size = new Size(133, 23);
+            comboBoxManoTra.Size = new Size(168, 23);
             comboBoxManoTra.TabIndex = 67;
             // 
             // comboBoxManoHechizo
@@ -216,10 +222,10 @@
             comboBoxManoHechizo.BackColor = Color.Peru;
             comboBoxManoHechizo.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxManoHechizo.FormattingEnabled = true;
-            comboBoxManoHechizo.Location = new Point(171, 430);
+            comboBoxManoHechizo.Location = new Point(171, 442);
             comboBoxManoHechizo.Margin = new Padding(3, 2, 3, 2);
             comboBoxManoHechizo.Name = "comboBoxManoHechizo";
-            comboBoxManoHechizo.Size = new Size(133, 23);
+            comboBoxManoHechizo.Size = new Size(168, 23);
             comboBoxManoHechizo.TabIndex = 66;
             comboBoxManoHechizo.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
@@ -227,8 +233,9 @@
             // 
             botonColocarTra.BackgroundImage = Properties.Resources.BotonColocar;
             botonColocarTra.BackgroundImageLayout = ImageLayout.Stretch;
-            botonColocarTra.FlatAppearance.BorderColor = Color.SaddleBrown;
-            botonColocarTra.Location = new Point(15, 464);
+            botonColocarTra.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            botonColocarTra.FlatStyle = FlatStyle.Flat;
+            botonColocarTra.Location = new Point(15, 486);
             botonColocarTra.Margin = new Padding(3, 2, 3, 2);
             botonColocarTra.Name = "botonColocarTra";
             botonColocarTra.Size = new Size(73, 38);
@@ -240,20 +247,23 @@
             // 
             botonEliminarTra.BackgroundImage = Properties.Resources.BotonEliminarTra;
             botonEliminarTra.BackgroundImageLayout = ImageLayout.Stretch;
-            botonEliminarTra.FlatAppearance.BorderColor = Color.SaddleBrown;
-            botonEliminarTra.Location = new Point(93, 464);
+            botonEliminarTra.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            botonEliminarTra.FlatStyle = FlatStyle.Flat;
+            botonEliminarTra.Location = new Point(93, 486);
             botonEliminarTra.Margin = new Padding(3, 2, 3, 2);
             botonEliminarTra.Name = "botonEliminarTra";
             botonEliminarTra.Size = new Size(73, 38);
             botonEliminarTra.TabIndex = 64;
             botonEliminarTra.UseVisualStyleBackColor = true;
+            botonEliminarTra.Click += botonEliminarTra_Click;
             // 
             // botonActivarHechizo
             // 
             botonActivarHechizo.BackgroundImage = Properties.Resources.BotonActivar;
             botonActivarHechizo.BackgroundImageLayout = ImageLayout.Stretch;
-            botonActivarHechizo.FlatAppearance.BorderColor = Color.SaddleBrown;
-            botonActivarHechizo.Location = new Point(15, 422);
+            botonActivarHechizo.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            botonActivarHechizo.FlatStyle = FlatStyle.Flat;
+            botonActivarHechizo.Location = new Point(15, 434);
             botonActivarHechizo.Margin = new Padding(3, 2, 3, 2);
             botonActivarHechizo.Name = "botonActivarHechizo";
             botonActivarHechizo.Size = new Size(73, 38);
@@ -265,8 +275,9 @@
             // 
             botonEliminarHechizo.BackgroundImage = Properties.Resources.BotonEliminarHechizo;
             botonEliminarHechizo.BackgroundImageLayout = ImageLayout.Stretch;
-            botonEliminarHechizo.FlatAppearance.BorderColor = Color.SaddleBrown;
-            botonEliminarHechizo.Location = new Point(93, 421);
+            botonEliminarHechizo.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            botonEliminarHechizo.FlatStyle = FlatStyle.Flat;
+            botonEliminarHechizo.Location = new Point(93, 433);
             botonEliminarHechizo.Margin = new Padding(3, 2, 3, 2);
             botonEliminarHechizo.Name = "botonEliminarHechizo";
             botonEliminarHechizo.Size = new Size(73, 38);
@@ -278,8 +289,9 @@
             // 
             botonEliminarMounstro.BackgroundImage = Properties.Resources.BotonEliminarMostro;
             botonEliminarMounstro.BackgroundImageLayout = ImageLayout.Stretch;
-            botonEliminarMounstro.FlatAppearance.BorderColor = Color.SaddleBrown;
-            botonEliminarMounstro.Location = new Point(93, 374);
+            botonEliminarMounstro.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            botonEliminarMounstro.FlatStyle = FlatStyle.Flat;
+            botonEliminarMounstro.Location = new Point(93, 382);
             botonEliminarMounstro.Margin = new Padding(3, 2, 3, 2);
             botonEliminarMounstro.Name = "botonEliminarMounstro";
             botonEliminarMounstro.Size = new Size(73, 38);
@@ -295,7 +307,7 @@
             comboBoxCampoAliado.Location = new Point(134, 344);
             comboBoxCampoAliado.Margin = new Padding(3, 2, 3, 2);
             comboBoxCampoAliado.Name = "comboBoxCampoAliado";
-            comboBoxCampoAliado.Size = new Size(169, 23);
+            comboBoxCampoAliado.Size = new Size(204, 23);
             comboBoxCampoAliado.TabIndex = 58;
             // 
             // comboBoxMano
@@ -303,10 +315,10 @@
             comboBoxMano.BackColor = Color.Peru;
             comboBoxMano.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxMano.FormattingEnabled = true;
-            comboBoxMano.Location = new Point(171, 383);
+            comboBoxMano.Location = new Point(171, 391);
             comboBoxMano.Margin = new Padding(3, 2, 3, 2);
             comboBoxMano.Name = "comboBoxMano";
-            comboBoxMano.Size = new Size(133, 23);
+            comboBoxMano.Size = new Size(168, 23);
             comboBoxMano.TabIndex = 57;
             // 
             // panel7
@@ -321,10 +333,10 @@
             panel7.Controls.Add(CartaAtacanteR);
             panel7.Controls.Add(panel4);
             panel7.Controls.Add(pictureBox46);
-            panel7.Location = new Point(20, 131);
+            panel7.Location = new Point(17, 131);
             panel7.Margin = new Padding(3, 2, 3, 2);
             panel7.Name = "panel7";
-            panel7.Size = new Size(309, 193);
+            panel7.Size = new Size(321, 193);
             panel7.TabIndex = 56;
             // 
             // comboBoxDefensor
@@ -333,18 +345,18 @@
             comboBoxDefensor.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxDefensor.FlatStyle = FlatStyle.Flat;
             comboBoxDefensor.FormattingEnabled = true;
-            comboBoxDefensor.Location = new Point(206, 164);
+            comboBoxDefensor.Location = new Point(201, 164);
             comboBoxDefensor.Margin = new Padding(3, 2, 3, 2);
             comboBoxDefensor.Name = "comboBoxDefensor";
             comboBoxDefensor.RightToLeft = RightToLeft.Yes;
-            comboBoxDefensor.Size = new Size(89, 23);
+            comboBoxDefensor.Size = new Size(101, 23);
             comboBoxDefensor.TabIndex = 56;
             // 
             // panel9
             // 
             panel9.BackColor = Color.Peru;
             panel9.Controls.Add(label6);
-            panel9.Location = new Point(190, 43);
+            panel9.Location = new Point(199, 43);
             panel9.Margin = new Padding(3, 2, 3, 2);
             panel9.Name = "panel9";
             panel9.Size = new Size(104, 23);
@@ -354,7 +366,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Lucida Sans Unicode", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label6.Location = new Point(11, 4);
+            label6.Location = new Point(13, 4);
             label6.Name = "label6";
             label6.Size = new Size(78, 17);
             label6.TabIndex = 0;
@@ -365,12 +377,14 @@
             botonAtacar.BackgroundImage = Properties.Resources.BotonAtacar;
             botonAtacar.BackgroundImageLayout = ImageLayout.Stretch;
             botonAtacar.FlatAppearance.BorderSize = 0;
-            botonAtacar.Location = new Point(122, 161);
+            botonAtacar.FlatStyle = FlatStyle.Flat;
+            botonAtacar.Location = new Point(127, 161);
             botonAtacar.Margin = new Padding(3, 2, 3, 2);
             botonAtacar.Name = "botonAtacar";
             botonAtacar.Size = new Size(69, 29);
             botonAtacar.TabIndex = 10;
             botonAtacar.UseVisualStyleBackColor = true;
+            botonAtacar.Click += botonAtacar_Click;
             // 
             // comboBoxAtacante
             // 
@@ -378,18 +392,18 @@
             comboBoxAtacante.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxAtacante.FlatStyle = FlatStyle.Flat;
             comboBoxAtacante.FormattingEnabled = true;
-            comboBoxAtacante.Location = new Point(15, 164);
+            comboBoxAtacante.Location = new Point(20, 164);
             comboBoxAtacante.Margin = new Padding(3, 2, 3, 2);
             comboBoxAtacante.Name = "comboBoxAtacante";
             comboBoxAtacante.RightToLeft = RightToLeft.No;
-            comboBoxAtacante.Size = new Size(89, 23);
+            comboBoxAtacante.Size = new Size(98, 23);
             comboBoxAtacante.TabIndex = 0;
             // 
             // panel8
             // 
             panel8.BackColor = Color.Peru;
             panel8.Controls.Add(label5);
-            panel8.Location = new Point(15, 43);
+            panel8.Location = new Point(20, 43);
             panel8.Margin = new Padding(3, 2, 3, 2);
             panel8.Name = "panel8";
             panel8.Size = new Size(108, 23);
@@ -399,7 +413,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Lucida Sans Unicode", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label5.Location = new Point(20, 4);
+            label5.Location = new Point(15, 4);
             label5.Name = "label5";
             label5.Size = new Size(76, 17);
             label5.TabIndex = 0;
@@ -408,7 +422,7 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.FromArgb(200, 90, 40);
-            pictureBox3.Location = new Point(190, 65);
+            pictureBox3.Location = new Point(199, 65);
             pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(104, 95);
@@ -418,7 +432,7 @@
             // CartaAtacanteR
             // 
             CartaAtacanteR.BackColor = Color.FromArgb(200, 90, 40);
-            CartaAtacanteR.Location = new Point(15, 65);
+            CartaAtacanteR.Location = new Point(20, 65);
             CartaAtacanteR.Margin = new Padding(3, 2, 3, 2);
             CartaAtacanteR.Name = "CartaAtacanteR";
             CartaAtacanteR.Size = new Size(108, 95);
@@ -429,7 +443,7 @@
             // 
             panel4.BackColor = Color.Peru;
             panel4.Controls.Add(label1);
-            panel4.Location = new Point(8, 8);
+            panel4.Location = new Point(10, 8);
             panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
             panel4.Size = new Size(293, 30);
@@ -449,7 +463,7 @@
             // pictureBox46
             // 
             pictureBox46.Image = Properties.Resources.Versus;
-            pictureBox46.Location = new Point(118, 82);
+            pictureBox46.Location = new Point(126, 82);
             pictureBox46.Margin = new Padding(3, 2, 3, 2);
             pictureBox46.Name = "pictureBox46";
             pictureBox46.Size = new Size(78, 60);
@@ -461,19 +475,23 @@
             // 
             botonCambiarModo.BackgroundImage = Properties.Resources.CambiarModo;
             botonCambiarModo.BackgroundImageLayout = ImageLayout.Stretch;
+            botonCambiarModo.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            botonCambiarModo.FlatStyle = FlatStyle.Flat;
             botonCambiarModo.Location = new Point(28, 338);
             botonCambiarModo.Margin = new Padding(3, 2, 3, 2);
             botonCambiarModo.Name = "botonCambiarModo";
             botonCambiarModo.Size = new Size(95, 32);
             botonCambiarModo.TabIndex = 9;
             botonCambiarModo.UseVisualStyleBackColor = true;
+            botonCambiarModo.Click += botonCambiarModo_Click;
             // 
             // botonInvocar
             // 
             botonInvocar.BackgroundImage = Properties.Resources.Invocar;
             botonInvocar.BackgroundImageLayout = ImageLayout.Stretch;
-            botonInvocar.FlatAppearance.BorderColor = Color.SaddleBrown;
-            botonInvocar.Location = new Point(15, 374);
+            botonInvocar.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            botonInvocar.FlatStyle = FlatStyle.Flat;
+            botonInvocar.Location = new Point(15, 382);
             botonInvocar.Margin = new Padding(3, 2, 3, 2);
             botonInvocar.Name = "botonInvocar";
             botonInvocar.Size = new Size(73, 38);
@@ -503,7 +521,7 @@
             Fase1.Location = new Point(15, 53);
             Fase1.Margin = new Padding(3, 2, 3, 2);
             Fase1.Name = "Fase1";
-            Fase1.Size = new Size(314, 74);
+            Fase1.Size = new Size(326, 74);
             Fase1.SizeMode = PictureBoxSizeMode.StretchImage;
             Fase1.TabIndex = 3;
             Fase1.TabStop = false;
@@ -586,6 +604,7 @@
             J2Mano1.SizeMode = PictureBoxSizeMode.StretchImage;
             J2Mano1.TabIndex = 3;
             J2Mano1.TabStop = false;
+            J2Mano1.Click += J2Mano1_Click;
             // 
             // J2Mano2
             // 
@@ -598,6 +617,7 @@
             J2Mano2.SizeMode = PictureBoxSizeMode.StretchImage;
             J2Mano2.TabIndex = 6;
             J2Mano2.TabStop = false;
+            J2Mano2.Click += J2Mano2_Click;
             // 
             // J2Mano3
             // 
@@ -610,6 +630,7 @@
             J2Mano3.SizeMode = PictureBoxSizeMode.StretchImage;
             J2Mano3.TabIndex = 7;
             J2Mano3.TabStop = false;
+            J2Mano3.Click += J2Mano3_Click;
             // 
             // J2Mano4
             // 
@@ -622,6 +643,7 @@
             J2Mano4.SizeMode = PictureBoxSizeMode.StretchImage;
             J2Mano4.TabIndex = 8;
             J2Mano4.TabStop = false;
+            J2Mano4.Click += J2Mano4_Click;
             // 
             // J2Mano5
             // 
@@ -634,6 +656,7 @@
             J2Mano5.SizeMode = PictureBoxSizeMode.StretchImage;
             J2Mano5.TabIndex = 9;
             J2Mano5.TabStop = false;
+            J2Mano5.Click += J2Mano5_Click;
             // 
             // J2Mano6
             // 
@@ -646,6 +669,7 @@
             J2Mano6.SizeMode = PictureBoxSizeMode.StretchImage;
             J2Mano6.TabIndex = 10;
             J2Mano6.TabStop = false;
+            J2Mano6.Click += J2Mano6_Click;
             // 
             // J2CampTra1
             // 
@@ -658,6 +682,7 @@
             J2CampTra1.SizeMode = PictureBoxSizeMode.StretchImage;
             J2CampTra1.TabIndex = 11;
             J2CampTra1.TabStop = false;
+            J2CampTra1.Click += J2CampTra1_Click;
             // 
             // J2CampTra2
             // 
@@ -670,6 +695,7 @@
             J2CampTra2.SizeMode = PictureBoxSizeMode.StretchImage;
             J2CampTra2.TabIndex = 12;
             J2CampTra2.TabStop = false;
+            J2CampTra2.Click += J2CampTra2_Click;
             // 
             // J2CampTra3
             // 
@@ -682,6 +708,7 @@
             J2CampTra3.SizeMode = PictureBoxSizeMode.StretchImage;
             J2CampTra3.TabIndex = 13;
             J2CampTra3.TabStop = false;
+            J2CampTra3.Click += J2CampTra3_Click;
             // 
             // J2CampTra4
             // 
@@ -694,6 +721,7 @@
             J2CampTra4.SizeMode = PictureBoxSizeMode.StretchImage;
             J2CampTra4.TabIndex = 14;
             J2CampTra4.TabStop = false;
+            J2CampTra4.Click += J2CampTra4_Click;
             // 
             // J2CampTra5
             // 
@@ -706,106 +734,107 @@
             J2CampTra5.SizeMode = PictureBoxSizeMode.StretchImage;
             J2CampTra5.TabIndex = 15;
             J2CampTra5.TabStop = false;
+            J2CampTra5.Click += J2CampTra5_Click;
             // 
-            // pictureBox15
+            // J2CampMons1Mod
             // 
-            pictureBox15.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox15.Location = new Point(377, 185);
-            pictureBox15.Margin = new Padding(3, 2, 3, 2);
-            pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(73, 60);
-            pictureBox15.TabIndex = 16;
-            pictureBox15.TabStop = false;
+            J2CampMons1Mod.BackColor = Color.Red;
+            J2CampMons1Mod.Location = new Point(377, 185);
+            J2CampMons1Mod.Margin = new Padding(3, 2, 3, 2);
+            J2CampMons1Mod.Name = "J2CampMons1Mod";
+            J2CampMons1Mod.Size = new Size(73, 60);
+            J2CampMons1Mod.TabIndex = 16;
+            J2CampMons1Mod.TabStop = false;
             // 
-            // pictureBox16
+            // J2CampMons2Mod
             // 
-            pictureBox16.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox16.Location = new Point(455, 185);
-            pictureBox16.Margin = new Padding(3, 2, 3, 2);
-            pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(73, 60);
-            pictureBox16.TabIndex = 17;
-            pictureBox16.TabStop = false;
+            J2CampMons2Mod.BackColor = Color.Red;
+            J2CampMons2Mod.Location = new Point(455, 185);
+            J2CampMons2Mod.Margin = new Padding(3, 2, 3, 2);
+            J2CampMons2Mod.Name = "J2CampMons2Mod";
+            J2CampMons2Mod.Size = new Size(73, 60);
+            J2CampMons2Mod.TabIndex = 17;
+            J2CampMons2Mod.TabStop = false;
             // 
-            // pictureBox17
+            // J2CampMons3Mod
             // 
-            pictureBox17.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox17.Location = new Point(536, 185);
-            pictureBox17.Margin = new Padding(3, 2, 3, 2);
-            pictureBox17.Name = "pictureBox17";
-            pictureBox17.Size = new Size(73, 60);
-            pictureBox17.TabIndex = 18;
-            pictureBox17.TabStop = false;
+            J2CampMons3Mod.BackColor = Color.Red;
+            J2CampMons3Mod.Location = new Point(536, 185);
+            J2CampMons3Mod.Margin = new Padding(3, 2, 3, 2);
+            J2CampMons3Mod.Name = "J2CampMons3Mod";
+            J2CampMons3Mod.Size = new Size(73, 60);
+            J2CampMons3Mod.TabIndex = 18;
+            J2CampMons3Mod.TabStop = false;
             // 
-            // pictureBox18
+            // J2CampMons4Mod
             // 
-            pictureBox18.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox18.Location = new Point(615, 185);
-            pictureBox18.Margin = new Padding(3, 2, 3, 2);
-            pictureBox18.Name = "pictureBox18";
-            pictureBox18.Size = new Size(73, 60);
-            pictureBox18.TabIndex = 19;
-            pictureBox18.TabStop = false;
+            J2CampMons4Mod.BackColor = Color.Red;
+            J2CampMons4Mod.Location = new Point(615, 185);
+            J2CampMons4Mod.Margin = new Padding(3, 2, 3, 2);
+            J2CampMons4Mod.Name = "J2CampMons4Mod";
+            J2CampMons4Mod.Size = new Size(73, 60);
+            J2CampMons4Mod.TabIndex = 19;
+            J2CampMons4Mod.TabStop = false;
             // 
-            // pictureBox19
+            // J2CampMons5Mod
             // 
-            pictureBox19.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox19.Location = new Point(697, 185);
-            pictureBox19.Margin = new Padding(3, 2, 3, 2);
-            pictureBox19.Name = "pictureBox19";
-            pictureBox19.Size = new Size(73, 60);
-            pictureBox19.TabIndex = 20;
-            pictureBox19.TabStop = false;
+            J2CampMons5Mod.BackColor = Color.Red;
+            J2CampMons5Mod.Location = new Point(697, 185);
+            J2CampMons5Mod.Margin = new Padding(3, 2, 3, 2);
+            J2CampMons5Mod.Name = "J2CampMons5Mod";
+            J2CampMons5Mod.Size = new Size(73, 60);
+            J2CampMons5Mod.TabIndex = 20;
+            J2CampMons5Mod.TabStop = false;
             // 
-            // pictureBox20
+            // J1CampMons3Mod
             // 
-            pictureBox20.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox20.Location = new Point(536, 261);
-            pictureBox20.Margin = new Padding(3, 2, 3, 2);
-            pictureBox20.Name = "pictureBox20";
-            pictureBox20.Size = new Size(73, 60);
-            pictureBox20.TabIndex = 21;
-            pictureBox20.TabStop = false;
+            J1CampMons3Mod.BackColor = Color.Red;
+            J1CampMons3Mod.Location = new Point(536, 261);
+            J1CampMons3Mod.Margin = new Padding(3, 2, 3, 2);
+            J1CampMons3Mod.Name = "J1CampMons3Mod";
+            J1CampMons3Mod.Size = new Size(73, 60);
+            J1CampMons3Mod.TabIndex = 21;
+            J1CampMons3Mod.TabStop = false;
             // 
-            // pictureBox21
+            // J1CampMons4Mod
             // 
-            pictureBox21.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox21.Location = new Point(615, 261);
-            pictureBox21.Margin = new Padding(3, 2, 3, 2);
-            pictureBox21.Name = "pictureBox21";
-            pictureBox21.Size = new Size(73, 60);
-            pictureBox21.TabIndex = 22;
-            pictureBox21.TabStop = false;
+            J1CampMons4Mod.BackColor = Color.Red;
+            J1CampMons4Mod.Location = new Point(615, 261);
+            J1CampMons4Mod.Margin = new Padding(3, 2, 3, 2);
+            J1CampMons4Mod.Name = "J1CampMons4Mod";
+            J1CampMons4Mod.Size = new Size(73, 60);
+            J1CampMons4Mod.TabIndex = 22;
+            J1CampMons4Mod.TabStop = false;
             // 
-            // pictureBox22
+            // J1CampMons5Mod
             // 
-            pictureBox22.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox22.Location = new Point(696, 261);
-            pictureBox22.Margin = new Padding(3, 2, 3, 2);
-            pictureBox22.Name = "pictureBox22";
-            pictureBox22.Size = new Size(73, 60);
-            pictureBox22.TabIndex = 23;
-            pictureBox22.TabStop = false;
+            J1CampMons5Mod.BackColor = Color.Red;
+            J1CampMons5Mod.Location = new Point(696, 261);
+            J1CampMons5Mod.Margin = new Padding(3, 2, 3, 2);
+            J1CampMons5Mod.Name = "J1CampMons5Mod";
+            J1CampMons5Mod.Size = new Size(73, 60);
+            J1CampMons5Mod.TabIndex = 23;
+            J1CampMons5Mod.TabStop = false;
             // 
-            // pictureBox23
+            // J1CampMons2Mod
             // 
-            pictureBox23.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox23.Location = new Point(456, 262);
-            pictureBox23.Margin = new Padding(3, 2, 3, 2);
-            pictureBox23.Name = "pictureBox23";
-            pictureBox23.Size = new Size(73, 60);
-            pictureBox23.TabIndex = 24;
-            pictureBox23.TabStop = false;
+            J1CampMons2Mod.BackColor = Color.Red;
+            J1CampMons2Mod.Location = new Point(456, 262);
+            J1CampMons2Mod.Margin = new Padding(3, 2, 3, 2);
+            J1CampMons2Mod.Name = "J1CampMons2Mod";
+            J1CampMons2Mod.Size = new Size(73, 60);
+            J1CampMons2Mod.TabIndex = 24;
+            J1CampMons2Mod.TabStop = false;
             // 
-            // pictureBox24
+            // J1CampMons1Mod
             // 
-            pictureBox24.BackColor = Color.FromArgb(255, 128, 0);
-            pictureBox24.Location = new Point(378, 262);
-            pictureBox24.Margin = new Padding(3, 2, 3, 2);
-            pictureBox24.Name = "pictureBox24";
-            pictureBox24.Size = new Size(73, 60);
-            pictureBox24.TabIndex = 25;
-            pictureBox24.TabStop = false;
+            J1CampMons1Mod.BackColor = Color.Red;
+            J1CampMons1Mod.Location = new Point(375, 262);
+            J1CampMons1Mod.Margin = new Padding(3, 2, 3, 2);
+            J1CampMons1Mod.Name = "J1CampMons1Mod";
+            J1CampMons1Mod.Size = new Size(73, 60);
+            J1CampMons1Mod.TabIndex = 25;
+            J1CampMons1Mod.TabStop = false;
             // 
             // J1CampTra1
             // 
@@ -818,6 +847,7 @@
             J1CampTra1.SizeMode = PictureBoxSizeMode.StretchImage;
             J1CampTra1.TabIndex = 26;
             J1CampTra1.TabStop = false;
+            J1CampTra1.Click += J1CampTra1_Click;
             // 
             // J1CampTra2
             // 
@@ -830,6 +860,7 @@
             J1CampTra2.SizeMode = PictureBoxSizeMode.StretchImage;
             J1CampTra2.TabIndex = 27;
             J1CampTra2.TabStop = false;
+            J1CampTra2.Click += J1CampTra2_Click;
             // 
             // J1CampTra3
             // 
@@ -842,6 +873,7 @@
             J1CampTra3.SizeMode = PictureBoxSizeMode.StretchImage;
             J1CampTra3.TabIndex = 28;
             J1CampTra3.TabStop = false;
+            J1CampTra3.Click += J1CampTra3_Click;
             // 
             // J1CampTra4
             // 
@@ -854,6 +886,7 @@
             J1CampTra4.SizeMode = PictureBoxSizeMode.StretchImage;
             J1CampTra4.TabIndex = 29;
             J1CampTra4.TabStop = false;
+            J1CampTra4.Click += J1CampTra4_Click;
             // 
             // J1CampTra5
             // 
@@ -866,6 +899,7 @@
             J1CampTra5.SizeMode = PictureBoxSizeMode.StretchImage;
             J1CampTra5.TabIndex = 30;
             J1CampTra5.TabStop = false;
+            J1CampTra5.Click += J1CampTra5_Click;
             // 
             // J1Mano1
             // 
@@ -904,6 +938,7 @@
             J1Mano3.SizeMode = PictureBoxSizeMode.StretchImage;
             J1Mano3.TabIndex = 33;
             J1Mano3.TabStop = false;
+            J1Mano3.Click += J1Mano3_Click;
             // 
             // J1Mano4
             // 
@@ -916,6 +951,7 @@
             J1Mano4.SizeMode = PictureBoxSizeMode.StretchImage;
             J1Mano4.TabIndex = 34;
             J1Mano4.TabStop = false;
+            J1Mano4.Click += J1Mano4_Click;
             // 
             // J1Mano5
             // 
@@ -928,6 +964,7 @@
             J1Mano5.SizeMode = PictureBoxSizeMode.StretchImage;
             J1Mano5.TabIndex = 35;
             J1Mano5.TabStop = false;
+            J1Mano5.Click += J1Mano5_Click;
             // 
             // J1Mano6
             // 
@@ -940,6 +977,7 @@
             J1Mano6.SizeMode = PictureBoxSizeMode.StretchImage;
             J1Mano6.TabIndex = 36;
             J1Mano6.TabStop = false;
+            J1Mano6.Click += J1Mano6_Click;
             // 
             // J2CampMons1
             // 
@@ -952,6 +990,8 @@
             J2CampMons1.SizeMode = PictureBoxSizeMode.StretchImage;
             J2CampMons1.TabIndex = 37;
             J2CampMons1.TabStop = false;
+            J2CampMons1.Click += J2CampMons1_Click;
+            J2CampMons1.MouseHover += J2CampMons1_MouseHover;
             // 
             // J2CampMons2
             // 
@@ -964,6 +1004,8 @@
             J2CampMons2.SizeMode = PictureBoxSizeMode.StretchImage;
             J2CampMons2.TabIndex = 38;
             J2CampMons2.TabStop = false;
+            J2CampMons2.Click += J2CampMons2_Click;
+            J2CampMons2.MouseHover += J2CampMons2_MouseHover;
             // 
             // J2CampMons3
             // 
@@ -976,6 +1018,8 @@
             J2CampMons3.SizeMode = PictureBoxSizeMode.StretchImage;
             J2CampMons3.TabIndex = 39;
             J2CampMons3.TabStop = false;
+            J2CampMons3.Click += J2CampMons3_Click;
+            J2CampMons3.MouseHover += J2CampMons3_MouseHover;
             // 
             // J2CampMons4
             // 
@@ -988,6 +1032,8 @@
             J2CampMons4.SizeMode = PictureBoxSizeMode.StretchImage;
             J2CampMons4.TabIndex = 40;
             J2CampMons4.TabStop = false;
+            J2CampMons4.Click += J2CampMons4_Click;
+            J2CampMons4.MouseHover += J2CampMons4_MouseHover;
             // 
             // J2CampMons5
             // 
@@ -1000,6 +1046,8 @@
             J2CampMons5.SizeMode = PictureBoxSizeMode.StretchImage;
             J2CampMons5.TabIndex = 41;
             J2CampMons5.TabStop = false;
+            J2CampMons5.Click += J2CampMons5_Click;
+            J2CampMons5.MouseHover += J2CampMons5_MouseHover;
             // 
             // J1CampMons1
             // 
@@ -1012,6 +1060,8 @@
             J1CampMons1.SizeMode = PictureBoxSizeMode.StretchImage;
             J1CampMons1.TabIndex = 42;
             J1CampMons1.TabStop = false;
+            J1CampMons1.Click += J1CampMons1_Click;
+            J1CampMons1.MouseHover += J1CampMons1_MouseHover;
             // 
             // J1CampMons2
             // 
@@ -1024,6 +1074,8 @@
             J1CampMons2.SizeMode = PictureBoxSizeMode.StretchImage;
             J1CampMons2.TabIndex = 43;
             J1CampMons2.TabStop = false;
+            J1CampMons2.Click += J1CampMons2_Click;
+            J1CampMons2.MouseHover += J1CampMons2_MouseHover;
             // 
             // J1CampMons3
             // 
@@ -1036,6 +1088,8 @@
             J1CampMons3.SizeMode = PictureBoxSizeMode.StretchImage;
             J1CampMons3.TabIndex = 44;
             J1CampMons3.TabStop = false;
+            J1CampMons3.Click += J1CampMons3_Click;
+            J1CampMons3.MouseHover += J1CampMons3_MouseHover;
             // 
             // J1CampMons4
             // 
@@ -1048,6 +1102,8 @@
             J1CampMons4.SizeMode = PictureBoxSizeMode.StretchImage;
             J1CampMons4.TabIndex = 45;
             J1CampMons4.TabStop = false;
+            J1CampMons4.Click += J1CampMons4_Click;
+            J1CampMons4.MouseHover += J1CampMons4_MouseHover;
             // 
             // J1CampMons5
             // 
@@ -1060,6 +1116,8 @@
             J1CampMons5.SizeMode = PictureBoxSizeMode.StretchImage;
             J1CampMons5.TabIndex = 46;
             J1CampMons5.TabStop = false;
+            J1CampMons5.Click += J1CampMons5_Click;
+            J1CampMons5.MouseHover += J1CampMons5_MouseHover;
             // 
             // panel2
             // 
@@ -1151,6 +1209,60 @@
             // 
             toolTipDato.Popup += toolTipDato_Popup;
             // 
+            // panel5
+            // 
+            panel5.BackColor = Color.SaddleBrown;
+            panel5.BorderStyle = BorderStyle.FixedSingle;
+            panel5.Controls.Add(labelJugadorTurno);
+            panel5.Controls.Add(label3);
+            panel5.Location = new Point(367, 481);
+            panel5.Margin = new Padding(3, 2, 3, 2);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(454, 44);
+            panel5.TabIndex = 51;
+            // 
+            // labelJugadorTurno
+            // 
+            labelJugadorTurno.AutoSize = true;
+            labelJugadorTurno.Font = new Font("Lucida Sans Unicode", 18F, FontStyle.Bold | FontStyle.Italic);
+            labelJugadorTurno.ForeColor = Color.FromArgb(255, 192, 128);
+            labelJugadorTurno.Location = new Point(290, 8);
+            labelJugadorTurno.Name = "labelJugadorTurno";
+            labelJugadorTurno.Size = new Size(134, 28);
+            labelJugadorTurno.TabIndex = 1;
+            labelJugadorTurno.Text = "Jugador 1";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Lucida Sans Unicode", 18F, FontStyle.Bold | FontStyle.Italic);
+            label3.Location = new Point(18, 9);
+            label3.Name = "label3";
+            label3.Size = new Size(258, 28);
+            label3.TabIndex = 0;
+            label3.Text = "Turno del Jugador: ";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.SaddleBrown;
+            button1.FlatAppearance.BorderColor = Color.Black;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 15F);
+            button1.Location = new Point(55, 502);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(230, 32);
+            button1.TabIndex = 52;
+            button1.Text = "<< Volver al Menu  ";
+            button1.TextAlign = ContentAlignment.TopCenter;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // actualizacionVida
+            // 
+            actualizacionVida.Interval = 1000;
+            actualizacionVida.Tick += actualizacionVida_Tick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1158,7 +1270,9 @@
             BackColor = SystemColors.Control;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1192, 504);
+            ClientSize = new Size(1194, 538);
+            Controls.Add(button1);
+            Controls.Add(panel5);
             Controls.Add(MazoJ2);
             Controls.Add(MazoJ1);
             Controls.Add(CementerioJ2);
@@ -1186,16 +1300,16 @@
             Controls.Add(J1CampTra3);
             Controls.Add(J1CampTra2);
             Controls.Add(J1CampTra1);
-            Controls.Add(pictureBox24);
-            Controls.Add(pictureBox23);
-            Controls.Add(pictureBox22);
-            Controls.Add(pictureBox21);
-            Controls.Add(pictureBox20);
-            Controls.Add(pictureBox19);
-            Controls.Add(pictureBox18);
-            Controls.Add(pictureBox17);
-            Controls.Add(pictureBox16);
-            Controls.Add(pictureBox15);
+            Controls.Add(J1CampMons1Mod);
+            Controls.Add(J1CampMons2Mod);
+            Controls.Add(J1CampMons5Mod);
+            Controls.Add(J1CampMons4Mod);
+            Controls.Add(J1CampMons3Mod);
+            Controls.Add(J2CampMons5Mod);
+            Controls.Add(J2CampMons4Mod);
+            Controls.Add(J2CampMons3Mod);
+            Controls.Add(J2CampMons2Mod);
+            Controls.Add(J2CampMons1Mod);
             Controls.Add(J2CampTra5);
             Controls.Add(J2CampTra4);
             Controls.Add(J2CampTra3);
@@ -1214,7 +1328,9 @@
             Controls.Add(pictureBox2);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
@@ -1244,16 +1360,16 @@
             ((System.ComponentModel.ISupportInitialize)J2CampTra3).EndInit();
             ((System.ComponentModel.ISupportInitialize)J2CampTra4).EndInit();
             ((System.ComponentModel.ISupportInitialize)J2CampTra5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox23).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox24).EndInit();
+            ((System.ComponentModel.ISupportInitialize)J2CampMons1Mod).EndInit();
+            ((System.ComponentModel.ISupportInitialize)J2CampMons2Mod).EndInit();
+            ((System.ComponentModel.ISupportInitialize)J2CampMons3Mod).EndInit();
+            ((System.ComponentModel.ISupportInitialize)J2CampMons4Mod).EndInit();
+            ((System.ComponentModel.ISupportInitialize)J2CampMons5Mod).EndInit();
+            ((System.ComponentModel.ISupportInitialize)J1CampMons3Mod).EndInit();
+            ((System.ComponentModel.ISupportInitialize)J1CampMons4Mod).EndInit();
+            ((System.ComponentModel.ISupportInitialize)J1CampMons5Mod).EndInit();
+            ((System.ComponentModel.ISupportInitialize)J1CampMons2Mod).EndInit();
+            ((System.ComponentModel.ISupportInitialize)J1CampMons1Mod).EndInit();
             ((System.ComponentModel.ISupportInitialize)J1CampTra1).EndInit();
             ((System.ComponentModel.ISupportInitialize)J1CampTra2).EndInit();
             ((System.ComponentModel.ISupportInitialize)J1CampTra3).EndInit();
@@ -1283,6 +1399,8 @@
             ((System.ComponentModel.ISupportInitialize)CementerioJ2).EndInit();
             ((System.ComponentModel.ISupportInitialize)MazoJ1).EndInit();
             ((System.ComponentModel.ISupportInitialize)MazoJ2).EndInit();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1307,16 +1425,16 @@
         private PictureBox J2CampTra3;
         private PictureBox J2CampTra4;
         private PictureBox J2CampTra5;
-        private PictureBox pictureBox15;
-        private PictureBox pictureBox16;
-        private PictureBox pictureBox17;
-        private PictureBox pictureBox18;
-        private PictureBox pictureBox19;
-        private PictureBox pictureBox20;
-        private PictureBox pictureBox21;
-        private PictureBox pictureBox22;
-        private PictureBox pictureBox23;
-        private PictureBox pictureBox24;
+        private PictureBox J2CampMons1Mod;
+        private PictureBox J2CampMons2Mod;
+        private PictureBox J2CampMons3Mod;
+        private PictureBox J2CampMons4Mod;
+        private PictureBox J2CampMons5Mod;
+        private PictureBox J1CampMons3Mod;
+        private PictureBox J1CampMons4Mod;
+        private PictureBox J1CampMons5Mod;
+        private PictureBox J1CampMons2Mod;
+        private PictureBox J1CampMons1Mod;
         private PictureBox J1CampTra1;
         private PictureBox J1CampTra2;
         private PictureBox J1CampTra3;
@@ -1375,5 +1493,10 @@
         private Button botonEliminarMounstro;
         private ComboBox comboBoxManoTra;
         private ComboBox comboBoxManoHechizo;
+        private Panel panel5;
+        private Button button1;
+        private Label labelJugadorTurno;
+        private Label label3;
+        private System.Windows.Forms.Timer actualizacionVida;
     }
 }

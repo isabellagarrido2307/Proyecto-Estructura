@@ -20,6 +20,7 @@ namespace Proyecto_Yu_Gi_Oh
         public Form1()
         {
             InitializeComponent();
+            this.FormClosed += new FormClosedEventHandler(cerrarform);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
@@ -32,10 +33,26 @@ namespace Proyecto_Yu_Gi_Oh
             Jugador2.RobarCarta();
             Jugador2.RobarCarta();
             Jugador2.RobarCarta();
+            Jugador1.ManoHechizos.Insertar(new OllaCodicia());
             ActualizarFase(Jugador1, Jugador2);
             AsignarImagenes();
             cargarImagenes();
+            actualizacionVida.Start();
         }
+        //cositas del front
+        public void ImagenVacia()
+        {
+            if (pictureBox1.Image == null)
+            {
+                pictureBox1.Image = Properties.Resources.Default;
+            }
+        }
+        private void cerrarform(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //codigo
         public unsafe void ActualizarFase(Jugador JugadorAJugar, Jugador JugadorEnemigo)
         {
             if (TipoFase == 1)
@@ -95,7 +112,10 @@ namespace Proyecto_Yu_Gi_Oh
                 Nodo* aux = JugadorAJugar.CampoMonstruos.cabeza;
                 while (aux != null)
                 {
-                    comboBoxAtacante.Items.Add(aux->getMonstruo().getNombre());
+                    if (aux->getMonstruo().getModo() == true)
+                    {
+                        comboBoxAtacante.Items.Add(aux->getMonstruo().getNombre());
+                    }
                     aux = aux->getSiguiente();
                 }
                 aux = JugadorEnemigo.CampoMonstruos.cabeza;
@@ -635,9 +655,50 @@ namespace Proyecto_Yu_Gi_Oh
             {
                 aux = aux->getSiguiente();
             }
+
+            MessageBox.Show("Activamos efecto" + aux->getHechizo().getNombre());
+
             aux->getHechizo().activarEfecto(JugadorUso, JugadorEnemigo);
+            MessageBox.Show("post actIVAMOS efecto");
+
             JugadorUso.Cementerio.CementerioHechizos.Insertar(aux->getHechizo());
             JugadorUso.ManoHechizos.Eliminar(aux->getHechizo());
+        }
+        public unsafe void EliminarTrampa(Jugador JugadorAliado, string NombreTrampa)
+        {
+            NodoTrampasInvocacion* aux = JugadorAliado.ManoTrampasInvocacion.cabeza;
+            while (aux != null)
+            {
+                var trampa = aux->getTrampa();
+                if (trampa != null && trampa.getNombre() == NombreTrampa)
+                {
+                    break;
+                }
+                aux = aux->getSiguiente();
+            }
+            if (aux != null)
+            {
+                JugadorAliado.Cementerio.CementerioTrampasInvocacion.InsertarTra(aux->getTrampa());
+                JugadorAliado.ManoTrampasInvocacion.Eliminar(aux->getTrampa());
+            }
+            else
+            {
+                NodoTrampaAtaque* aux2 = JugadorAliado.ManoTrampasAtaque.cabeza;
+                while (aux2 != null)
+                {
+                    var trampa = aux2->getTrampa();
+                    if (trampa != null && trampa.getNombre() == NombreTrampa)
+                    {
+                        break;
+                    }
+                    aux2 = aux2->getSiguiente();
+                }
+                if (aux2 != null)
+                {
+                    JugadorAliado.Cementerio.CementerioTrampasAtaque.InsertarTr(aux2->getTrampa());
+                    JugadorAliado.ManoTrampasAtaque.Eliminar(aux2->getTrampa());
+                }
+            }
         }
         public unsafe void DesplegarTrampa(Jugador JugadorAliado, Jugador JugadorEnemigo, string NombreTrampa)
         {
@@ -687,22 +748,12 @@ namespace Proyecto_Yu_Gi_Oh
             this.toolTipDato.SetToolTip(this.MazoJ2, "N° Cartas: " /* variable/procedimiento para calcular el tamaño */);
         }
 
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void botonDescartar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void botonInvocar_Click(object sender, EventArgs e)
+        private unsafe void botonInvocar_Click(object sender, EventArgs e)
         {
             if (comboBoxMano.SelectedIndex == -1)
             {
@@ -711,11 +762,21 @@ namespace Proyecto_Yu_Gi_Oh
             }
             if (TurnoJugador == 1)
             {
+                if (Jugador1.CampoMonstruos.getTamano() >= 5)
+                {
+                    MessageBox.Show("Campo de Monstruos lleno");
+                    return;
+                }
                 InvocarMonstruo(Jugador1, Jugador2, comboBoxMano.SelectedItem.ToString());
                 ActualizarFase(Jugador1, Jugador2);
             }
             else
             {
+                if (Jugador2.CampoMonstruos.getTamano() >= 5)
+                {
+                    MessageBox.Show("Campo de Monstruos lleno");
+                    return;
+                }
                 InvocarMonstruo(Jugador2, Jugador1, comboBoxMano.SelectedItem.ToString());
                 ActualizarFase(Jugador2, Jugador1);
             }
@@ -800,9 +861,12 @@ namespace Proyecto_Yu_Gi_Oh
             else
             {
                 NodoHechizos* aux = Jugador2.ManoHechizos.cabeza;
-                while (aux->getHechizo().getNombre() != comboBoxManoHechizo.SelectedItem.ToString())
+                while (aux != null)
                 {
-
+                    if (aux->getHechizo().getNombre() == comboBoxManoHechizo.SelectedItem.ToString())
+                    {
+                        break;
+                    }
                     aux = aux->getSiguiente();
                 }
                 UsarHechizo(Jugador2, Jugador1, comboBoxManoHechizo.SelectedItem.ToString());
@@ -830,46 +894,32 @@ namespace Proyecto_Yu_Gi_Oh
                 MessageBox.Show("Seleccione un monstruo del campo");
                 return;
             }
-
-            NodoHechizos* aux = null;
             if (TurnoJugador == 1)
             {
-                aux = Jugador1.ManoHechizos.cabeza;
-            }
-            else
-            {
-                aux = Jugador2.ManoHechizos.cabeza;
-            }
-
-            if (aux == null)
-            {
-                MessageBox.Show("No hay monstruos en el campo");
-                return;
-            }
-
-            while (aux != null && aux->getHechizo().getNombre() != comboBoxManoHechizo.SelectedItem.ToString())
-            {
-                aux = aux->getSiguiente();
-            }
-
-            if (aux == null)
-            {
-                MessageBox.Show("Monstruo no encontrado");
-                return;
-            }
-
-            if (TurnoJugador == 1)
-            {
+                NodoHechizos* aux = Jugador1.ManoHechizos.cabeza;
+                while (aux != null)
+                {
+                    if (aux->getHechizo().getNombre().Equals(comboBoxManoHechizo.SelectedItem.ToString()))
+                    {
+                        break;
+                    }
+                    aux = aux->getSiguiente();
+                }
                 Jugador1.Cementerio.CementerioHechizos.Insertar(aux->getHechizo());
                 Jugador1.ManoHechizos.Eliminar(aux->getHechizo());
                 ActualizarFase(Jugador1, Jugador2);
             }
             else
             {
-                Jugador2.Cementerio.CementerioHechizos.Insertar(aux->getHechizo());
-                Jugador2.ManoHechizos.Eliminar(aux->getHechizo());
-                ActualizarFase(Jugador2, Jugador1);
-
+                NodoHechizos* aux = Jugador2.ManoHechizos.cabeza;
+                while (aux != null)
+                {
+                    if (aux->getHechizo().getNombre().Equals(comboBoxManoHechizo.SelectedItem.ToString()))
+                    {
+                        break;
+                    }
+                    aux = aux->getSiguiente();
+                }
             }
             AsignarImagenes();
             cargarImagenes();
@@ -885,14 +935,27 @@ namespace Proyecto_Yu_Gi_Oh
             }
             if (TurnoJugador == 1)
             {
-                DesplegarTrampa(Jugador1, Jugador2, comboBoxManoTra.SelectedItem.ToString());
-                
-                ActualizarFase(Jugador1, Jugador2);
+                if (Jugador1.CampoTrampasAtaque.getTamano() + Jugador1.CampoTrampasInvocacion.getTamano() < 5)
+                {
+                    DesplegarTrampa(Jugador1, Jugador2, comboBoxManoTra.SelectedItem.ToString());
+                    ActualizarFase(Jugador1, Jugador2);
+                }
+                else
+                {
+                    MessageBox.Show("Campo de trampas lleno");
+                }
             }
             else
             {
-                DesplegarTrampa(Jugador2, Jugador1, comboBoxManoTra.SelectedItem.ToString());
-
+                if (Jugador2.CampoTrampasAtaque.getTamano() + Jugador2.CampoTrampasInvocacion.getTamano() < 5)
+                {
+                    DesplegarTrampa(Jugador2, Jugador1, comboBoxManoTra.SelectedItem.ToString());
+                    ActualizarFase(Jugador2, Jugador1);
+                }
+                else
+                {
+                    MessageBox.Show("Campo de trampas lleno");
+                }
             }
             AsignarImagenes();
             cargarImagenes();
@@ -931,21 +994,711 @@ namespace Proyecto_Yu_Gi_Oh
                 if (TurnoJugador == 1)
                 {
                     TurnoJugador = 2;
-                    ActualizarFase(Jugador2, Jugador1);
+                    labelJugadorTurno.Text = "Jugador 2";
                     Jugador2.RobarCarta();
+                    ActualizarFase(Jugador2, Jugador1);
                     AsignarImagenes();
                     cargarImagenes();
                 }
                 else
                 {
+                    labelJugadorTurno.Text = "Jugador 1";
                     TurnoJugador = 1;
-                    ActualizarFase(Jugador1, Jugador2);
                     Jugador1.RobarCarta();
+                    ActualizarFase(Jugador1, Jugador2);
                     AsignarImagenes();
                     cargarImagenes();
                 }
             }
 
+        }
+
+
+
+
+        //cositas del front
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.FormClosed += new FormClosedEventHandler(cerrarform);
+        }
+
+        private void J1Mano3_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J1Mano3.Image;
+            ImagenVacia();
+        }
+
+        private void J1Mano4_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J1Mano4.Image;
+            ImagenVacia();
+        }
+
+        private void J1Mano5_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J1Mano5.Image;
+            ImagenVacia();
+        }
+
+        private void J1Mano6_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J1Mano6.Image;
+            ImagenVacia();
+        }
+
+        private void J1CampTra1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J1CampTra1.Image;
+            ImagenVacia();
+        }
+
+        private void J1CampTra2_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J1CampTra2.Image;
+            ImagenVacia();
+        }
+
+        private void J1CampTra3_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J1CampTra3.Image;
+            ImagenVacia();
+        }
+
+        private void J1CampTra4_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J1CampTra4.Image;
+            ImagenVacia();
+        }
+
+        private void J1CampTra5_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J1CampTra5.Image;
+            ImagenVacia();
+        }
+
+        private void J1CampMons1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J1CampMons1.Image;
+            ImagenVacia();
+        }
+
+        private void J1CampMons2_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J1CampMons2.Image;
+            ImagenVacia();
+        }
+
+        private void J1CampMons3_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J1CampMons3.Image;
+            ImagenVacia();
+        }
+
+        private void J1CampMons4_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J1CampMons4.Image;
+            ImagenVacia();
+        }
+
+        private void J1CampMons5_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J1CampMons5.Image;
+            ImagenVacia();
+        }
+
+        private void J2CampMons1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2CampMons1.Image;
+            ImagenVacia();
+        }
+
+        private void J2CampMons2_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2CampMons2.Image;
+            ImagenVacia();
+        }
+
+        private void J2CampMons3_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2CampMons3.Image;
+            ImagenVacia();
+        }
+
+        private void J2CampMons4_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2CampMons4.Image;
+            ImagenVacia();
+        }
+
+        private void J2CampMons5_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2CampMons1.Image;
+            ImagenVacia();
+        }
+
+        private void J2CampTra1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2CampTra1.Image;
+            ImagenVacia();
+        }
+
+        private void J2CampTra2_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2CampTra2.Image;
+            ImagenVacia();
+        }
+
+        private void J2CampTra3_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2CampTra3.Image;
+            ImagenVacia();
+        }
+
+        private void J2CampTra4_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2CampTra4.Image;
+            ImagenVacia();
+        }
+
+        private void J2CampTra5_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2CampTra5.Image;
+            ImagenVacia();
+        }
+
+        private void J2Mano1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2Mano1.Image;
+            ImagenVacia();
+        }
+
+        private void J2Mano2_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2Mano2.Image;
+            ImagenVacia();
+        }
+
+        private void J2Mano3_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2Mano3.Image;
+            ImagenVacia();
+        }
+
+        private void J2Mano4_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2Mano4.Image;
+            ImagenVacia();
+        }
+
+        private void J2Mano5_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2Mano5.Image;
+            ImagenVacia();
+        }
+
+        private void J2Mano6_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = J2Mano6.Image;
+            ImagenVacia();
+        }
+
+        private unsafe void botonCambiarModo_Click(object sender, EventArgs e)
+        {
+            if (comboBoxCampoAliado.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un monstruo del campo");
+                return;
+            }
+            if (TurnoJugador == 1)
+            {
+                int contador = 0;
+                Nodo* aux = Jugador1.CampoMonstruos.cabeza;
+                while (aux->getMonstruo().getNombre() != comboBoxCampoAliado.SelectedItem.ToString())
+                {
+                    aux = aux->getSiguiente();
+                    contador++;
+                }
+                aux->getMonstruo().cambiarModo();
+                if (contador == 0)
+                {
+                    if (aux->getMonstruo().getModo() == true)
+                    {
+                        J1CampMons1Mod.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        J1CampMons1Mod.BackColor = Color.Gray;
+                    }
+                }
+                else if (contador == 1)
+                {
+                    if (aux->getMonstruo().getModo() == true)
+                    {
+                        J1CampMons2Mod.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        J1CampMons2Mod.BackColor = Color.Gray;
+                    }
+                }
+                else if (contador == 2)
+                {
+                    if (aux->getMonstruo().getModo() == true)
+                    {
+                        J1CampMons3Mod.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        J1CampMons3Mod.BackColor = Color.Gray;
+                    }
+                }
+                else if (contador == 3)
+                {
+                    if (aux->getMonstruo().getModo() == true)
+                    {
+                        J1CampMons4Mod.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        J1CampMons4Mod.BackColor = Color.Gray;
+                    }
+                }
+                else if (contador == 4)
+                {
+                    if (aux->getMonstruo().getModo() == true)
+                    {
+                        J1CampMons5Mod.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        J1CampMons5Mod.BackColor = Color.Gray;
+                    }
+                }
+            }
+            else
+            {
+                int contador = 0;
+                Nodo* aux = Jugador2.CampoMonstruos.cabeza;
+                while (aux->getMonstruo().getNombre() != comboBoxCampoAliado.SelectedItem.ToString())
+                {
+                    aux = aux->getSiguiente();
+                    contador++;
+                }
+                aux->getMonstruo().cambiarModo();
+                if (contador == 0)
+                {
+                    if (aux->getMonstruo().getModo() == true)
+                    {
+                        J2CampMons1Mod.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        J2CampMons1Mod.BackColor = Color.Gray;
+                    }
+                }
+                else if (contador == 1)
+                {
+                    if (aux->getMonstruo().getModo() == true)
+                    {
+                        J2CampMons2Mod.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        J2CampMons2Mod.BackColor = Color.Gray;
+                    }
+                }
+                else if (contador == 2)
+                {
+                    if (aux->getMonstruo().getModo() == true)
+                    {
+                        J2CampMons3Mod.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        J2CampMons3Mod.BackColor = Color.Gray;
+                    }
+                }
+                else if (contador == 3)
+                {
+                    if (aux->getMonstruo().getModo() == true)
+                    {
+                        J2CampMons4Mod.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        J2CampMons4Mod.BackColor = Color.Gray;
+                    }
+                }
+                else if (contador == 4)
+                {
+                    if (aux->getMonstruo().getModo() == true)
+                    {
+                        J2CampMons5Mod.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        J2CampMons5Mod.BackColor = Color.Gray;
+                    }
+                }
+            }
+            AsignarImagenes();
+            cargarImagenes();
+            comboBoxMano.SelectedIndex = -1;
+        }
+
+        private unsafe void J1CampMons1_MouseHover(object sender, EventArgs e)
+        {
+            //if (J1CampMons1.Image == null)
+            //{
+            //    this.toolTipDato.SetToolTip(this.J1CampMons1, "No Mostro");
+            //}
+            //else
+            //{
+            //    Monstruos aux = BuscarMonsPorImg(J1CampMons1.Image, Jugador1.CampoMonstruos);
+
+            //    this.toolTipDato.SetToolTip(this.J1CampMons1, $"Nombre: {aux.getNombre()} \nATK: {aux.getAtaque()} \nDEF: {aux.getDefensa()}");
+            //}
+        }
+
+        private unsafe void J1CampMons2_MouseHover(object sender, EventArgs e)
+        {
+            //if (J1CampMons2.Image == null)
+            //{
+            //    this.toolTipDato.SetToolTip(this.J1CampMons2, "No Mostro");
+            //}
+            //else
+            //{
+            //    Monstruos aux = BuscarMonsPorImg(J1CampMons2.Image, Jugador1.CampoMonstruos);
+
+            //    this.toolTipDato.SetToolTip(this.J1CampMons2, $"Nombre: {aux.getNombre()} \nATK: {aux.getAtaque()} \nDEF: {aux.getDefensa()}");
+            //}
+        }
+        public unsafe Monstruos BuscarMonsPorImg(Image Imagen, ListaMonstruos ListaBuscar)
+        {
+            Nodo* aux = ListaBuscar.cabeza;
+            while (aux != null)
+            {
+                if ((aux->getMonstruo().getDireccion() == Imagen))
+                {
+                    break;
+                }
+                aux = aux->getSiguiente();
+            }
+            return aux->getMonstruo();
+        }
+        private unsafe void J1CampMons3_MouseHover(object sender, EventArgs e)
+        {
+            //if (J1CampMons3.Image == null)
+            //{
+            //    this.toolTipDato.SetToolTip(this.J1CampMons3, "No Mostro");
+            //}
+            //else
+            //{
+            //    Monstruos aux = BuscarMonsPorImg(J1CampMons3.Image, Jugador1.CampoMonstruos);
+
+            //    this.toolTipDato.SetToolTip(this.J1CampMons3, $"Nombre: {aux.getNombre()} \nATK: {aux.getAtaque()} \nDEF: {aux.getDefensa()}");
+            //}
+        }
+
+        private unsafe void J1CampMons4_MouseHover(object sender, EventArgs e)
+        {
+            //if (J1CampMons4.Image == null)
+            //{
+            //    this.toolTipDato.SetToolTip(this.J1CampMons4, "No Mostro");
+            //}
+            //else
+            //{
+            //    Monstruos aux = BuscarMonsPorImg(J1CampMons4.Image, Jugador1.CampoMonstruos);
+
+            //    this.toolTipDato.SetToolTip(this.J1CampMons4, $"Nombre: {aux.getNombre()} \nATK: {aux.getAtaque()} \nDEF: {aux.getDefensa()}");
+            //}
+        }
+
+        private unsafe void J1CampMons5_MouseHover(object sender, EventArgs e)
+        {
+            //if (J1CampMons5.Image == null)
+            //{
+            //    this.toolTipDato.SetToolTip(this.J1CampMons5, "No Mostro");
+            //}
+            //else
+            //{
+            //    Monstruos aux = BuscarMonsPorImg(J1CampMons5.Image, Jugador1.CampoMonstruos);
+
+            //    this.toolTipDato.SetToolTip(this.J1CampMons5,
+            //        $"Nombre: {aux.getNombre()} " +
+            //        $"\nATK: {aux.getAtaque()} " +
+            //        $"\nDEF: {aux.getDefensa()}");
+            //}
+        }
+
+        private unsafe void J2CampMons1_MouseHover(object sender, EventArgs e)
+        {
+            //if (J2CampMons1.Image == null)
+            //{
+            //    this.toolTipDato.SetToolTip(this.J2CampMons1, "No Mostro");
+            //}
+            //else
+            //{
+            //    Monstruos aux = BuscarMonsPorImg(J2CampMons1.Image, Jugador2.CampoMonstruos);
+
+            //    this.toolTipDato.SetToolTip(this.J2CampMons1,
+            //        $"Nombre: {aux.getNombre()} " +
+            //        $"\nATK: {aux.getAtaque()} " +
+            //        $"\nDEF: {aux.getDefensa()}");
+            //}
+        }
+
+        private unsafe void J2CampMons2_MouseHover(object sender, EventArgs e)
+        {
+            //if (J2CampMons2.Image == null)
+            //{
+            //    this.toolTipDato.SetToolTip(this.J2CampMons2, "No Mostro");
+            //}
+            //else
+            //{
+            //    Monstruos aux = BuscarMonsPorImg(J2CampMons2.Image, Jugador1.CampoMonstruos);
+
+            //    this.toolTipDato.SetToolTip(this.J2CampMons2,
+            //        $"Nombre: {aux.getNombre()} " +
+            //        $"\nATK: {aux.getAtaque()} " +
+            //        $"\nDEF: {aux.getDefensa()}");
+            //}
+        }
+
+        private unsafe void J2CampMons3_MouseHover(object sender, EventArgs e)
+        {
+            //if (J2CampMons3.Image == null)
+            //{
+            //    this.toolTipDato.SetToolTip(this.J2CampMons3, "No Mostro");
+            //}
+            //else
+            //{
+            //    Monstruos aux = BuscarMonsPorImg(J2CampMons3.Image, Jugador1.CampoMonstruos);
+
+            //    this.toolTipDato.SetToolTip(this.J2CampMons3,
+            //        $"Nombre: {aux.getNombre()} " +
+            //        $"\nATK: {aux.getAtaque()} " +
+            //        $"\nDEF: {aux.getDefensa()}");
+            //}
+        }
+
+        private unsafe void J2CampMons4_MouseHover(object sender, EventArgs e)
+        {
+            //if (J2CampMons4.Image == null)
+            //{
+            //    this.toolTipDato.SetToolTip(this.J2CampMons4, "No Mostro");
+            //}
+            //else
+            //{
+            //    Monstruos aux = BuscarMonsPorImg(J2CampMons4.Image, Jugador1.CampoMonstruos);
+
+            //    this.toolTipDato.SetToolTip(this.J2CampMons4,
+            //        $"Nombre: {aux.getNombre()} " +
+            //        $"\nATK: {aux.getAtaque()} " +
+            //        $"\nDEF: {aux.getDefensa()}");
+            //}
+        }
+
+        private unsafe void J2CampMons5_MouseHover(object sender, EventArgs e)
+        {
+            //if (J2CampMons5.Image == null)
+            //{
+            //    this.toolTipDato.SetToolTip(this.J2CampMons5, "No Mostro");
+            //}
+            //else
+            //{
+            //    Monstruos aux = BuscarMonsPorImg(J2CampMons5.Image, Jugador1.CampoMonstruos);
+
+            //    this.toolTipDato.SetToolTip(this.J2CampMons5,
+            //        $"Nombre: {aux.getNombre()} " +
+            //        $"\nATK: {aux.getAtaque()} " +
+            //        $"\nDEF: {aux.getDefensa()}");
+            //}
+        }
+
+        private void botonEliminarTra_Click(object sender, EventArgs e)
+        {
+            if (comboBoxManoTra.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione una trampa de la mano");
+                return;
+            }
+            if (TurnoJugador == 1)
+            {
+                EliminarTrampa(Jugador1, comboBoxManoTra.SelectedItem.ToString());
+
+                ActualizarFase(Jugador1, Jugador2);
+            }
+            else
+            {
+                EliminarTrampa(Jugador2, comboBoxManoTra.SelectedItem.ToString());
+                ActualizarFase(Jugador2, Jugador1);
+            }
+            AsignarImagenes();
+            cargarImagenes();
+            comboBoxManoTra.SelectedIndex = -1;
+        }
+
+        private void botonAtacar_Click(object sender, EventArgs e)
+        {
+
+            if (comboBoxDefensor.Items.Count == 0 && comboBoxAtacante.SelectedIndex != -1)
+            {
+                if (TurnoJugador == 1)
+                {
+                    if (Jugador2.Vida - Jugador1.CampoMonstruos.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString()).getAtaque() <= 0)
+                    {
+                        Jugador2.Vida = 0;
+                    }
+                    else
+                    {
+                        Jugador2.Vida = Jugador2.Vida - Jugador1.CampoMonstruos.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString()).getAtaque();
+                    }
+                    comboBoxAtacante.Items.RemoveAt(comboBoxAtacante.SelectedIndex);
+                    return;
+                }
+                else
+                {
+                    if (Jugador1.Vida - Jugador2.CampoMonstruos.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString()).getAtaque() <= 0)
+                    {
+                        Jugador1.Vida = 0;
+                    }
+                    else
+                    {
+                        Jugador1.Vida = Jugador1.Vida - Jugador2.CampoMonstruos.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString()).getAtaque();
+                    }
+                    comboBoxAtacante.Items.RemoveAt(comboBoxAtacante.SelectedIndex);
+                    return;
+                }
+            }
+            else if (comboBoxAtacante.SelectedIndex == -1 || comboBoxDefensor.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un Monstruo Atacante Y Defensor");
+                return;
+            }
+
+
+            if (TurnoJugador == 1)
+            {
+                Monstruos MonstruoAtacante = Jugador1.CampoMonstruos.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString());
+                Monstruos MonstruoDefensor = Jugador2.CampoMonstruos.BuscarMonstruo(comboBoxDefensor.SelectedItem.ToString());
+                if (MonstruoAtacante.getSalud() > MonstruoDefensor.getSalud())
+                {
+                    Jugador2.CampoMonstruos.Eliminar(MonstruoDefensor);
+                    Jugador2.Cementerio.CementerioMonstruos.Insertar(MonstruoDefensor);
+                    if (MonstruoDefensor.getNombre() == "Ladron Fantasma")
+                    {
+                        Jugador2.RobarCarta();
+                    }
+                    if (MonstruoDefensor.getModo() == true)
+                    {
+                        Jugador2.Vida = Jugador2.Vida - (MonstruoAtacante.getSalud() - MonstruoDefensor.getSalud());
+                    }
+                    comboBoxAtacante.Items.RemoveAt(comboBoxAtacante.SelectedIndex);
+                    MonstruoAtacante.EfectoAtaque(Jugador1.CampoMonstruos, Jugador2.CampoMonstruos, Jugador1.Cementerio.CementerioMonstruos, Jugador2.Cementerio.CementerioMonstruos, MonstruoDefensor);
+                    AsignarImagenes();
+                    cargarImagenes();
+                }
+                else if (MonstruoAtacante.getSalud() < MonstruoDefensor.getSalud())
+                {
+                    Jugador1.CampoMonstruos.Eliminar(MonstruoAtacante);
+                    Jugador1.Cementerio.CementerioMonstruos.Equals(MonstruoAtacante);
+                    AsignarImagenes();
+                    cargarImagenes();
+                    if (MonstruoAtacante.getNombre() == "Ladron Fantasma")
+                    {
+                        Jugador1.RobarCarta();
+                    }
+                }
+                else
+                {
+                    Jugador1.CampoMonstruos.Eliminar(MonstruoAtacante);
+                    Jugador1.Cementerio.CementerioMonstruos.Equals(MonstruoAtacante);
+                    Jugador2.CampoMonstruos.Eliminar(MonstruoDefensor);
+                    Jugador2.Cementerio.CementerioMonstruos.Insertar(MonstruoDefensor);
+                    AsignarImagenes();
+                    cargarImagenes();
+                    if (MonstruoAtacante.getNombre() == "Ladron Fantasma")
+                    {
+                        Jugador1.RobarCarta();
+                    }
+                    if (MonstruoDefensor.getNombre() == "Ladron Fantasma")
+                    {
+                        Jugador2.RobarCarta();
+                    }
+                }
+                ActualizarFase(Jugador1, Jugador2);
+            }
+            else
+            {
+                Monstruos MonstruoAtacante = Jugador2.CampoMonstruos.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString());
+                Monstruos MonstruoDefensor = Jugador1.CampoMonstruos.BuscarMonstruo(comboBoxDefensor.SelectedItem.ToString());
+                if (MonstruoAtacante.getSalud() > MonstruoDefensor.getSalud())
+                {
+                    Jugador1.CampoMonstruos.Eliminar(MonstruoDefensor);
+                    Jugador1.Cementerio.CementerioMonstruos.Insertar(MonstruoDefensor);
+                    if (MonstruoDefensor.getModo() == true)
+                    {
+                        Jugador1.Vida = Jugador1.Vida - (MonstruoAtacante.getSalud() - MonstruoDefensor.getSalud());
+                    }
+                    if (MonstruoDefensor.getNombre() == "Ladron Fantasma")
+                    {
+                        Jugador1.RobarCarta();
+                    }
+                    comboBoxAtacante.Items.RemoveAt(comboBoxAtacante.SelectedIndex);
+                    MonstruoAtacante.EfectoAtaque(Jugador2.CampoMonstruos, Jugador1.CampoMonstruos, Jugador2.Cementerio.CementerioMonstruos, Jugador1.Cementerio.CementerioMonstruos, MonstruoDefensor);
+                    AsignarImagenes();
+                    cargarImagenes();
+                }
+                else if (MonstruoAtacante.getSalud() < MonstruoDefensor.getSalud())
+                {
+                    Jugador2.CampoMonstruos.Eliminar(MonstruoAtacante);
+                    Jugador2.Cementerio.CementerioMonstruos.Equals(MonstruoAtacante);
+                    if (MonstruoAtacante.getNombre() == "Ladron Fantasma")
+                    {
+                        Jugador2.RobarCarta();
+                    }
+                    AsignarImagenes();
+                    cargarImagenes();
+                }
+                else
+                {
+                    Jugador2.CampoMonstruos.Eliminar(MonstruoAtacante);
+                    Jugador2.Cementerio.CementerioMonstruos.Equals(MonstruoAtacante);
+                    Jugador1.CampoMonstruos.Eliminar(MonstruoDefensor);
+                    Jugador1.Cementerio.CementerioMonstruos.Insertar(MonstruoDefensor);
+                    AsignarImagenes();
+                    cargarImagenes();
+                    if (MonstruoAtacante.getNombre() == "Ladron Fantasma")
+                    {
+                        Jugador2.RobarCarta();
+                    }
+                    if (MonstruoDefensor.getNombre() == "Ladron Fantasma")
+                    {
+                        Jugador1.RobarCarta();
+                    }
+                }
+                ActualizarFase(Jugador2, Jugador1);
+            }
+
+        }
+
+        private void actualizacionVida_Tick(object sender, EventArgs e)
+        {
+            BarraVidaJ1.Value = Jugador1.Vida;
+            BarraVidaJ2.Value = Jugador2.Vida;
+            if (Jugador1.Vida <= 0)
+            {
+                actualizacionVida.Stop();
+                MessageBox.Show("Jugador 2 Gana");
+                this.Close();
+            }
+            if (Jugador2.Vida <= 0)
+            {
+                actualizacionVida.Stop();
+                MessageBox.Show("Jugador 1 Gana");
+                this.Close();
+            }
         }
     }
 }

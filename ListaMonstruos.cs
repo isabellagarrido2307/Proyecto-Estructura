@@ -10,12 +10,17 @@ namespace Proyecto_Yu_Gi_Oh
 {
     public unsafe class ListaMonstruos
     {
+        private int tamano;
         public Nodo* cabeza;
         public ListaMonstruos()
         {
+            tamano = 0;
             this.cabeza = null;
         }
-
+        public int getTamano()
+        {
+            return tamano;
+        }
         public unsafe void Insertar(Monstruos _monstruo)
         {
             Nodo* nuevo = (Nodo*)Marshal.AllocHGlobal(sizeof(Nodo));
@@ -30,26 +35,41 @@ namespace Proyecto_Yu_Gi_Oh
                 nuevo->setSiguiente(this.cabeza);
                 this.cabeza = nuevo;
             }
+            tamano++;
         }
         public void Eliminar(Monstruos _monstruo)
         {
-            Nodo* aux = this.cabeza;
-            Nodo* aux2 = this.cabeza;
-            if (this.cabeza->getMonstruo() == _monstruo)
-            {
-                cabeza = cabeza->getSiguiente();
-                return;
-            }
+            Nodo* aux = cabeza;
+            Nodo* aux2 = null;
             while (aux != null)
             {
                 if (aux->getMonstruo() == _monstruo)
                 {
-                    aux2->setSiguiente(aux->getSiguiente());
+                    if (aux2 == null)
+                    {
+                        cabeza = aux->getSiguiente();
+                    }
+                    else
+                    {
+                        aux2->setSiguiente(aux->getSiguiente());
+                    }
+                    Marshal.FreeHGlobal((IntPtr)aux);
                     return;
                 }
                 aux2 = aux;
                 aux = aux->getSiguiente();
             }
+            tamano--;
+        }
+        public Monstruos BuscarMonstruo(string Nombre)
+        {
+            Nodo* aux = cabeza;
+            while (aux != null && aux->getMonstruo().getNombre() != Nombre)
+            {
+                
+                aux = aux->getSiguiente();
+            }
+            return aux->getMonstruo();
         }
     }
 }
