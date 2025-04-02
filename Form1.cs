@@ -1,3 +1,5 @@
+using System.Xml.Serialization;
+
 namespace Proyecto_Yu_Gi_Oh
 {
     public partial class Form1 : Form
@@ -647,6 +649,7 @@ namespace Proyecto_Yu_Gi_Oh
             aux->getMonstruo().EfectoDespliegue(JugadorInvocando.CampoMonstruos, JugadorEnemigo.CampoMonstruos);
             JugadorInvocando.CampoMonstruos.Insertar(aux->getMonstruo());
             JugadorInvocando.ManoMonstruos.Eliminar(aux->getMonstruo());
+            chequearTrampaInvocacion(JugadorEnemigo, JugadorInvocando, aux->getMonstruo());
         }
         public unsafe void UsarHechizo(Jugador JugadorUso, Jugador JugadorEnemigo, string NombreHechizo)
         {
@@ -876,7 +879,58 @@ namespace Proyecto_Yu_Gi_Oh
                 comboBoxManoHechizo.SelectedIndex = -1;
             }
         }
-
+        public unsafe bool siContieneSaltar(ListaTrampasAtaque ListaAtq, ListaTrampasInvocacion ListaInv)
+        {
+            NodoTrampaAtaque* aux = ListaAtq.cabeza;
+            while (aux != null)
+            {
+                if (aux->getTrampa().getNombre() == "Muro de defensa")
+                {
+                    ListaAtq.Eliminar(aux->getTrampa());
+                    return true;
+                } else if (aux->getTrampa().getNombre() == "Espantapajaros de hierro")
+                {
+                    ListaAtq.Eliminar(aux->getTrampa());
+                    return true;
+                } else if (aux->getTrampa().getNombre() == "Engatuzamiento Labioso")
+                {
+                    ListaAtq.Eliminar(aux->getTrampa());
+                    return true;
+                }
+                else if (aux->getTrampa().getNombre() == "Cadenas de Sombra")
+                {
+                    ListaAtq.Eliminar(aux->getTrampa());
+                    return true;
+                }
+                aux = aux->getSiguiente();
+            }
+            NodoTrampasInvocacion* aux2 = ListaInv.cabeza;
+            while (aux2 != null)
+            {
+                if (aux2->getTrampa().getNombre() == "Muro de defensa")
+                {
+                    ListaInv.Eliminar(aux2->getTrampa());
+                    return true;
+                }
+                else if (aux2->getTrampa().getNombre() == "Espantapajaros de hierro")
+                {
+                    ListaInv.Eliminar(aux2->getTrampa());
+                    return true;
+                }
+                else if (aux2->getTrampa().getNombre() == "Engatuzamiento Labioso")
+                {
+                    ListaInv.Eliminar(aux2->getTrampa());
+                    return true;
+                }
+                else if (aux2->getTrampa().getNombre() == "Cadenas de Sombra")
+                {
+                    ListaInv.Eliminar(aux2->getTrampa());
+                    return true;
+                }
+                aux2 = aux2->getSiguiente();
+            }
+            return false;
+        }
         private void J1Mano1_Click(object sender, EventArgs e)
         {
             pictureBox1.Image = J1Mano1.Image;
@@ -1538,7 +1592,65 @@ namespace Proyecto_Yu_Gi_Oh
             cargarImagenes();
             comboBoxManoTra.SelectedIndex = -1;
         }
-
+        public unsafe void chequearTrampaAtq(Jugador JugadorDefensor, Jugador JugadorAtacante, Monstruos CartaAtacante)
+        {
+            NodoTrampaAtaque* aux = JugadorDefensor.CampoTrampasAtaque.cabeza;
+            while (aux->getTrampa() != null)
+            {
+                if (aux->getTrampa().condicional(JugadorDefensor, JugadorAtacante, CartaAtacante))
+                {
+                    aux->getTrampa().efectoBatalla(JugadorDefensor, JugadorAtacante, CartaAtacante);
+                    break;
+                }
+                else {
+                    aux = aux->getSiguiente();
+                }
+            }
+        }
+        public unsafe void chequearTrampaAtaque(Jugador JugadorDefensor, Jugador JugadorAtacante, Monstruos CartaAtacante)
+        {
+            NodoTrampaAtaque* aux = JugadorDefensor.CampoTrampasAtaque.cabeza;
+            while (aux->getTrampa() != null)
+            {
+                if (aux->getTrampa().condicional(JugadorDefensor, JugadorAtacante, CartaAtacante))
+                {
+                    aux->getTrampa().efectoBatalla(JugadorDefensor, JugadorAtacante, CartaAtacante);
+                    break;
+                }
+                else
+                {
+                    aux = aux->getSiguiente();
+                }
+            }
+        }
+        public unsafe void chequearTrampaInvocacion(Jugador JugadorAliado, Jugador JugadorInvocador, Monstruos CartaInvocada)
+        {
+            NodoTrampasInvocacion* aux = JugadorAliado.CampoTrampasInvocacion.cabeza;
+            if (aux == null)
+            {
+                return;
+            }
+            if (aux->getTrampa().condicional == null)
+            {
+                return;
+            }
+            while (aux->getTrampa() != null)
+            {
+                if (aux->getTrampa().condicional(JugadorAliado, JugadorInvocador, CartaInvocada))
+                {
+                    aux->getTrampa().efectoInvocacion(JugadorAliado, JugadorInvocador, CartaInvocada);
+                    JugadorAliado.CampoTrampasInvocacion.Eliminar(aux->getTrampa());
+                    JugadorAliado.Cementerio.CementerioTrampasInvocacion.InsertarTra(aux->getTrampa());
+                    AsignarImagenes();
+                    cargarImagenes();
+                    break;
+                }
+                else
+                {
+                    aux = aux->getSiguiente();
+                }
+            }
+        }
         private void botonAtacar_Click(object sender, EventArgs e)
         {
 
@@ -1546,6 +1658,12 @@ namespace Proyecto_Yu_Gi_Oh
             {
                 if (TurnoJugador == 1)
                 {
+                    if (siContieneSaltar(Jugador2.CampoTrampasAtaque, Jugador2.CampoTrampasInvocacion))
+                    {
+                        Jugador1.CampoTrampasAtaque.Eliminar(Jugador2.CampoTrampasAtaque.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString()));
+                        comboBoxAtacante.Items.RemoveAt(comboBoxAtacante.SelectedIndex);
+                        return;
+                    }
                     if (Jugador2.Vida - Jugador1.CampoMonstruos.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString()).getAtaque() <= 0)
                     {
                         Jugador2.Vida = 0;
@@ -1553,18 +1671,26 @@ namespace Proyecto_Yu_Gi_Oh
                     else
                     {
                         Jugador2.Vida = Jugador2.Vida - Jugador1.CampoMonstruos.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString()).getAtaque();
+                        chequearTrampaAtaque(Jugador2, Jugador1, Jugador1.CampoMonstruos.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString()));
                     }
                     comboBoxAtacante.Items.RemoveAt(comboBoxAtacante.SelectedIndex);
                     return;
                 }
                 else
                 {
+                    if (siContieneSaltar(Jugador1.CampoTrampasAtaque, Jugador1.CampoTrampasInvocacion))
+                    {
+                        Jugador1.CampoTrampasAtaque.Eliminar(Jugador1.CampoTrampasAtaque.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString()));
+                        comboBoxAtacante.Items.RemoveAt(comboBoxAtacante.SelectedIndex);
+                        return;
+                    }
                     if (Jugador1.Vida - Jugador2.CampoMonstruos.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString()).getAtaque() <= 0)
                     {
                         Jugador1.Vida = 0;
                     }
                     else
                     {
+                        chequearTrampaAtaque(Jugador1, Jugador2, Jugador2.CampoMonstruos.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString()));
                         Jugador1.Vida = Jugador1.Vida - Jugador2.CampoMonstruos.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString()).getAtaque();
                     }
                     comboBoxAtacante.Items.RemoveAt(comboBoxAtacante.SelectedIndex);
@@ -1582,6 +1708,7 @@ namespace Proyecto_Yu_Gi_Oh
             {
                 Monstruos MonstruoAtacante = Jugador1.CampoMonstruos.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString());
                 Monstruos MonstruoDefensor = Jugador2.CampoMonstruos.BuscarMonstruo(comboBoxDefensor.SelectedItem.ToString());
+                chequearTrampaAtaque(Jugador2, Jugador1, MonstruoAtacante);
                 if (MonstruoAtacante.getSalud() > MonstruoDefensor.getSalud())
                 {
                     Jugador2.CampoMonstruos.Eliminar(MonstruoDefensor);
@@ -1631,6 +1758,7 @@ namespace Proyecto_Yu_Gi_Oh
             }
             else
             {
+                chequearTrampaAtaque(Jugador1, Jugador2, Jugador2.CampoMonstruos.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString()));
                 Monstruos MonstruoAtacante = Jugador2.CampoMonstruos.BuscarMonstruo(comboBoxAtacante.SelectedItem.ToString());
                 Monstruos MonstruoDefensor = Jugador1.CampoMonstruos.BuscarMonstruo(comboBoxDefensor.SelectedItem.ToString());
                 if (MonstruoAtacante.getSalud() > MonstruoDefensor.getSalud())

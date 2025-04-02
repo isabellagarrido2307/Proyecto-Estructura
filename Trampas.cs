@@ -31,8 +31,11 @@ namespace Proyecto_Yu_Gi_Oh
         {
             return direccion;
         }
-
-        virtual public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        virtual public unsafe bool condicional(Jugador jugadorAliado, Jugador jugadorEnemigo, Monstruos cartaAtacante)
+        {
+            return true;
+        }
+        virtual public unsafe void efectoBatalla(Jugador jugadorAliado, Jugador jugadorEnemigo, Monstruos cartaAtacante)
         {
     
         }
@@ -64,8 +67,11 @@ namespace Proyecto_Yu_Gi_Oh
         {
             return direccion;
         }
-
-        virtual public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo)
+        virtual public bool condicional(Jugador jugadorAliado, Jugador jugadorEnemigo, Monstruos CartaInvocada)
+        {
+            return false;
+        }
+        virtual public unsafe void efectoInvocacion(Jugador jugadorAliado, Jugador jugadorEnemigo, Monstruos CartaInvocada)
         {
 
         }

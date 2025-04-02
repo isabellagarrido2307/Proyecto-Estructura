@@ -60,5 +60,14 @@ namespace Proyecto_Yu_Gi_Oh
             }
             tamano--;
         }
+        public TrampasInvocacion BuscarMonstruo(string Nombre)
+        {
+            NodoTrampasInvocacion* aux = cabeza;
+            while (aux != null && aux->getTrampa().getNombre() != Nombre)
+            {
+                aux = aux->getSiguiente();
+            }
+            return aux->getTrampa();
+        }
     }
 }

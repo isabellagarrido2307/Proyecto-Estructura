@@ -3,40 +3,59 @@
   "WorkspaceRootPath": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\cartas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:cartas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\listatrampasataque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:listatrampasataque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\clasestrampas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:clasestrampas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\listatrampasinvocacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:listatrampasinvocacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\listamonstruos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:listamonstruos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\monstruos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:monstruos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\claseshechizos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:claseshechizos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\trampas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:trampas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\nodo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:nodo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\cartas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:cartas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\claseshechizos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:claseshechizos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\mazofamilia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\mazofamilia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:mazofamilia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\mazfamilycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|solutionrelative:mazfamilycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC9F935D-D76D-4923-B16E-5BDF1D9763ED}|Proyecto Yu-Gi-Oh.csproj|c:\\users\\gabri\\onedrive\\escritorio\\ultima modificaciones\\zip\\proyecto-estructura\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,17 +69,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAHEGAAAAAAAAAAAmwI0GAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAHwGAAAAAAAAAAAmwJIGAABnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-30T19:09:37.66Z",
               "IsPinned": true,
@@ -69,6 +88,20 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ClasesTrampas.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\ClasesTrampas.cs",
+              "RelativeDocumentMoniker": "ClasesTrampas.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\ClasesTrampas.cs",
+              "RelativeToolTip": "ClasesTrampas.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAIA9wHMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T02:32:22.199Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -81,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
@@ -95,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "Jugador.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Jugador.cs",
               "RelativeDocumentMoniker": "Jugador.cs",
@@ -112,7 +145,83 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "ListaMonstruos.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\ListaMonstruos.cs",
+              "RelativeDocumentMoniker": "ListaMonstruos.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\ListaMonstruos.cs",
+              "RelativeToolTip": "ListaMonstruos.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAIwD8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:31:56.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Monstruos.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Monstruos.cs",
+              "RelativeDocumentMoniker": "Monstruos.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Monstruos.cs",
+              "RelativeToolTip": "Monstruos.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:31:46.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ListaTrampasInvocacion.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\ListaTrampasInvocacion.cs",
+              "RelativeDocumentMoniker": "ListaTrampasInvocacion.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\ListaTrampasInvocacion.cs",
+              "RelativeToolTip": "ListaTrampasInvocacion.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAcwEUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:31:32.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "D:\\VisualStudio\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "D:\\VisualStudio\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAOkSAAAAAAAAAAAMwPkSAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-04-02T04:07:28.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ListaTrampasAtaque.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\ListaTrampasAtaque.cs",
+              "RelativeDocumentMoniker": "ListaTrampasAtaque.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\ListaTrampasAtaque.cs",
+              "RelativeToolTip": "ListaTrampasAtaque.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAMwD4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T03:08:28.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Trampas.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Trampas.cs",
+              "RelativeDocumentMoniker": "Trampas.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Trampas.cs",
+              "RelativeToolTip": "Trampas.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAzwCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T02:30:04.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Cartas.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Cartas.cs",
               "RelativeDocumentMoniker": "Cartas.cs",
@@ -120,12 +229,11 @@
               "RelativeToolTip": "Cartas.cs",
               "ViewState": "AgIAAIsAAAAAAAAAAAAiwMoBAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T01:56:51.501Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T01:56:51.501Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "ClasesHechizos.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\ClasesHechizos.cs",
               "RelativeDocumentMoniker": "ClasesHechizos.cs",
@@ -133,57 +241,29 @@
               "RelativeToolTip": "ClasesHechizos.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAIAywEUAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T01:54:28.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T01:54:28.909Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "Menu.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Menu.cs",
               "RelativeDocumentMoniker": "Menu.cs",
               "ToolTip": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Menu.cs [Dise\u00F1o]",
               "RelativeToolTip": "Menu.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T01:41:39.433Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-04-02T01:41:39.433Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "MazoFamilia.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\MazoFamilia.cs",
               "RelativeDocumentMoniker": "MazoFamilia.cs",
               "ToolTip": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\MazoFamilia.cs [Dise\u00F1o]",
               "RelativeToolTip": "MazoFamilia.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T01:41:37.059Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MazFamilycs.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\MazFamilycs.cs",
-              "RelativeDocumentMoniker": "MazFamilycs.cs",
-              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\MazFamilycs.cs [Dise\u00F1o]",
-              "RelativeToolTip": "MazFamilycs.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T01:41:32.587Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Nodo.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Nodo.cs",
-              "RelativeDocumentMoniker": "Nodo.cs",
-              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Escritorio\\Ultima modificaciones\\zip\\Proyecto-Estructura\\Nodo.cs",
-              "RelativeToolTip": "Nodo.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAowBsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T21:17:38.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T01:41:37.059Z"
             }
           ]
         }
